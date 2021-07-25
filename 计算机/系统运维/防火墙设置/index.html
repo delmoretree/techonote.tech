@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1012,20 +1021,20 @@
 <li>&#x51FA;&#x73B0; <code>Active: inactive (dead)</code> &#x7070;&#x8272;&#x8868;&#x793A;&#x505C;&#x6B62;&#xFF0C;&#x770B;&#x5355;&#x8BCD;&#x4E5F;&#x884C;&#x3002;</li>
 </ul>
 <h2 id="&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;">&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --state</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--state</span></span></code></pre></div>
 <h2 id="&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;">&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --list-all</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--list-all</span></span></code></pre></div>
 <h2 id="&#x67E5;&#x8BE2;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x653E;">&#x67E5;&#x8BE2;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x653E;</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --query-port=8080/tcp</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--query-port</span><span class="op">=</span>8080/tcp</span></code></pre></div>
 <h2 id="&#x5F00;&#x653E;80&#x7AEF;&#x53E3;">&#x5F00;&#x653E;80&#x7AEF;&#x53E3;</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --permanent --add-port=80/tcp</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--permanent</span> <span class="at">--add-port</span><span class="op">=</span>80/tcp</span></code></pre></div>
 <h2 id="&#x79FB;&#x9664;&#x7AEF;&#x53E3;">&#x79FB;&#x9664;&#x7AEF;&#x53E3;</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --permanent --remove-port=8080/tcp</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--permanent</span> <span class="at">--remove-port</span><span class="op">=</span>8080/tcp</span></code></pre></div>
 <h2 id="&#x9488;&#x5BF9;ip&#x7684;&#x63CF;&#x8FF0;">&#x9488;&#x5BF9;ip&#x7684;&#x63CF;&#x8FF0;</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --permanent --add-rich-rule=<span class="st">&quot;rule family=&quot;</span>ipv4<span class="st">&quot; source address=&quot;</span>192.168.0.200<span class="st">&quot; port protocol=&quot;</span>tcp<span class="st">&quot; port=&quot;</span>80<span class="st">&quot; accept&quot;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --permanent --add-rich-rule=<span class="st">&quot;rule family=&quot;</span>ipv4<span class="st">&quot; source address=&quot;</span>10.0.0.0/24<span class="st">&quot; port protocol=&quot;</span>tcp<span class="st">&quot; port=&quot;</span>80<span class="st">&quot; reject&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--permanent</span> <span class="at">--add-rich-rule</span><span class="op">=</span><span class="st">&quot;rule family=&quot;</span>ipv4<span class="st">&quot; source address=&quot;</span>192.168.0.200<span class="st">&quot; port protocol=&quot;</span>tcp<span class="st">&quot; port=&quot;</span>80<span class="st">&quot; accept&quot;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--permanent</span> <span class="at">--add-rich-rule</span><span class="op">=</span><span class="st">&quot;rule family=&quot;</span>ipv4<span class="st">&quot; source address=&quot;</span>10.0.0.0/24<span class="st">&quot; port protocol=&quot;</span>tcp<span class="st">&quot; port=&quot;</span>80<span class="st">&quot; reject&quot;</span></span></code></pre></div>
 <h2 id="&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;">&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> --reload</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firewall-cmd</span> <span class="at">--reload</span></span></code></pre></div>
 <blockquote>
 <p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x540E;&#x8981;&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;</p>
 </blockquote>

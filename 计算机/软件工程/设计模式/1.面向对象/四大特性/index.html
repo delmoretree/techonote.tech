@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1015,45 +1024,45 @@
 <h2 id="&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</h2>
 <p>&#x901A;&#x8FC7;&#x8BED;&#x8A00;&#x672C;&#x8EAB;&#x7684;&#x8BBF;&#x95EE; <code>&#x6743;&#x9650;&#x63A7;&#x5236;</code> &#x8FD9;&#x4E00;&#x8BED;&#x6CD5;&#x673A;&#x5236;&#x652F;&#x6301;&#x5C01;&#x88C5;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Wallet {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> id;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> createTime;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">BigDecimal</span> balance;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> balanceLastModifiedTime;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Wallet <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> id<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> createTime<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">BigDecimal</span> balance<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> balanceLastModifiedTime<span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;...</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Wallet</span>() {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span>.<span class="fu">id</span> = IdGenerator.<span class="fu">getInstance</span>().<span class="fu">generate</span>();</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span>.<span class="fu">createTime</span> = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span>.<span class="fu">balance</span> = <span class="bu">BigDecimal</span>.<span class="fu">ZERO</span>;</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span>.<span class="fu">balanceLastModifiedTime</span> = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Wallet</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span><span class="op">.</span><span class="fu">id</span> <span class="op">=</span> IdGenerator<span class="op">.</span><span class="fu">getInstance</span><span class="op">().</span><span class="fu">generate</span><span class="op">();</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span><span class="op">.</span><span class="fu">createTime</span> <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span> <span class="op">=</span> <span class="bu">BigDecimal</span><span class="op">.</span><span class="fu">ZERO</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="kw">this</span><span class="op">.</span><span class="fu">balanceLastModifiedTime</span> <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x9762;&#x5BF9;get&#x65B9;&#x6CD5;&#x505A;&#x4E86;&#x4EE3;&#x7801;&#x6298;&#x53E0;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x6240;&#x5360;&#x6587;&#x7AE0;&#x7684;&#x7BC7;&#x5E45;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getId</span>() { <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">id</span>; }</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getCreateTime</span>() { <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">createTime</span>; }</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span>() { <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">balance</span>; }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getBalanceLastModifiedTime</span>() { <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">balanceLastModifiedTime</span>;  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">id</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getCreateTime</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">createTime</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getBalanceLastModifiedTime</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">balanceLastModifiedTime</span><span class="op">;</span>  <span class="op">}</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">increaseBalance</span>(<span class="bu">BigDecimal</span> increasedAmount) {</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (increasedAmount.<span class="fu">compareTo</span>(<span class="bu">BigDecimal</span>.<span class="fu">ZERO</span>) &lt; <span class="dv">0</span>) {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span>(<span class="st">&quot;...&quot;</span>);</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balance</span>.<span class="fu">add</span>(increasedAmount);</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balanceLastModifiedTime</span> = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">increaseBalance</span><span class="op">(</span><span class="bu">BigDecimal</span> increasedAmount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>increasedAmount<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="bu">BigDecimal</span><span class="op">.</span><span class="fu">ZERO</span><span class="op">)</span> <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span><span class="op">(</span><span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span>increasedAmount<span class="op">);</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balanceLastModifiedTime</span> <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">decreaseBalance</span>(<span class="bu">BigDecimal</span> decreasedAmount) {</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (decreasedAmount.<span class="fu">compareTo</span>(<span class="bu">BigDecimal</span>.<span class="fu">ZERO</span>) &lt; <span class="dv">0</span>) {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span>(<span class="st">&quot;...&quot;</span>);</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (decreasedAmount.<span class="fu">compareTo</span>(<span class="kw">this</span>.<span class="fu">balance</span>) &gt; <span class="dv">0</span>) {</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InsufficientAmountException</span>(<span class="st">&quot;...&quot;</span>);</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balance</span>.<span class="fu">subtract</span>(decreasedAmount);</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balanceLastModifiedTime</span> = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">decreaseBalance</span><span class="op">(</span><span class="bu">BigDecimal</span> decreasedAmount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>decreasedAmount<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="bu">BigDecimal</span><span class="op">.</span><span class="fu">ZERO</span><span class="op">)</span> <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span><span class="op">(</span><span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>decreasedAmount<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">)</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InsufficientAmountException</span><span class="op">(</span><span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">.</span><span class="fu">subtract</span><span class="op">(</span>decreasedAmount<span class="op">);</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balanceLastModifiedTime</span> <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x4ECE;&#x4E1A;&#x52A1;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#xFF0C;<code>id</code>&#x3001;<code>createTime</code> &#x5728;&#x521B;&#x5EFA;&#x94B1;&#x5305;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x786E;&#x5B9A;&#x597D;&#x4E86;&#xFF0C;&#x4E4B;&#x540E;&#x4E0D;&#x5E94;&#x8BE5;&#x518D;&#x88AB;&#x6539;&#x52A8;&#xFF0C;&#x6240;&#x4EE5;&#x5E76;&#x6CA1;&#x6709;&#x66B4;&#x9732;&#x4FEE;&#x6539;&#x65B9;&#x6CD5;&#x3002;</li>
 <li>&#x5BF9;&#x4E8E;&#x94B1;&#x5305;&#x4F59;&#x989D; <code>balance</code> &#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4ECE;&#x4E1A;&#x52A1;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x80FD;&#x589E;&#x6216;&#x8005;&#x51CF;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x3002;&#x6240;&#x4EE5;&#x53EA;&#x66B4;&#x9732;&#x4E86; <code>increaseBalance()</code> &#x548C; <code>decreaseBalance()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x66B4;&#x9732; <code>set</code> &#x65B9;&#x6CD5;&#x3002;</li>
@@ -1070,24 +1079,24 @@
 <h2 id="&#x5B9E;&#x73B0;-1">&#x5B9E;&#x73B0;</h2>
 <p>&#x501F;&#x52A9;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x63D0;&#x4F9B;&#x7684; <code>&#x63A5;&#x53E3;&#x7C7B;</code>&#xFF08;&#x6BD4;&#x5982; Java &#x4E2D;&#x7684; interface &#x5173;&#x952E;&#x5B57;&#x8BED;&#x6CD5;&#xFF09;&#x6216;&#x8005; <code>&#x62BD;&#x8C61;&#x7C7B;</code>&#xFF08;&#x6BD4;&#x5982; Java &#x4E2D;&#x7684; abstract &#x5173;&#x952E;&#x5B57;&#x8BED;&#x6CD5;&#xFF09;&#x8FD9;&#x4E24;&#x79CD;&#x8BED;&#x6CD5;&#x673A;&#x5236;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x62BD;&#x8C61;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#x3002;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IPictureStorage {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">savePicture</span>(Picture picture);</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Image</span> <span class="fu">getPicture</span>(<span class="bu">String</span> pictureId);</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">deletePicture</span>(<span class="bu">String</span> pictureId);</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">modifyMetaInfo</span>(<span class="bu">String</span> pictureId, PictureMetaInfo metaInfo);</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IPictureStorage <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">savePicture</span><span class="op">(</span>Picture picture<span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Image</span> <span class="fu">getPicture</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">);</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">deletePicture</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">);</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">modifyMetaInfo</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">,</span> PictureMetaInfo metaInfo<span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PictureStorage <span class="kw">implements</span> IPictureStorage {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PictureStorage <span class="kw">implements</span> IPictureStorage <span class="op">{</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;...</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">savePicture</span>(Picture picture) {  }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">savePicture</span><span class="op">(</span>Picture picture<span class="op">)</span> <span class="op">{</span>  <span class="op">}</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">getPicture</span>(<span class="bu">String</span> pictureId) {  }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">getPicture</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">)</span> <span class="op">{</span>  <span class="op">}</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">deletePicture</span>(<span class="bu">String</span> pictureId) {  }</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">deletePicture</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">)</span> <span class="op">{</span>  <span class="op">}</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">modifyMetaInfo</span>(<span class="bu">String</span> pictureId, PictureMetaInfo metaInfo) {  }</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">modifyMetaInfo</span><span class="op">(</span><span class="bu">String</span> pictureId<span class="op">,</span> PictureMetaInfo metaInfo<span class="op">)</span> <span class="op">{</span>  <span class="op">}</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x4E00;&#x5B9A;&#x8981;&#x4E3A;&#x5B9E;&#x73B0;&#x7C7B; <code>PictureStorage</code> &#x62BD;&#x8C61;&#x51FA;&#x63A5;&#x53E3;&#x7C7B; <code>IPictureStorage</code> &#xFF0C;&#x624D;&#x53EB;&#x4F5C;&#x62BD;&#x8C61;&#x3002;&#x5373;&#x4FBF;&#x4E0D;&#x7F16;&#x5199; <code>IPictureStorage</code> &#x63A5;&#x53E3;&#x7C7B;&#xFF0C;&#x5355;&#x7EAF;&#x7684; <code>PictureStorage</code> &#x7C7B;&#x672C;&#x8EAB;&#x5C31;&#x6EE1;&#x8DB3;&#x62BD;&#x8C61;&#x7279;&#x6027;&#x3002;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x7684; <code>&#x51FD;&#x6570;</code> &#x8FD9;&#x4E00;&#x8BED;&#x6CD5;&#x673A;&#x5236;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x5305;&#x88F9;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#xFF0C;&#x8FD9;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x62BD;&#x8C61;&#x3002;&#x8C03;&#x7528;&#x8005;&#x5728;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x7814;&#x7A76;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x7684;&#x547D;&#x540D;&#x3001;&#x6CE8;&#x91CA;&#x6216;&#x8005;&#x6587;&#x6863;&#xFF0C;&#x4E86;&#x89E3;&#x5176;&#x63D0;&#x4F9B;&#x4E86;&#x4EC0;&#x4E48;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528; C &#x8BED;&#x8A00;&#x7684; <code>malloc()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x5B83;&#x7684;&#x5E95;&#x5C42;&#x4EE3;&#x7801;&#x662F;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x7684;&#x3002;</li>
 <li>&#x4E0D;&#x8981;&#x5728;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x66B4;&#x9732;&#x592A;&#x591A;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x9700;&#x8981;&#x6539;&#x53D8;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x7528;&#x53BB;&#x4FEE;&#x6539;&#x5176;&#x5B9A;&#x4E49;&#x3002;&#x4E3E;&#x4E2A;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982; <code>getAliyunPictureUrl()</code> &#x5C31;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x62BD;&#x8C61;&#x601D;&#x7EF4;&#x7684;&#x547D;&#x540D;&#xFF0C;&#x56E0;&#x4E3A;&#x67D0;&#x4E00;&#x5929;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x518D;&#x628A;&#x56FE;&#x7247;&#x5B58;&#x50A8;&#x5728;&#x963F;&#x91CC;&#x4E91;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x79C1;&#x6709;&#x4E91;&#x4E0A;&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x547D;&#x540D;&#x4E5F;&#x8981;&#x968F;&#x4E4B;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x62BD;&#x8C61;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x53EB;&#x4F5C; <code>getPictureUrl()</code> &#xFF0C;&#x90A3;&#x5373;&#x4FBF;&#x5185;&#x90E8;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x547D;&#x540D;&#x3002;</li>
@@ -1111,42 +1120,42 @@
 <h2 id="&#x7EC4;&#x5408;&#x4F18;&#x4E8E;&#x7EE7;&#x627F;">&#x7EC4;&#x5408;&#x4F18;&#x4E8E;&#x7EE7;&#x627F;</h2>
 <p>&#x5229;&#x7528; <code>&#x7EC4;&#x5408;&#xFF08;composition&#xFF09;</code>&#x3001;<code>&#x63A5;&#x53E3;</code> &#x3001;<code>&#x59D4;&#x6258;&#xFF08;delegation&#xFF09;</code> &#x4E09;&#x4E2A;&#x6280;&#x672F;&#x624B;&#x6BB5;&#xFF0C;&#x4E00;&#x5757;&#x513F;&#x6765;&#x89E3;&#x51B3;&#x7EE7;&#x627F;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Flyable {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fly</span>();</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Tweetable {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">tweet</span>();</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> EggLayable {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">layEgg</span>();</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> FlyAbility <span class="kw">implements</span> Flyable {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Flyable <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fly</span><span class="op">();</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Tweetable <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">tweet</span><span class="op">();</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> EggLayable <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">layEgg</span><span class="op">();</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> FlyAbility <span class="kw">implements</span> Flyable <span class="op">{</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fly</span>() { <span class="co">//... }</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TweetAbility <span class="kw">implements</span> Tweetable {</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fly</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TweetAbility <span class="kw">implements</span> Tweetable <span class="op">{</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tweet</span>() { <span class="co">//... }</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> EggLayAbility <span class="kw">implements</span> EggLayable {</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tweet</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> EggLayAbility <span class="kw">implements</span> EggLayable <span class="op">{</span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">layEgg</span>() { <span class="co">//... }</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">layEgg</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x9E35;&#x9E1F;&#x4E0D;&#x4F1A;&#x98DE;&#xFF0C;&#x4E0D;&#x7528;&#x5B9E;&#x73B0;&#x98DE;&#x884C;&#x63A5;&#x53E3;</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Ostrich <span class="kw">implements</span> Tweetable, EggLayable {</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> TweetAbility tweetAbility = <span class="kw">new</span> <span class="fu">TweetAbility</span>(); <span class="co">//&#x7EC4;&#x5408;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> EggLayAbility eggLayAbility = <span class="kw">new</span> <span class="fu">EggLayAbility</span>(); <span class="co">//&#x7EC4;&#x5408;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Ostrich <span class="kw">implements</span> Tweetable<span class="op">,</span> EggLayable <span class="op">{</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> TweetAbility tweetAbility <span class="op">=</span> <span class="kw">new</span> <span class="fu">TweetAbility</span><span class="op">();</span> <span class="co">//&#x7EC4;&#x5408;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> EggLayAbility eggLayAbility <span class="op">=</span> <span class="kw">new</span> <span class="fu">EggLayAbility</span><span class="op">();</span> <span class="co">//&#x7EC4;&#x5408;</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="co">//... &#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tweet</span>() {</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    tweetAbility.<span class="fu">tweet</span>(); <span class="co">// &#x59D4;&#x6258;</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tweet</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    tweetAbility<span class="op">.</span><span class="fu">tweet</span><span class="op">();</span> <span class="co">// &#x59D4;&#x6258;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">layEgg</span>() {</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    eggLayAbility.<span class="fu">layEgg</span>(); <span class="co">// &#x59D4;&#x6258;</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">layEgg</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    eggLayAbility<span class="op">.</span><span class="fu">layEgg</span><span class="op">();</span> <span class="co">// &#x59D4;&#x6258;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x7EC4;&#x5408;-or-&#x7EE7;&#x627F;">&#x7EC4;&#x5408; or &#x7EE7;&#x627F;</h2>
 <p><strong>&#x7B80;&#x5355;&#x7528;&#x7EE7;&#x627F;&#xFF0C;&#x590D;&#x6742;&#x7528;&#x7EC4;&#x5408;&#x3002;</strong> &#x5982;&#x679C;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x7EE7;&#x627F;&#x7ED3;&#x6784;&#x7A33;&#x5B9A;&#xFF08;&#x4E0D;&#x4F1A;&#x8F7B;&#x6613;&#x6539;&#x53D8;&#xFF09;&#xFF0C;&#x7EE7;&#x627F;&#x5C42;&#x6B21;&#x6BD4;&#x8F83;&#x6D45;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x6700;&#x591A;&#x6709;&#x4E24;&#x5C42;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF09;&#xFF0C;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x4E0D;&#x590D;&#x6742;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5927;&#x80C6;&#x5730;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x3002;&#x53CD;&#x4E4B;&#xFF0C;&#x7CFB;&#x7EDF;&#x8D8A;&#x4E0D;&#x7A33;&#x5B9A;&#xFF0C;&#x7EE7;&#x627F;&#x5C42;&#x6B21;&#x5F88;&#x6DF1;&#xFF0C;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x590D;&#x6742;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x7EC4;&#x5408;&#x6765;&#x66FF;&#x4EE3;&#x7EE7;&#x627F;&#x3002; <strong>&#x65E0;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x7528;&#x7EC4;&#x5408;&#x3002;</strong> &#x9700;&#x8981;&#x4EE3;&#x7801;&#x590D;&#x7528;&#xFF0C;&#x53C8;&#x4E0D;&#x5177;&#x6709;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x4F7F;&#x7528;&#x7EC4;&#x5408;&#x5C31;&#x66F4;&#x52A0;&#x5408;&#x7406;&#x3001;&#x66F4;&#x52A0;&#x7075;&#x6D3B; <strong>&#x9700;&#x8981;&#x591A;&#x6001;&#x7279;&#x6027;&#x7528;&#x7EE7;&#x627F;&#x3002;</strong> &#x5982;&#x679C;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5165;&#x53C2;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x5165;&#x53C2;&#x53C8;&#x975E;&#x63A5;&#x53E3;&#xFF0C;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x591A;&#x6001;&#xFF0C;&#x53EA;&#x80FD;&#x91C7;&#x7528;&#x7EE7;&#x627F;&#x6765;&#x5B9E;&#x73B0;</p>
 <h1 id="&#x591A;&#x6001;">&#x591A;&#x6001;</h1>
@@ -1160,102 +1169,102 @@
 <h2 id="&#x5B9E;&#x73B0;-3">&#x5B9E;&#x73B0;</h2>
 <h3 id="&#x7EE7;&#x627F;&#x91CD;&#x5199;">&#x7EE7;&#x627F;&#x91CD;&#x5199;</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DynamicArray {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> DEFAULT_CAPACITY = <span class="dv">10</span>;</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">int</span> size = <span class="dv">0</span>;</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">int</span> capacity = DEFAULT_CAPACITY;</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">Integer</span>[] elements = <span class="kw">new</span> <span class="bu">Integer</span>[DEFAULT_CAPACITY];</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DynamicArray <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> DEFAULT_CAPACITY <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">int</span> size <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">int</span> capacity <span class="op">=</span> DEFAULT_CAPACITY<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">Integer</span><span class="op">[]</span> elements <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">[</span>DEFAULT_CAPACITY<span class="op">];</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">size</span>() { <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">size</span>; }</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Integer</span> <span class="fu">get</span>(<span class="dt">int</span> index) { <span class="kw">return</span> elements[index];}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">size</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">size</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Integer</span> <span class="fu">get</span><span class="op">(</span><span class="dt">int</span> index<span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> elements<span class="op">[</span>index<span class="op">];}</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;n&#x591A;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">add</span>(<span class="bu">Integer</span> e) {</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ensureCapacity</span>();</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    elements[size++] = e;</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">add</span><span class="op">(</span><span class="bu">Integer</span> e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ensureCapacity</span><span class="op">();</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    elements<span class="op">[</span>size<span class="op">++]</span> <span class="op">=</span> e<span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">ensureCapacity</span>() {</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">ensureCapacity</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x5982;&#x679C;&#x6570;&#x7EC4;&#x6EE1;&#x4E86;&#x5C31;&#x6269;&#x5BB9;...&#x4EE3;&#x7801;&#x7701;&#x7565;...</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SortedDynamicArray <span class="kw">extends</span> DynamicArray {</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SortedDynamicArray <span class="kw">extends</span> DynamicArray <span class="op">{</span></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">add</span>(<span class="bu">Integer</span> e) {</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ensureCapacity</span>();</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i;</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (i = size-<span class="dv">1</span>; i&gt;=<span class="dv">0</span>; --i) { <span class="co">//&#x4FDD;&#x8BC1;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6709;&#x5E8F;</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>      <span class="kw">if</span> (elements[i] &gt; e) {</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        elements[i+<span class="dv">1</span>] = elements[i];</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      } <span class="kw">else</span> {</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        <span class="kw">break</span>;</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    elements[i+<span class="dv">1</span>] = e;</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    ++size;</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">add</span><span class="op">(</span><span class="bu">Integer</span> e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ensureCapacity</span><span class="op">();</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>i <span class="op">=</span> size<span class="op">-</span><span class="dv">1</span><span class="op">;</span> i<span class="op">&gt;=</span><span class="dv">0</span><span class="op">;</span> <span class="op">--</span>i<span class="op">)</span> <span class="op">{</span> <span class="co">//&#x4FDD;&#x8BC1;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6709;&#x5E8F;</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="op">(</span>elements<span class="op">[</span>i<span class="op">]</span> <span class="op">&gt;</span> e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        elements<span class="op">[</span>i<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> elements<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    elements<span class="op">[</span>i<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> e<span class="op">;</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>size<span class="op">;</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Example {</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">test</span>(DynamicArray dynamicArray) {</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    dynamicArray.<span class="fu">add</span>(<span class="dv">5</span>);</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    dynamicArray.<span class="fu">add</span>(<span class="dv">1</span>);</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    dynamicArray.<span class="fu">add</span>(<span class="dv">3</span>);</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; dynamicArray.<span class="fu">size</span>(); ++i) {</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(dynamicArray.<span class="fu">get</span>(i));</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Example <span class="op">{</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">test</span><span class="op">(</span>DynamicArray dynamicArray<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    dynamicArray<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">5</span><span class="op">);</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    dynamicArray<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    dynamicArray<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">3</span><span class="op">);</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> dynamicArray<span class="op">.</span><span class="fu">size</span><span class="op">();</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>dynamicArray<span class="op">.</span><span class="fu">get</span><span class="op">(</span>i<span class="op">));</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) {</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    DynamicArray dynamicArray = <span class="kw">new</span> <span class="fu">SortedDynamicArray</span>();</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">test</span>(dynamicArray); <span class="co">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;1&#x3001;3&#x3001;5</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span> args<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    DynamicArray dynamicArray <span class="op">=</span> <span class="kw">new</span> <span class="fu">SortedDynamicArray</span><span class="op">();</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">test</span><span class="op">(</span>dynamicArray<span class="op">);</span> <span class="co">// &#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;1&#x3001;3&#x3001;5</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x5B50;&#x7C7B; <code>SortedDyamicArray</code> &#x66FF;&#x6362;&#x7236;&#x7C7B; <code>DynamicArray</code> &#xFF0C;&#x6267;&#x884C;&#x5B50;&#x7C7B; <code>SortedDyamicArray</code> &#x7684; <code>add()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x591A;&#x6001;&#x7279;&#x6027;&#x3002;</p>
 </blockquote>
 <h3 id="&#x5229;&#x7528;&#x63A5;&#x53E3;&#x7C7B;">&#x5229;&#x7528;&#x63A5;&#x53E3;&#x7C7B;</h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span> {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span>();</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">next</span>();</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">remove</span>();</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">();</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">next</span><span class="op">();</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">remove</span><span class="op">();</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Array</span> <span class="kw">implements</span> <span class="bu">Iterator</span> {</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span>[] data;</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Array</span> <span class="kw">implements</span> <span class="bu">Iterator</span> <span class="op">{</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span><span class="op">[]</span> data<span class="op">;</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span>() { <span class="kw">... </span>}</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">next</span>() { <span class="kw">... </span>}</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">remove</span>() { <span class="kw">... </span>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">()</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">next</span><span class="op">()</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">remove</span><span class="op">()</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;...</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">LinkedList</span> <span class="kw">implements</span> <span class="bu">Iterator</span> {</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> LinkedListNode head;</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">LinkedList</span> <span class="kw">implements</span> <span class="bu">Iterator</span> <span class="op">{</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> LinkedListNode head<span class="op">;</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span>() {  }</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">next</span>() {  }</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">remove</span>() {  }</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">()</span> <span class="op">{</span>  <span class="op">}</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">next</span><span class="op">()</span> <span class="op">{</span>  <span class="op">}</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">remove</span><span class="op">()</span> <span class="op">{</span>  <span class="op">}</span></span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;... </span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo {</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">print</span>(<span class="bu">Iterator</span> iterator) {</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">while</span> (iterator.<span class="fu">hasNext</span>()) {</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(iterator.<span class="fu">next</span>());</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo <span class="op">{</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">print</span><span class="op">(</span><span class="bu">Iterator</span> iterator<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>iterator<span class="op">.</span><span class="fu">hasNext</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>iterator<span class="op">.</span><span class="fu">next</span><span class="op">());</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span> arrayIterator = <span class="kw">new</span> <span class="bu">Array</span>();</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(arrayIterator);</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span> arrayIterator <span class="op">=</span> <span class="kw">new</span> <span class="bu">Array</span><span class="op">();</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span><span class="op">(</span>arrayIterator<span class="op">);</span></span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span> linkedListIterator = <span class="kw">new</span> <span class="bu">LinkedList</span>();</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(linkedListIterator);</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span> linkedListIterator <span class="op">=</span> <span class="kw">new</span> <span class="bu">LinkedList</span><span class="op">();</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span><span class="op">(</span>linkedListIterator<span class="op">);</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <ul>
 <li><code>Iterator</code> &#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7C7B;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x96C6;&#x5408;&#x6570;&#x636E;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;</li>
@@ -1303,8 +1312,8 @@
         </div>
         <div class="item right">
             
-              <a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-1-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/">
-                1-1-函数极限
+              <a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-3-%E6%97%A0%E7%A9%B7%E5%B0%8F/">
+                1-3-无穷小
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

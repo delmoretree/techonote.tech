@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1008,174 +1017,174 @@
 <h2 id="&#x5C06;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x7684;&#x90E8;&#x5206;&#x62BD;&#x8C61;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7C7B;">&#x5C06;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x7684;&#x90E8;&#x5206;&#x62BD;&#x8C61;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7C7B;</h2>
 <p>&#x4F8B;&#xFF1A;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x89E3;&#x6790;&#x5668;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x89E3;&#x6790;&#x6210;&#x5BF9;&#x8C61;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span>(<span class="bu">String</span> ruleConfigFilePath) {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension = <span class="fu">getFileExtension</span>(ruleConfigFilePath);</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser = <span class="kw">null</span>;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (<span class="st">&quot;json&quot;</span>.<span class="fu">equalsIgnoreCase</span>(ruleConfigFileExtension)) {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span>();</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;xml&quot;</span>.<span class="fu">equalsIgnoreCase</span>(ruleConfigFileExtension)) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span>();</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;yaml&quot;</span>.<span class="fu">equalsIgnoreCase</span>(ruleConfigFileExtension)) {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span>();</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;properties&quot;</span>.<span class="fu">equalsIgnoreCase</span>(ruleConfigFileExtension)) {</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span>();</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span>(</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;Rule config file format is not supported: &quot;</span> + ruleConfigFilePath);</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span><span class="op">(</span><span class="bu">String</span> ruleConfigFilePath<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension <span class="op">=</span> <span class="fu">getFileExtension</span><span class="op">(</span>ruleConfigFilePath<span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;json&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>ruleConfigFileExtension<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;xml&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>ruleConfigFileExtension<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;yaml&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>ruleConfigFileExtension<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;properties&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>ruleConfigFileExtension<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span><span class="op">(</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;Rule config file format is not supported: &quot;</span> <span class="op">+</span> ruleConfigFilePath<span class="op">);</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText = <span class="st">&quot;&quot;</span>;</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x4ECE;ruleConfigFilePath&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x672C;&#x5230;configText&#x4E2D;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig = parser.<span class="fu">parse</span>(configText);</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> ruleConfig;</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig <span class="op">=</span> parser<span class="op">.</span><span class="fu">parse</span><span class="op">(</span>configText<span class="op">);</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ruleConfig<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span>(<span class="bu">String</span> filePath) {</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span><span class="op">(</span><span class="bu">String</span> filePath<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x540D;&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x6BD4;&#x5982;rule.json&#xFF0C;&#x8FD4;&#x56DE;json</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="st">&quot;json&quot;</span>;</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;json&quot;</span><span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x4E3A;&#x4E86;&#x8BA9;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x597D;&#xFF0C;&#x5C06;&#x4EE3;&#x7801;&#x4E2D;&#x6D89;&#x53CA; <code>parser</code> &#x521B;&#x5EFA;&#x7684;&#x90E8;&#x5206;&#x903B;&#x8F91;&#x5265;&#x79BB;&#x51FA;&#x6765;&#xFF0C;&#x62BD;&#x8C61;&#x5230;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#x4E2D;&#xFF0C;&#x8D1F;&#x8D23;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x3002;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span>(<span class="bu">String</span> ruleConfigFilePath) {</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension = <span class="fu">getFileExtension</span>(ruleConfigFilePath);</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser = RuleConfigParserFactory.<span class="fu">createParser</span>(ruleConfigFileExtension);</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (parser == <span class="kw">null</span>) {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span>(</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;Rule config file format is not supported: &quot;</span> + ruleConfigFilePath);</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span><span class="op">(</span><span class="bu">String</span> ruleConfigFilePath<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension <span class="op">=</span> <span class="fu">getFileExtension</span><span class="op">(</span>ruleConfigFilePath<span class="op">);</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser <span class="op">=</span> RuleConfigParserFactory<span class="op">.</span><span class="fu">createParser</span><span class="op">(</span>ruleConfigFileExtension<span class="op">);</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>parser <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span><span class="op">(</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;Rule config file format is not supported: &quot;</span> <span class="op">+</span> ruleConfigFilePath<span class="op">);</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText = <span class="st">&quot;&quot;</span>;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x4ECE;ruleConfigFilePath&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x672C;&#x5230;configText&#x4E2D;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig = parser.<span class="fu">parse</span>(configText);</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> ruleConfig;</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig <span class="op">=</span> parser<span class="op">.</span><span class="fu">parse</span><span class="op">(</span>configText<span class="op">);</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ruleConfig<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span>(<span class="bu">String</span> filePath) {</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span><span class="op">(</span><span class="bu">String</span> filePath<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x540D;&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x6BD4;&#x5982;rule.json&#xFF0C;&#x8FD4;&#x56DE;json</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="st">&quot;json&quot;</span>;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;json&quot;</span><span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactory {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParser <span class="fu">createParser</span>(<span class="bu">String</span> configFormat) {</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser = <span class="kw">null</span>;</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (<span class="st">&quot;json&quot;</span>.<span class="fu">equalsIgnoreCase</span>(configFormat)) {</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span>();</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;xml&quot;</span>.<span class="fu">equalsIgnoreCase</span>(configFormat)) {</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span>();</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;yaml&quot;</span>.<span class="fu">equalsIgnoreCase</span>(configFormat)) {</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span>();</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (<span class="st">&quot;properties&quot;</span>.<span class="fu">equalsIgnoreCase</span>(configFormat)) {</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>      parser = <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span>();</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> parser;</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactory <span class="op">{</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">(</span><span class="bu">String</span> configFormat<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;json&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>configFormat<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;xml&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>configFormat<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;yaml&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>configFormat<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span><span class="st">&quot;properties&quot;</span><span class="op">.</span><span class="fu">equalsIgnoreCase</span><span class="op">(</span>configFormat<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>      parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parser<span class="op">;</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x5C06;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#x63D0;&#x5347;&#x6027;&#x80FD;">&#x5C06;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x63D0;&#x5347;&#x6027;&#x80FD;</h2>
 <p>&#x5C06; <code>parser</code> &#x4E8B;&#x5148;&#x521B;&#x5EFA;&#x597D;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#x3002;&#x5F53;&#x8C03;&#x7528; <code>createParser()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x53D6;&#x51FA; <code>parser</code> &#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactory {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, RuleConfigParser&gt; cachedParsers = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactory <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> RuleConfigParser<span class="op">&gt;</span> cachedParsers <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    cachedParsers.<span class="fu">put</span>(<span class="st">&quot;json&quot;</span>, <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span>());</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    cachedParsers.<span class="fu">put</span>(<span class="st">&quot;xml&quot;</span>, <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span>());</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    cachedParsers.<span class="fu">put</span>(<span class="st">&quot;yaml&quot;</span>, <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span>());</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    cachedParsers.<span class="fu">put</span>(<span class="st">&quot;properties&quot;</span>, <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span>());</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    cachedParsers<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;json&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span><span class="op">());</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    cachedParsers<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;xml&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span><span class="op">());</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    cachedParsers<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;yaml&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span><span class="op">());</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    cachedParsers<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;properties&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span><span class="op">());</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParser <span class="fu">createParser</span>(<span class="bu">String</span> configFormat) {</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (configFormat == <span class="kw">null</span> || configFormat.<span class="fu">isEmpty</span>()) {</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">null</span>;<span class="co">//&#x8FD4;&#x56DE;null&#x8FD8;&#x662F;IllegalArgumentException&#x5168;&#x51ED;&#x4F60;&#x81EA;&#x5DF1;&#x8BF4;&#x4E86;&#x7B97;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser = cachedParsers.<span class="fu">get</span>(configFormat.<span class="fu">toLowerCase</span>());</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> parser;</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">(</span><span class="bu">String</span> configFormat<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>configFormat <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> configFormat<span class="op">.</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">null</span><span class="op">;</span><span class="co">//&#x8FD4;&#x56DE;null&#x8FD8;&#x662F;IllegalArgumentException&#x5168;&#x51ED;&#x4F60;&#x81EA;&#x5DF1;&#x8BF4;&#x4E86;&#x7B97;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser <span class="op">=</span> cachedParsers<span class="op">.</span><span class="fu">get</span><span class="op">(</span>configFormat<span class="op">.</span><span class="fu">toLowerCase</span><span class="op">());</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parser<span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x5982;&#x679C;&#x8981;&#x6DFB;&#x52A0;&#x65B0;&#x7684; <code>parser</code>&#xFF0C;&#x90A3;&#x52BF;&#x5FC5;&#x8981;&#x6539;&#x52A8;&#x5230; <code>RuleConfigParserFactory</code> &#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x8981;&#x4E0D;&#x662F;&#x9891;&#x7E41;&#x6539;&#x52A8;&#xFF0C;&#x7A0D;&#x5FAE;&#x4E0D;&#x7B26;&#x5408;&#x5F00;&#x95ED;&#x539F;&#x5219;&#xFF0C;&#x4E5F;&#x662F;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x7684;&#x3002;</p>
 </blockquote>
 <h1 id="&#x5DE5;&#x5382;&#x65B9;&#x6CD5;">&#x5DE5;&#x5382;&#x65B9;&#x6CD5;</h1>
 <h2 id="&#x5229;&#x7528;&#x591A;&#x6001;&#x652F;&#x6301;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x89E3;&#x51B3;if-else&#x6EE5;&#x7528;&#x95EE;&#x9898;">&#x5229;&#x7528;&#x591A;&#x6001;&#x652F;&#x6301;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF0C;&#x89E3;&#x51B3;if-else&#x6EE5;&#x7528;&#x95EE;&#x9898;</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IRuleConfigParserFactory {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  IRuleConfigParser <span class="fu">createParser</span>();</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IRuleConfigParserFactory <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  IRuleConfigParser <span class="fu">createParser</span><span class="op">();</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JsonRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JsonRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory <span class="op">{</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span>() {</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span>();</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> XmlRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> XmlRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory <span class="op">{</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span>() {</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span>();</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> YamlRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory {</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> YamlRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory <span class="op">{</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span>() {</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span>();</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PropertiesRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory {</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PropertiesRuleConfigParserFactory <span class="kw">implements</span> IRuleConfigParserFactory <span class="op">{</span></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span>() {</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span>();</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource {</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span>(<span class="bu">String</span> ruleConfigFilePath) {</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension = <span class="fu">getFileExtension</span>(ruleConfigFilePath);</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigSource <span class="op">{</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> RuleConfig <span class="fu">load</span><span class="op">(</span><span class="bu">String</span> ruleConfigFilePath<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> ruleConfigFileExtension <span class="op">=</span> <span class="fu">getFileExtension</span><span class="op">(</span>ruleConfigFilePath<span class="op">);</span></span>
 <span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParserFactory parserFactory = RuleConfigParserFactoryMap.<span class="fu">getParserFactory</span>(ruleConfigFileExtension);</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (parserFactory == <span class="kw">null</span>) {</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span>(<span class="st">&quot;Rule config file format is not supported: &quot;</span> + ruleConfigFilePath);</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser = parserFactory.<span class="fu">createParser</span>();</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParserFactory parserFactory <span class="op">=</span> RuleConfigParserFactoryMap<span class="op">.</span><span class="fu">getParserFactory</span><span class="op">(</span>ruleConfigFileExtension<span class="op">);</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>parserFactory <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidRuleConfigException</span><span class="op">(</span><span class="st">&quot;Rule config file format is not supported: &quot;</span> <span class="op">+</span> ruleConfigFilePath<span class="op">);</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParser parser <span class="op">=</span> parserFactory<span class="op">.</span><span class="fu">createParser</span><span class="op">();</span></span>
 <span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText = <span class="st">&quot;&quot;</span>;</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> configText <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
 <span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x4ECE;ruleConfigFilePath&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x672C;&#x5230;configText&#x4E2D;</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig = parser.<span class="fu">parse</span>(configText);</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> ruleConfig;</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    RuleConfig ruleConfig <span class="op">=</span> parser<span class="op">.</span><span class="fu">parse</span><span class="op">(</span>configText<span class="op">);</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ruleConfig<span class="op">;</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span>(<span class="bu">String</span> filePath) {</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">getFileExtension</span><span class="op">(</span><span class="bu">String</span> filePath<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x540D;&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x6BD4;&#x5982;rule.json&#xFF0C;&#x8FD4;&#x56DE;json</span></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="st">&quot;json&quot;</span>;</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;json&quot;</span><span class="op">;</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="co">//&#x56E0;&#x4E3A;&#x5DE5;&#x5382;&#x7C7B;&#x53EA;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#xFF0C;</span></span>
 <span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="co">//&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x6B21;&#x90FD;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5DE5;&#x5382;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x7684;&#x7B2C;&#x4E8C;&#x79CD;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;&#x66F4;&#x52A0;&#x5408;&#x9002;&#x3002;</span></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactoryMap { <span class="co">//&#x5DE5;&#x5382;&#x7684;&#x5DE5;&#x5382;</span></span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, IRuleConfigParserFactory&gt; cachedFactories = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RuleConfigParserFactoryMap <span class="op">{</span> <span class="co">//&#x5DE5;&#x5382;&#x7684;&#x5DE5;&#x5382;</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> IRuleConfigParserFactory<span class="op">&gt;</span> cachedFactories <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> {</span>
-<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>    cachedFactories.<span class="fu">put</span>(<span class="st">&quot;json&quot;</span>, <span class="kw">new</span> <span class="fu">JsonRuleConfigParserFactory</span>());</span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>    cachedFactories.<span class="fu">put</span>(<span class="st">&quot;xml&quot;</span>, <span class="kw">new</span> <span class="fu">XmlRuleConfigParserFactory</span>());</span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    cachedFactories.<span class="fu">put</span>(<span class="st">&quot;yaml&quot;</span>, <span class="kw">new</span> <span class="fu">YamlRuleConfigParserFactory</span>());</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    cachedFactories.<span class="fu">put</span>(<span class="st">&quot;properties&quot;</span>, <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParserFactory</span>());</span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> <span class="op">{</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>    cachedFactories<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;json&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParserFactory</span><span class="op">());</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>    cachedFactories<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;xml&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParserFactory</span><span class="op">());</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    cachedFactories<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;yaml&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">YamlRuleConfigParserFactory</span><span class="op">());</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    cachedFactories<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;properties&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">PropertiesRuleConfigParserFactory</span><span class="op">());</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParserFactory <span class="fu">getParserFactory</span>(<span class="bu">String</span> type) {</span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (type == <span class="kw">null</span> || type.<span class="fu">isEmpty</span>()) {</span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">null</span>;</span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParserFactory parserFactory = cachedFactories.<span class="fu">get</span>(type.<span class="fu">toLowerCase</span>());</span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> parserFactory;</span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IRuleConfigParserFactory <span class="fu">getParserFactory</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>type <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> type<span class="op">.</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>    IRuleConfigParserFactory parserFactory <span class="op">=</span> cachedFactories<span class="op">.</span><span class="fu">get</span><span class="op">(</span>type<span class="op">.</span><span class="fu">toLowerCase</span><span class="op">());</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parserFactory<span class="op">;</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x89C4;&#x5219;&#x914D;&#x7F6E;&#x89E3;&#x6790;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x65B0;&#x7684; <code>parser</code> &#x7C7B;&#x548C; <code>parser factory</code> &#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x5728; <code>RuleConfigParserFactoryMap</code> &#x7C7B;&#x4E2D;&#xFF0C;&#x5C06;&#x65B0;&#x7684; <code>parser factory</code> &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230; <code>cachedFactories</code> &#x4E2D;&#x5373;&#x53EF;&#x3002; &#x4EE3;&#x7801;&#x7684;&#x6539;&#x52A8;&#x975E;&#x5E38;&#x5C11;&#xFF0C;<strong>&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x6BD4;&#x8D77;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x66F4;&#x52A0;&#x7B26;&#x5408;&#x5F00;&#x95ED;&#x539F;&#x5219;</strong>&#x3002;</p>
 <h1 id="&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x590D;&#x6742;&#x7528;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x5426;&#x5219;&#x7528;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;">&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x590D;&#x6742;&#x7528;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#xFF0C;&#x5426;&#x5219;&#x7528;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;</h1>
 <p>&#x5F53;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x4E0D;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684; <code>new</code> &#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#xFF0C;&#x800C;&#x662F;&#x8981;&#x7EC4;&#x5408;&#x5176;&#x4ED6;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x505A;&#x5404;&#x79CD;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#xFF0C; &#x5C06;&#x590D;&#x6742;&#x7684;&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x62C6;&#x5206;&#x5230;&#x591A;&#x4E2A;&#x5DE5;&#x5382;&#x7C7B;&#x4E2D;&#xFF0C;&#x8BA9;&#x6BCF;&#x4E2A;&#x5DE5;&#x5382;&#x7C7B;&#x90FD;&#x4E0D;&#x81F3;&#x4E8E;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#x3002;&#x800C;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x7684;&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x90FD;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x5DE5;&#x5382;&#x7C7B;&#x53D8;&#x5F97;&#x5F88;&#x590D;&#x6742;&#x3002;</p>
@@ -1183,35 +1192,35 @@
 <h1 id="&#x62BD;&#x8C61;&#x5DE5;&#x5382;">&#x62BD;&#x8C61;&#x5DE5;&#x5382;</h1>
 <p>&#x8BA9;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF08;<code>IRuleConfigParser</code>&#x3001;<code>ISystemConfigParser</code> &#x7B49;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x79CD; <code>parser</code> &#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x5730;&#x51CF;&#x5C11;&#x5DE5;&#x5382;&#x7C7B;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IConfigParserFactory {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  IRuleConfigParser <span class="fu">createRuleParser</span>();</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  ISystemConfigParser <span class="fu">createSystemParser</span>();</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IConfigParserFactory <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  IRuleConfigParser <span class="fu">createRuleParser</span><span class="op">();</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  ISystemConfigParser <span class="fu">createSystemParser</span><span class="op">();</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">//&#x6B64;&#x5904;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x65B0;&#x7684;parser&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;IBizConfigParser</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JsonConfigParserFactory <span class="kw">implements</span> IConfigParserFactory {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JsonConfigParserFactory <span class="kw">implements</span> IConfigParserFactory <span class="op">{</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createRuleParser</span>() {</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span>();</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createRuleParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">JsonRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> ISystemConfigParser <span class="fu">createSystemParser</span>() {</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">JsonSystemConfigParser</span>();</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> ISystemConfigParser <span class="fu">createSystemParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">JsonSystemConfigParser</span><span class="op">();</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> XmlConfigParserFactory <span class="kw">implements</span> IConfigParserFactory {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> XmlConfigParserFactory <span class="kw">implements</span> IConfigParserFactory <span class="op">{</span></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createRuleParser</span>() {</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span>();</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> IRuleConfigParser <span class="fu">createRuleParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">XmlRuleConfigParser</span><span class="op">();</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> ISystemConfigParser <span class="fu">createSystemParser</span>() {</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">XmlSystemConfigParser</span>();</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> ISystemConfigParser <span class="fu">createSystemParser</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">XmlSystemConfigParser</span><span class="op">();</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x7701;&#x7565;YamlConfigParserFactory&#x548C;PropertiesConfigParserFactory&#x4EE3;&#x7801;</span></span></code></pre></div>
 <h1 id="&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x8BA9;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x597D;">&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x8BA9;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x597D;</h1>
@@ -1227,26 +1236,26 @@
 <h2 id="&#x914D;&#x7F6E;&#x89E3;&#x6790;">&#x914D;&#x7F6E;&#x89E3;&#x6790;</h2>
 <p>DI &#x5BB9;&#x5668;&#x4E8B;&#x5148;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5E94;&#x7528;&#x4F1A;&#x521B;&#x5EFA;&#x54EA;&#x4E9B;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x628A;&#x67D0;&#x4E2A;&#x5E94;&#x7528;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x5199;&#x6B7B;&#x5728;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x4E2D;&#x3002;<strong>&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#xFF0C;&#x8BA9;&#x5E94;&#x7528;&#x544A;&#x77E5; DI &#x5BB9;&#x5668;&#x8981;&#x521B;&#x5EFA;&#x54EA;&#x4E9B;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RateLimiter {</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> RedisCounter redisCounter;</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">RateLimiter</span>(RedisCounter redisCounter) {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">redisCounter</span> = redisCounter;</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">test</span>() {</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Hello World!&quot;</span>);</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RateLimiter <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> RedisCounter redisCounter<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">RateLimiter</span><span class="op">(</span>RedisCounter redisCounter<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">redisCounter</span> <span class="op">=</span> redisCounter<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">test</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hello World!&quot;</span><span class="op">);</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RedisCounter {</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> ipAddress;</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> port;</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">RedisCounter</span>(<span class="bu">String</span> ipAddress, <span class="dt">int</span> port) {</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">ipAddress</span> = ipAddress;</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">port</span> = port;</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RedisCounter <span class="op">{</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> ipAddress<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> port<span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">RedisCounter</span><span class="op">(</span><span class="bu">String</span> ipAddress<span class="op">,</span> <span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">ipAddress</span> <span class="op">=</span> ipAddress<span class="op">;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">port</span> <span class="op">=</span> port<span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;beans&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;bean</span><span class="ot"> id=</span><span class="st">&quot;rateLimiter&quot;</span><span class="ot"> class=</span><span class="st">&quot;com.xzg.RateLimiter&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;constructor-arg</span><span class="ot"> ref=</span><span class="st">&quot;redisCounter&quot;</span><span class="kw">/&gt;</span></span>

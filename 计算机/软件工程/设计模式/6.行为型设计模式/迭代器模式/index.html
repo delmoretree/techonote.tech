@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1012,80 +1021,80 @@
 <h2 id="iterator-&#x63A5;&#x53E3;">Iterator &#x63A5;&#x53E3;</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x4E00;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span>&lt;E&gt; {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span>();</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">next</span>();</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  E <span class="fu">currentItem</span>();</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">();</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">next</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  E <span class="fu">currentItem</span><span class="op">();</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x4E8C;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span>&lt;E&gt; {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span>();</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  E <span class="fu">next</span>();</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Iterator</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  E <span class="fu">next</span><span class="op">();</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x7B2C;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;<code>next()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x5C06;&#x6E38;&#x6807;&#x540E;&#x79FB;&#x4E00;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;<code>currentItem()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6E38;&#x6807;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;&#x3002;</li>
 <li>&#x5728;&#x7B2C;&#x4E8C;&#x79CD;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E0E;&#x540E;&#x79FB;&#x4E00;&#x4F4D;&#x8FD9;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x51FD;&#x6570; <code>next()</code> &#x4E2D;&#x5B8C;&#x6210;&#x3002;</li>
 </ul>
 <p>&#x7B2C;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;<strong>&#x66F4;&#x52A0;&#x7075;&#x6D3B;</strong>&#x4E00;&#x4E9B;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x8C03;&#x7528; <code>currentItem()</code> &#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x4E0D;&#x79FB;&#x52A8;&#x6E38;&#x6807;&#x3002;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ArrayIterator&lt;E&gt; <span class="kw">implements</span> <span class="bu">Iterator</span>&lt;E&gt; {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> cursor;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span>&lt;E&gt; arrayList;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ArrayIterator<span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="kw">implements</span> <span class="bu">Iterator</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> cursor<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>E<span class="op">&gt;</span> arrayList<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ArrayIterator</span>(<span class="bu">ArrayList</span>&lt;E&gt; arrayList) {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">cursor</span> = <span class="dv">0</span>;</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">arrayList</span> = arrayList;</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ArrayIterator</span><span class="op">(</span><span class="bu">ArrayList</span><span class="op">&lt;</span>E<span class="op">&gt;</span> arrayList<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">cursor</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">arrayList</span> <span class="op">=</span> arrayList<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span>() {</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> cursor != arrayList.<span class="fu">size</span>(); <span class="co">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#xFF0C;cursor&#x5728;&#x6307;&#x5411;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;hasNext()&#x4ECD;&#x65E7;&#x8FD4;&#x56DE;true&#x3002;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cursor <span class="op">!=</span> arrayList<span class="op">.</span><span class="fu">size</span><span class="op">();</span> <span class="co">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#xFF0C;cursor&#x5728;&#x6307;&#x5411;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;hasNext()&#x4ECD;&#x65E7;&#x8FD4;&#x56DE;true&#x3002;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">next</span>() {</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    cursor++;</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">next</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    cursor<span class="op">++;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> E <span class="fu">currentItem</span>() {</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (cursor &gt;= arrayList.<span class="fu">size</span>()) {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="bu">NoSuchElementException</span>();</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> arrayList.<span class="fu">get</span>(cursor);</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> E <span class="fu">currentItem</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>cursor <span class="op">&gt;=</span> arrayList<span class="op">.</span><span class="fu">size</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">NoSuchElementException</span><span class="op">();</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> arrayList<span class="op">.</span><span class="fu">get</span><span class="op">(</span>cursor<span class="op">);</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">List</span>&lt;E&gt; {</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Iterator</span> <span class="fu">iterator</span>();</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">List</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Iterator</span> <span class="fu">iterator</span><span class="op">();</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">ArrayList</span>&lt;E&gt; <span class="kw">implements</span> <span class="bu">List</span>&lt;E&gt; {</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="kw">implements</span> <span class="bu">List</span><span class="op">&lt;</span>E<span class="op">&gt;</span> <span class="op">{</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> cursor;</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span>&lt;E&gt; arrayList;</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> cursor<span class="op">;</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>E<span class="op">&gt;</span> arrayList<span class="op">;</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Iterator</span> <span class="fu">iterator</span>() {</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">ArrayIterator</span>(<span class="kw">this</span>);</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Iterator</span> <span class="fu">iterator</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">ArrayIterator</span><span class="op">(</span><span class="kw">this</span><span class="op">);</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo {</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">List</span>&lt;<span class="bu">String</span>&gt; names = <span class="kw">new</span> <span class="bu">ArrayList</span>&lt;&gt;();</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    names.<span class="fu">add</span>(<span class="st">&quot;xzg&quot;</span>);</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    names.<span class="fu">add</span>(<span class="st">&quot;wang&quot;</span>);</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    names.<span class="fu">add</span>(<span class="st">&quot;zheng&quot;</span>);</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo <span class="op">{</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> names <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    names<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">&quot;xzg&quot;</span><span class="op">);</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    names<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">&quot;wang&quot;</span><span class="op">);</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    names<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">&quot;zheng&quot;</span><span class="op">);</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span>&lt;<span class="bu">String</span>&gt; iterator = names.<span class="fu">iterator</span>();</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">while</span> (iterator.<span class="fu">hasNext</span>()) {</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(iterator.<span class="fu">currentItem</span>());</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      iterator.<span class="fu">next</span>();</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Iterator</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> iterator <span class="op">=</span> names<span class="op">.</span><span class="fu">iterator</span><span class="op">();</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>iterator<span class="op">.</span><span class="fu">hasNext</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>iterator<span class="op">.</span><span class="fu">currentItem</span><span class="op">());</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      iterator<span class="op">.</span><span class="fu">next</span><span class="op">();</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x9700;&#x8981;&#x5B9A;&#x4E49; <code>hasNext()</code>&#x3001;<code>currentItem()</code>&#x3001;<code>next()</code> &#x4E09;&#x4E2A;&#x6700;&#x57FA;&#x672C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
 <li>&#x5F85;&#x904D;&#x5386;&#x7684;&#x5BB9;&#x5668;&#x5BF9;&#x8C61;&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x4F20;&#x9012;&#x5230;&#x8FED;&#x4EE3;&#x5668;&#x7C7B;&#x4E2D;&#x3002;</li>

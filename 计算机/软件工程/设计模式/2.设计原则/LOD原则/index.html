@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1021,35 +1030,35 @@
 <h1 id="&#x4E0D;&#x8BE5;&#x6709;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#x4E0D;&#x8981;&#x6709;&#x4F9D;&#x8D56;">&#x4E0D;&#x8BE5;&#x6709;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#xFF0C;&#x4E0D;&#x8981;&#x6709;&#x4F9D;&#x8D56;</h1>
 <p>&#x4F8B;&#xFF1A;&#x7B80;&#x5316;&#x7248;&#x7684;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x722C;&#x53D6;&#x7F51;&#x9875;&#x529F;&#x80FD;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x8D1F;&#x8D23;&#x5E95;&#x5C42;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#xFF0C;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x6570;&#x636E;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NetworkTransporter {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NetworkTransporter <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x7701;&#x7565;&#x5C5E;&#x6027;&#x548C;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;...</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Byte</span>[] <span class="fu">send</span>(HtmlRequest htmlRequest) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Byte</span><span class="op">[]</span> <span class="fu">send</span><span class="op">(</span>HtmlRequest htmlRequest<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="co">//...</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x7528;&#x6765;&#x901A;&#x8FC7; URL &#x83B7;&#x53D6;&#x7F51;&#x9875;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HtmlDownloader {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> NetworkTransporter transporter;<span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;IOC&#x6CE8;&#x5165;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HtmlDownloader <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> NetworkTransporter transporter<span class="op">;</span><span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;IOC&#x6CE8;&#x5165;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Html <span class="fu">downloadHtml</span>(<span class="bu">String</span> url) {</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Byte</span>[] rawHtml = transporter.<span class="fu">send</span>(<span class="kw">new</span> <span class="fu">HtmlRequest</span>(url));</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">Html</span>(rawHtml);</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Html <span class="fu">downloadHtml</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Byte</span><span class="op">[]</span> rawHtml <span class="op">=</span> transporter<span class="op">.</span><span class="fu">send</span><span class="op">(</span><span class="kw">new</span> <span class="fu">HtmlRequest</span><span class="op">(</span>url<span class="op">));</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Html</span><span class="op">(</span>rawHtml<span class="op">);</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x8868;&#x793A;&#x7F51;&#x9875;&#x6587;&#x6863;&#xFF0C;&#x540E;&#x7EED;&#x7684;&#x7F51;&#x9875;&#x5185;&#x5BB9;&#x62BD;&#x53D6;&#x3001;&#x5206;&#x8BCD;&#x3001;&#x7D22;&#x5F15;&#x90FD;&#x662F;&#x4EE5;&#x6B64;&#x4E3A;&#x5904;&#x7406;&#x5BF9;&#x8C61;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Document</span> {</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Html html;</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> url;</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Document</span> <span class="op">{</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Html html<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> url<span class="op">;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span>(<span class="bu">String</span> url) {</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">url</span> = url;</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    HtmlDownloader downloader = <span class="kw">new</span> <span class="fu">HtmlDownloader</span>();</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">html</span> = downloader.<span class="fu">downloadHtml</span>(url);</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">url</span> <span class="op">=</span> url<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    HtmlDownloader downloader <span class="op">=</span> <span class="kw">new</span> <span class="fu">HtmlDownloader</span><span class="op">();</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">html</span> <span class="op">=</span> downloader<span class="op">.</span><span class="fu">downloadHtml</span><span class="op">(</span>url<span class="op">);</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><p><code>NetworkTransporter</code> &#x7C7B;&#x7684;&#x8BBE;&#x8BA1;&#x8FDD;&#x80CC;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#xFF0C;&#x4F9D;&#x8D56;&#x4E86;&#x4E0D;&#x8BE5;&#x6709;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684; <code>HtmlRequest</code> &#x7C7B;&#x3002;</p>
 <p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5E95;&#x5C42;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x5C3D;&#x53EF;&#x80FD;&#x901A;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x53EA;&#x662F;&#x670D;&#x52A1;&#x4E8E;&#x4E0B;&#x8F7D; HTML&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E94;&#x8BE5;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x592A;&#x5177;&#x4F53;&#x7684;&#x53D1;&#x9001;&#x5BF9;&#x8C61; <code>HtmlRequest</code>&#x3002; &#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x628A; <code>address</code> &#x548C; <code>content</code> &#x4EA4;&#x7ED9; <code>NetworkTransporter</code>&#xFF0C;&#x800C;&#x975E;&#x662F;&#x76F4;&#x63A5;&#x628A; <code>HtmlRequest</code> &#x4EA4;&#x7ED9; <code>NetworkTransporter</code>&#x3002;</p></li>
@@ -1059,97 +1068,97 @@
 </ul>
 <p>&#x91CD;&#x6784;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NetworkTransporter {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NetworkTransporter <span class="op">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x7701;&#x7565;&#x5C5E;&#x6027;&#x548C;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;...</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Byte</span>[] <span class="fu">send</span>(<span class="bu">String</span> address, <span class="bu">Byte</span>[] data) {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Byte</span><span class="op">[]</span> <span class="fu">send</span><span class="op">(</span><span class="bu">String</span> address<span class="op">,</span> <span class="bu">Byte</span><span class="op">[]</span> data<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>      <span class="co">//...</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HtmlDownloader {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> NetworkTransporter transporter;<span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;IOC&#x6CE8;&#x5165;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HtmlDownloader <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> NetworkTransporter transporter<span class="op">;</span><span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;IOC&#x6CE8;&#x5165;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">// HtmlDownloader&#x8FD9;&#x91CC;&#x4E5F;&#x8981;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x4FEE;&#x6539;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Html <span class="fu">downloadHtml</span>(<span class="bu">String</span> url) {</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    HtmlRequest htmlRequest = <span class="kw">new</span> <span class="fu">HtmlRequest</span>(url);</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Byte</span>[] rawHtml = transporter.<span class="fu">send</span>(</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      htmlRequest.<span class="fu">getAddress</span>(), htmlRequest.<span class="fu">getContent</span>().<span class="fu">getBytes</span>());</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">Html</span>(rawHtml);</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Html <span class="fu">downloadHtml</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    HtmlRequest htmlRequest <span class="op">=</span> <span class="kw">new</span> <span class="fu">HtmlRequest</span><span class="op">(</span>url<span class="op">);</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Byte</span><span class="op">[]</span> rawHtml <span class="op">=</span> transporter<span class="op">.</span><span class="fu">send</span><span class="op">(</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      htmlRequest<span class="op">.</span><span class="fu">getAddress</span><span class="op">(),</span> htmlRequest<span class="op">.</span><span class="fu">getContent</span><span class="op">().</span><span class="fu">getBytes</span><span class="op">());</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Html</span><span class="op">(</span>rawHtml<span class="op">);</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Document</span> {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Html html;</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> url;</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Document</span> <span class="op">{</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Html html<span class="op">;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> url<span class="op">;</span></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span>(<span class="bu">String</span> url, Html html) {</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">html</span> = html;</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">url</span> = url;</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span><span class="op">(</span><span class="bu">String</span> url<span class="op">,</span> Html html<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">html</span> <span class="op">=</span> html<span class="op">;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">url</span> <span class="op">=</span> url<span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6765;&#x521B;&#x5EFA;Document</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DocumentFactory {</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> HtmlDownloader downloader;</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DocumentFactory <span class="op">{</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> HtmlDownloader downloader<span class="op">;</span></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">DocumentFactory</span>(HtmlDownloader downloader) {</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">downloader</span> = downloader;</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">DocumentFactory</span><span class="op">(</span>HtmlDownloader downloader<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">downloader</span> <span class="op">=</span> downloader<span class="op">;</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span> <span class="fu">createDocument</span>(<span class="bu">String</span> url) {</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    Html html = downloader.<span class="fu">downloadHtml</span>(url);</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="bu">Document</span>(url, html);</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Document</span> <span class="fu">createDocument</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    Html html <span class="op">=</span> downloader<span class="op">.</span><span class="fu">downloadHtml</span><span class="op">(</span>url<span class="op">);</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Document</span><span class="op">(</span>url<span class="op">,</span> html<span class="op">);</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="&#x6709;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#x5C3D;&#x91CF;&#x53EA;&#x4F9D;&#x8D56;&#x5FC5;&#x8981;&#x7684;&#x63A5;&#x53E3;">&#x6709;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#xFF0C;&#x5C3D;&#x91CF;&#x53EA;&#x4F9D;&#x8D56;&#x5FC5;&#x8981;&#x7684;&#x63A5;&#x53E3;</h1>
 <p>&#x5728; <a href="!--&#xFFFC;0--">&#x5355;&#x4E00;&#x804C;&#x8D23;&#x4E2D;<em>&#x5E8F;&#x5217;&#x5316;&#x4E0E;&#x53CD;&#x5E8F;&#x5217;&#x5316;</em></a> &#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5408;&#x5E76;&#x4E4B;&#x540E;&#x7684;&#x7C7B;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x8FDD;&#x6CD5;&#x4E86;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x3002; &#x5047;&#x8BBE;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6709;&#x4E9B;&#x7C7B;&#x53EA;&#x7528;&#x5230;&#x4E86;&#x5E8F;&#x5217;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x53E6;&#x4E00;&#x4E9B;&#x7C7B;&#x53EA;&#x7528;&#x5230;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x64CD;&#x4F5C;&#x3002; &#x90A3;&#x57FA;&#x4E8E;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x540E;&#x534A;&#x90E8;&#x5206; <strong>&#x6709;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#xFF0C;&#x5C3D;&#x91CF;&#x53EA;&#x4F9D;&#x8D56;&#x5FC5;&#x8981;&#x7684;&#x63A5;&#x53E3;</strong>&#xFF0C;&#x53EA;&#x7528;&#x5230;&#x5E8F;&#x5217;&#x5316;&#x64CD;&#x4F5C;&#x7684;&#x90A3;&#x90E8;&#x5206;&#x7C7B;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x63A5;&#x53E3;&#x3002; &#x540C;&#x7406;&#xFF0C;&#x53EA;&#x7528;&#x5230;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x64CD;&#x4F5C;&#x7684;&#x90A3;&#x90E8;&#x5206;&#x7C7B;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x5E8F;&#x5217;&#x5316;&#x63A5;&#x53E3;&#x3002;</p>
 <p>&#x5C3D;&#x7BA1;&#x62C6;&#x5206;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x80FD;&#x6EE1;&#x8DB3;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#xFF0C;&#x4F46;&#x5374;&#x8FDD;&#x80CC;&#x4E86;&#x9AD8;&#x5185;&#x805A;&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#x3002; &#x9AD8;&#x5185;&#x805A;&#x8981;&#x6C42;&#x76F8;&#x8FD1;&#x7684;&#x529F;&#x80FD;&#x8981;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x529F;&#x80FD;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4FEE;&#x6539;&#x7684;&#x5730;&#x65B9;&#x4E0D;&#x81F3;&#x4E8E;&#x8FC7;&#x4E8E;&#x5206;&#x6563;&#x3002;</p>
 <p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x5C31;&#x80FD;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x548C;&#x9AD8;&#x5185;&#x805A;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#xFF1A;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Serializable</span> {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">serialize</span>(<span class="bu">Object</span> object);</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">serialize</span><span class="op">(</span><span class="bu">Object</span> object<span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Deserializable {</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Object</span> <span class="fu">deserialize</span>(<span class="bu">String</span> text);</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Deserializable <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Object</span> <span class="fu">deserialize</span><span class="op">(</span><span class="bu">String</span> text<span class="op">);</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Serialization <span class="kw">implements</span> <span class="bu">Serializable</span>, Deserializable {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Serialization <span class="kw">implements</span> <span class="bu">Serializable</span><span class="op">,</span> Deserializable <span class="op">{</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">serialize</span>(<span class="bu">Object</span> object) {</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> serializedResult = ...;</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> serializedResult;</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">serialize</span><span class="op">(</span><span class="bu">Object</span> object<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> serializedResult <span class="op">=</span> <span class="kw">...</span><span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> serializedResult<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">deserialize</span>(<span class="bu">String</span> str) {</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Object</span> deserializedResult = ...;</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> deserializedResult;</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">deserialize</span><span class="op">(</span><span class="bu">String</span> str<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Object</span> deserializedResult <span class="op">=</span> <span class="kw">...</span><span class="op">;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> deserializedResult<span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DemoClass_1 {</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Serializable</span> serializer;</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DemoClass_1 <span class="op">{</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Serializable</span> serializer<span class="op">;</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span>(<span class="bu">Serializable</span> serializer) {</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">serializer</span> = serializer;</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span><span class="op">(</span><span class="bu">Serializable</span> serializer<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">serializer</span> <span class="op">=</span> serializer<span class="op">;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DemoClass_2 {</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Deserializable deserializer;</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> DemoClass_2 <span class="op">{</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Deserializable deserializer<span class="op">;</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span>(Deserializable deserializer) {</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">deserializer</span> = deserializer;</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span><span class="op">(</span>Deserializable deserializer<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">deserializer</span> <span class="op">=</span> deserializer<span class="op">;</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x4E0A;&#x9762;&#x7684;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;&#xFF0C;&#x4E5F;&#x4F53;&#x73B0;&#x4E86; <strong>&#x57FA;&#x4E8E;&#x63A5;&#x53E3;&#x800C;&#x975E;&#x5B9E;&#x73B0;&#x7F16;&#x7A0B;</strong> &#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF0C;&#x7ED3;&#x5408;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x51FA;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF0C;&#x90A3;&#x5C31;&#x662F; <strong>&#x57FA;&#x4E8E;&#x6700;&#x5C0F;&#x63A5;&#x53E3;&#x800C;&#x975E;&#x6700;&#x5927;&#x5B9E;&#x73B0;&#x7F16;&#x7A0B;</strong>&#x3002;</p>
 
 </div>

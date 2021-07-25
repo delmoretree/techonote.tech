@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1008,60 +1017,60 @@
 <h2 id="&#x7B56;&#x7565;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x548C;&#x4E00;&#x7EC4;&#x5B9E;&#x73B0;&#x7C7B;">&#x7B56;&#x7565;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x548C;&#x4E00;&#x7EC4;&#x5B9E;&#x73B0;&#x7C7B;</h2>
 <p>&#x7B56;&#x7565;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7B56;&#x7565;&#x63A5;&#x53E3;&#x548C;&#x4E00;&#x7EC4;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x7B56;&#x7565;&#x7C7B;&#x3002; &#x56E0;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x7B56;&#x7565;&#x7C7B;&#x90FD;&#x5B9E;&#x73B0;&#x76F8;&#x540C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;<strong>&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x57FA;&#x4E8E;&#x63A5;&#x53E3;&#x800C;&#x975E;&#x5B9E;&#x73B0;&#x7F16;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7075;&#x6D3B;&#x5730;&#x66FF;&#x6362;&#x4E0D;&#x540C;&#x7684;&#x7B56;&#x7565;</strong>&#x3002;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Strategy {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">algorithmInterface</span>();</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Strategy <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">algorithmInterface</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ConcreteStrategyA <span class="kw">implements</span> Strategy {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ConcreteStrategyA <span class="kw">implements</span> Strategy <span class="op">{</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span>  <span class="fu">algorithmInterface</span>() {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span>  <span class="fu">algorithmInterface</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x5177;&#x4F53;&#x7684;&#x7B97;&#x6CD5;...</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ConcreteStrategyB <span class="kw">implements</span> Strategy {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ConcreteStrategyB <span class="kw">implements</span> Strategy <span class="op">{</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span>  <span class="fu">algorithmInterface</span>() {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span>  <span class="fu">algorithmInterface</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x5177;&#x4F53;&#x7684;&#x7B97;&#x6CD5;...</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x5DE5;&#x5382;&#x7C7B;&#x6839;&#x636E;-type-&#x521B;&#x5EFA;&#x7B56;&#x7565;">&#x5DE5;&#x5382;&#x7C7B;&#x6839;&#x636E; type &#x521B;&#x5EFA;&#x7B56;&#x7565;</h2>
 <p>&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x7EC4;&#x7B56;&#x7565;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x4E00;&#x822C;&#x4F1A;&#x901A;&#x8FC7; <strong>type</strong> &#x6765;&#x5224;&#x65AD;&#x521B;&#x5EFA;&#x54EA;&#x4E2A;&#x7B56;&#x7565;&#x6765;&#x4F7F;&#x7528;&#x3002;<strong>&#x628A;&#x6839;&#x636E; <code>type</code> &#x521B;&#x5EFA;&#x7B56;&#x7565;&#x7684;&#x903B;&#x8F91;&#x62BD;&#x79BB;&#x51FA;&#x6765;&#xFF0C;&#x653E;&#x5230;&#x5DE5;&#x5382;&#x7C7B;&#x4E2D;</strong>&#xFF0C;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x5C4F;&#x853D;&#x521B;&#x5EFA;&#x7EC6;&#x8282;&#x3002;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StrategyFactory {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, Strategy&gt; strategies = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StrategyFactory <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> Strategy<span class="op">&gt;</span> strategies <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    strategies.<span class="fu">put</span>(<span class="st">&quot;A&quot;</span>, <span class="kw">new</span> <span class="fu">ConcreteStrategyA</span>());</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    strategies.<span class="fu">put</span>(<span class="st">&quot;B&quot;</span>, <span class="kw">new</span> <span class="fu">ConcreteStrategyB</span>());</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    strategies<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;A&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyA</span><span class="op">());</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    strategies<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">&quot;B&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyB</span><span class="op">());</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> Strategy <span class="fu">getStrategy</span>(<span class="bu">String</span> type) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (type == <span class="kw">null</span> || type.<span class="fu">isEmpty</span>()) {</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="bu">IllegalArgumentException</span>(<span class="st">&quot;type should not be empty.&quot;</span>);</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> strategies.<span class="fu">get</span>(type);</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> Strategy <span class="fu">getStrategy</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>type <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> type<span class="op">.</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">IllegalArgumentException</span><span class="op">(</span><span class="st">&quot;type should not be empty.&quot;</span><span class="op">);</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> strategies<span class="op">.</span><span class="fu">get</span><span class="op">(</span>type<span class="op">);</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x65E0;&#x72B6;&#x6001;&#x7684;&#x7B56;&#x7565;&#x5DE5;&#x5382;&#x7C7B;&#xFF0C;&#x4F7F;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;</p>
 </blockquote>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StrategyFactory {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> Strategy <span class="fu">getStrategy</span>(<span class="bu">String</span> type) {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (type == <span class="kw">null</span> || type.<span class="fu">isEmpty</span>()) {</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="bu">IllegalArgumentException</span>(<span class="st">&quot;type should not be empty.&quot;</span>);</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StrategyFactory <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> Strategy <span class="fu">getStrategy</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>type <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> type<span class="op">.</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">IllegalArgumentException</span><span class="op">(</span><span class="st">&quot;type should not be empty.&quot;</span><span class="op">);</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (type.<span class="fu">equals</span>(<span class="st">&quot;A&quot;</span>)) {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyA</span>();</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> <span class="kw">if</span> (type.<span class="fu">equals</span>(<span class="st">&quot;B&quot;</span>)) {</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyB</span>();</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>type<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">&quot;A&quot;</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyA</span><span class="op">();</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>type<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">&quot;B&quot;</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">new</span> <span class="fu">ConcreteStrategyB</span><span class="op">();</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">null</span>;</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x6709;&#x72B6;&#x6001;&#x7684;&#x7B56;&#x7565;&#x5DE5;&#x5382;&#x7C7B;</p>
 </blockquote>
@@ -1072,39 +1081,39 @@
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x7B56;&#x7565;&#x7C7B;&#xFF1A;LruEvictionStrategy&#x3001;FifoEvictionStrategy&#x3001;LfuEvictionStrategy...</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x7B56;&#x7565;&#x5DE5;&#x5382;&#xFF1A;EvictionStrategyFactory</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserCache {</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, User&gt; cacheData = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> EvictionStrategy eviction;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserCache <span class="op">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> User<span class="op">&gt;</span> cacheData <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> EvictionStrategy eviction<span class="op">;</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">UserCache</span>(EvictionStrategy eviction) {</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">eviction</span> = eviction;</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">UserCache</span><span class="op">(</span>EvictionStrategy eviction<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">eviction</span> <span class="op">=</span> eviction<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x786E;&#x5B9A;&#xFF0C;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x51B3;&#x5B9A;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x7B56;&#x7565;</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application {</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) <span class="kw">throws</span> <span class="bu">Exception</span> {</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    EvictionStrategy evictionStrategy = <span class="kw">null</span>;</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Properties</span> props = <span class="kw">new</span> <span class="bu">Properties</span>();</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    props.<span class="fu">load</span>(<span class="kw">new</span> <span class="bu">FileInputStream</span>(<span class="st">&quot;./config.properties&quot;</span>));</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> type = props.<span class="fu">getProperty</span>(<span class="st">&quot;eviction_type&quot;</span>);</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    evictionStrategy = EvictionStrategyFactory.<span class="fu">getEvictionStrategy</span>(type);</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    UserCache userCache = <span class="kw">new</span> <span class="fu">UserCache</span>(evictionStrategy);</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application <span class="op">{</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    EvictionStrategy evictionStrategy <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Properties</span> props <span class="op">=</span> <span class="kw">new</span> <span class="bu">Properties</span><span class="op">();</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    props<span class="op">.</span><span class="fu">load</span><span class="op">(</span><span class="kw">new</span> <span class="bu">FileInputStream</span><span class="op">(</span><span class="st">&quot;./config.properties&quot;</span><span class="op">));</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> type <span class="op">=</span> props<span class="op">.</span><span class="fu">getProperty</span><span class="op">(</span><span class="st">&quot;eviction_type&quot;</span><span class="op">);</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    evictionStrategy <span class="op">=</span> EvictionStrategyFactory<span class="op">.</span><span class="fu">getEvictionStrategy</span><span class="op">(</span>type<span class="op">);</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    UserCache userCache <span class="op">=</span> <span class="kw">new</span> <span class="fu">UserCache</span><span class="op">(</span>evictionStrategy<span class="op">);</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x975E;&#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x786E;&#x5B9A;&#xFF0C;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x7B56;&#x7565;</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application {</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application <span class="op">{</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    EvictionStrategy evictionStrategy = <span class="kw">new</span> <span class="fu">LruEvictionStrategy</span>();</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    UserCache userCache = <span class="kw">new</span> <span class="fu">UserCache</span>(evictionStrategy);</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    EvictionStrategy evictionStrategy <span class="op">=</span> <span class="kw">new</span> <span class="fu">LruEvictionStrategy</span><span class="op">();</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    UserCache userCache <span class="op">=</span> <span class="kw">new</span> <span class="fu">UserCache</span><span class="op">(</span>evictionStrategy<span class="op">);</span></span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 </div>
 

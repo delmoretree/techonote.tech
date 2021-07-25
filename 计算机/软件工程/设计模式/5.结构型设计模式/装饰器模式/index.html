@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1006,12 +1015,12 @@
 <div id="article-content">
 	<h1 id="&#x88C5;&#x9970;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5178;&#x578B;&#x5E94;&#x7528;java-io">&#x88C5;&#x9970;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5178;&#x578B;&#x5E94;&#x7528;&#xFF1A;java IO</h1>
 <p><img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5082df8e7d5a4d44a34811b9f562d613.jpg?x-oss-process=style/size"></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> in = <span class="kw">new</span> <span class="bu">FileInputStream</span>(<span class="st">&quot;/user/wangzheng/test.txt&quot;</span>);</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> bin = <span class="kw">new</span> <span class="bu">BufferedInputStream</span>(in);</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">byte</span>[] data = <span class="kw">new</span> <span class="dt">byte</span>[<span class="dv">128</span>];</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">while</span> (bin.<span class="fu">read</span>(data) != -<span class="dv">1</span>) {</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> in <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileInputStream</span><span class="op">(</span><span class="st">&quot;/user/wangzheng/test.txt&quot;</span><span class="op">);</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> bin <span class="op">=</span> <span class="kw">new</span> <span class="bu">BufferedInputStream</span><span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">byte</span><span class="op">[]</span> data <span class="op">=</span> <span class="kw">new</span> <span class="dt">byte</span><span class="op">[</span><span class="dv">128</span><span class="op">];</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>bin<span class="op">.</span><span class="fu">read</span><span class="op">(</span>data<span class="op">)</span> <span class="op">!=</span> <span class="op">-</span><span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><code>InputStream</code> &#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;<code>FileInputStream</code> &#x662F;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6D41;&#x7684;&#x5B50;&#x7C7B;&#x3002;</li>
 <li><code>BufferedInputStream</code> &#x662F;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x5E26;&#x7F13;&#x5B58;&#x529F;&#x80FD;&#x7684;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x7684;&#x6548;&#x7387;&#x3002;</li>
@@ -1021,107 +1030,107 @@
 <p>&#x7EE7;&#x627F; <code>InputStream</code> &#x7684;&#x5B50;&#x7C7B;&#x6709;&#x5F88;&#x591A;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A; <code>InputStream</code> &#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x518D;&#x7EE7;&#x7EED;&#x6D3E;&#x751F;&#x652F;&#x6301;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x5B50;&#x7C7B;&#x3002; &#x5982;&#x679C;&#x5BF9;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x5176;&#x4ED6;&#x65B9;&#x9762;&#x7684;&#x589E;&#x5F3A;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7EC4;&#x5408;&#x7206;&#x70B8;&#xFF0C;&#x7C7B;&#x7EE7;&#x627F;&#x7ED3;&#x6784;&#x53D8;&#x5F97;&#x65E0;&#x6BD4;&#x590D;&#x6742;&#xFF0C;&#x4EE3;&#x7801;&#x65E2;&#x4E0D;&#x597D;&#x6269;&#x5C55;&#xFF0C;&#x4E5F;&#x4E0D;&#x597D;&#x7EF4;&#x62A4;&#x3002;&#x56E0;&#x6B64;<strong>&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7EE7;&#x627F;</strong>&#x3002;</p>
 <h2 id="&#x5C06;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x6539;&#x4E3A;&#x7EC4;&#x5408;&#x5173;&#x7CFB;">&#x5C06;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x6539;&#x4E3A;&#x7EC4;&#x5408;&#x5173;&#x7CFB;&#xFF0C;</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> <span class="bu">InputStream</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> <span class="bu">InputStream</span> <span class="op">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">read</span>(<span class="dt">byte</span> b[]) <span class="kw">throws</span> <span class="bu">IOException</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="fu">read</span>(b,<span class="dv">0</span>,b.<span class="fu">length</span>);</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">read</span><span class="op">(</span><span class="dt">byte</span> b<span class="op">[])</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">read</span><span class="op">(</span>b<span class="op">,</span><span class="dv">0</span><span class="op">,</span>b<span class="op">.</span><span class="fu">length</span><span class="op">);</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">read</span>(<span class="dt">byte</span> b[],<span class="dt">int</span> off,<span class="dt">int</span> len) <span class="kw">throws</span> <span class="bu">IOException</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">read</span><span class="op">(</span><span class="dt">byte</span> b<span class="op">[],</span><span class="dt">int</span> off<span class="op">,</span><span class="dt">int</span> len<span class="op">)</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">skip</span>(<span class="dt">long</span> n) <span class="kw">throws</span> <span class="bu">IOException</span> {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">skip</span><span class="op">(</span><span class="dt">long</span> n<span class="op">)</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">available</span>() <span class="kw">throws</span> <span class="bu">IOException</span> {</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="dv">0</span>;</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">available</span><span class="op">()</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">close</span>() <span class="kw">throws</span> <span class="bu">IOException</span> {}</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">close</span><span class="op">()</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">mark</span>(<span class="dt">int</span> readlimit) {}</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">mark</span><span class="op">(</span><span class="dt">int</span> readlimit<span class="op">)</span> <span class="op">{}</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">reset</span>() <span class="kw">throws</span> <span class="bu">IOException</span> {</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">throw</span> <span class="kw">new</span> <span class="bu">IOException</span>(<span class="st">&quot;mark/reset not supported&quot;</span>);</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">reset</span><span class="op">()</span> <span class="kw">throws</span> <span class="bu">IOException</span> <span class="op">{</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">IOException</span><span class="op">(</span><span class="st">&quot;mark/reset not supported&quot;</span><span class="op">);</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">markSupported</span>() {</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">false</span>;</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">markSupported</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">BufferedInputStream</span> <span class="kw">extends</span> <span class="bu">InputStream</span> {</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="kw">volatile</span> <span class="bu">InputStream</span> in;</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">BufferedInputStream</span> <span class="kw">extends</span> <span class="bu">InputStream</span> <span class="op">{</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="kw">volatile</span> <span class="bu">InputStream</span> in<span class="op">;</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">BufferedInputStream</span>(<span class="bu">InputStream</span> in) {</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">in</span> = in;</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">BufferedInputStream</span><span class="op">(</span><span class="bu">InputStream</span> in<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">in</span> <span class="op">=</span> in<span class="op">;</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x7F13;&#x5B58;&#x7684;&#x8BFB;&#x6570;&#x636E;&#x63A5;&#x53E3;...  </span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">DataInputStream</span> <span class="kw">extends</span> <span class="bu">InputStream</span> {</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="kw">volatile</span> <span class="bu">InputStream</span> in;</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">DataInputStream</span> <span class="kw">extends</span> <span class="bu">InputStream</span> <span class="op">{</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="kw">volatile</span> <span class="bu">InputStream</span> in<span class="op">;</span></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">DataInputStream</span>(<span class="bu">InputStream</span> in) {</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">in</span> = in;</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">DataInputStream</span><span class="op">(</span><span class="bu">InputStream</span> in<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">in</span> <span class="op">=</span> in<span class="op">;</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x5B9E;&#x73B0;&#x8BFB;&#x53D6;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x7684;&#x63A5;&#x53E3;</span></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x88C5;&#x9970;&#x5668;&#x7C7B;&#x548C;&#x539F;&#x59CB;&#x7C7B;&#x7EE7;&#x627F;&#x540C;&#x6837;&#x7684;&#x7236;&#x7C7B;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x539F;&#x59CB;&#x7C7B;<strong>&#x5D4C;&#x5957;</strong>&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7C7B;&#x3002;&#x5982;&#xFF1A;</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> in = <span class="kw">new</span> <span class="bu">FileInputStream</span>(<span class="st">&quot;/user/wangzheng/test.txt&quot;</span>);</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> bin = <span class="kw">new</span> <span class="bu">BufferedInputStream</span>(in);</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">DataInputStream</span> din = <span class="kw">new</span> <span class="bu">DataInputStream</span>(bin);</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> data = din.<span class="fu">readInt</span>();</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> in <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileInputStream</span><span class="op">(</span><span class="st">&quot;/user/wangzheng/test.txt&quot;</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">InputStream</span> bin <span class="op">=</span> <span class="kw">new</span> <span class="bu">BufferedInputStream</span><span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">DataInputStream</span> din <span class="op">=</span> <span class="kw">new</span> <span class="bu">DataInputStream</span><span class="op">(</span>bin<span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> data <span class="op">=</span> din<span class="op">.</span><span class="fu">readInt</span><span class="op">();</span></span></code></pre></div>
 <p>&#x5D4C;&#x5957;2&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7C7B;&#xFF1A;<code>BufferedInputStream</code> &#x548C; <code>DataInputStream</code>&#xFF0C;&#x8BA9;&#x5B83;&#x65E2;&#x652F;&#x6301;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;&#xFF0C;&#x53C8;&#x652F;&#x6301;&#x6309;&#x7167;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6765;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3002;</p>
 <ul>
 <li>&#x88C5;&#x9970;&#x5668;&#x7C7B;&#x662F;&#x5BF9;&#x529F;&#x80FD;&#x7684;&#x589E;&#x5F3A;&#x3002;</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;(&#x4E0B;&#x9762;&#x7684;&#x63A5;&#x53E3;&#x4E5F;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x6210;&#x62BD;&#x8C61;&#x7C7B;)</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f</span>();</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A impelements IA {</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span>() { <span class="co">//... }</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AProxy impements IA {</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a;</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">AProxy</span>(IA a) {</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">a</span> = a;</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f</span><span class="op">();</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A impelements IA <span class="op">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AProxy impements IA <span class="op">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">AProxy</span><span class="op">(</span>IA a<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">a</span> <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span>() {</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x4EE3;&#x7406;&#x903B;&#x8F91;</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    a.<span class="fu">f</span>();</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    a<span class="op">.</span><span class="fu">f</span><span class="op">();</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x4EE3;&#x7406;&#x903B;&#x8F91;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x88C5;&#x9970;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;(&#x4E0B;&#x9762;&#x7684;&#x63A5;&#x53E3;&#x4E5F;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x6210;&#x62BD;&#x8C61;&#x7C7B;)</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA {</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f</span>();</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A impelements IA {</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span>() { <span class="co">//... }</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ADecorator impements IA {</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a;</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ADecorator</span>(IA a) {</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">a</span> = a;</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA <span class="op">{</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f</span><span class="op">();</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A impelements IA <span class="op">{</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ADecorator impements IA <span class="op">{</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a<span class="op">;</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ADecorator</span><span class="op">(</span>IA a<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">a</span> <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span>() {</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x529F;&#x80FD;&#x589E;&#x5F3A;&#x4EE3;&#x7801;</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    a.<span class="fu">f</span>();</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    a<span class="op">.</span><span class="fu">f</span><span class="op">();</span></span>
 <span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x529F;&#x80FD;&#x589E;&#x5F3A;&#x4EE3;&#x7801;</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 </div>
 

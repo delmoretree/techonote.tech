@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1007,107 +1016,107 @@
 	<h1 id="&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;">&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;</h1>
 <p><strong>&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF08;Proxy Design Pattern&#xFF09;</strong> &#x5728;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x59CB;&#x7C7B;&#xFF08;&#x6216;&#x53EB;&#x88AB;&#x4EE3;&#x7406;&#x7C7B;&#xFF09;&#x4EE3;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;&#x3002;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IUserController {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password);</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password);</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IUserController <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">login</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">register</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserController <span class="kw">implements</span> IUserController {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserController <span class="kw">implements</span> IUserController <span class="op">{</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;login&#x903B;&#x8F91;...</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;UserVo&#x6570;&#x636E;...</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;register&#x903B;&#x8F91;...</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;UserVo&#x6570;&#x636E;...</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserControllerProxy <span class="kw">implements</span> IUserController {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector;</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserController userController;</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserControllerProxy <span class="kw">implements</span> IUserController <span class="op">{</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserController userController<span class="op">;</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">UserControllerProxy</span>(UserController userController) {</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">userController</span> = userController;</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">metricsCollector</span> = <span class="kw">new</span> <span class="fu">MetricsCollector</span>();</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">UserControllerProxy</span><span class="op">(</span>UserController userController<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">userController</span> <span class="op">=</span> userController<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">metricsCollector</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">MetricsCollector</span><span class="op">();</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x59D4;&#x6258;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    UserVo userVo = userController.<span class="fu">login</span>(telephone, password);</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    UserVo userVo <span class="op">=</span> userController<span class="op">.</span><span class="fu">login</span><span class="op">(</span>telephone<span class="op">,</span> password<span class="op">);</span></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(<span class="st">&quot;login&quot;</span>, responseTime, startTimestamp);</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime <span class="op">=</span> endTimeStamp <span class="op">-</span> startTimestamp<span class="op">;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo <span class="op">=</span> <span class="kw">new</span> <span class="bu">RequestInfo</span><span class="op">(</span><span class="st">&quot;login&quot;</span><span class="op">,</span> responseTime<span class="op">,</span> startTimestamp<span class="op">);</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    metricsCollector<span class="op">.</span><span class="fu">recordRequest</span><span class="op">(</span>requestInfo<span class="op">);</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userVo;</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> userVo<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span><span class="op">(</span><span class="bu">String</span> telephone<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    UserVo userVo = userController.<span class="fu">register</span>(telephone, password);</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    UserVo userVo <span class="op">=</span> userController<span class="op">.</span><span class="fu">register</span><span class="op">(</span>telephone<span class="op">,</span> password<span class="op">);</span></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(<span class="st">&quot;register&quot;</span>, responseTime, startTimestamp);</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime <span class="op">=</span> endTimeStamp <span class="op">-</span> startTimestamp<span class="op">;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo <span class="op">=</span> <span class="kw">new</span> <span class="bu">RequestInfo</span><span class="op">(</span><span class="st">&quot;register&quot;</span><span class="op">,</span> responseTime<span class="op">,</span> startTimestamp<span class="op">);</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    metricsCollector<span class="op">.</span><span class="fu">recordRequest</span><span class="op">(</span>requestInfo<span class="op">);</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userVo;</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> userVo<span class="op">;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>IUserController userController = <span class="kw">new</span> <span class="fu">UserControllerProxy</span>(<span class="kw">new</span> <span class="fu">UserController</span>());</span></code></pre></div>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>IUserController userController <span class="op">=</span> <span class="kw">new</span> <span class="fu">UserControllerProxy</span><span class="op">(</span><span class="kw">new</span> <span class="fu">UserController</span><span class="op">());</span></span></code></pre></div>
 <p>&#x4EE3;&#x7406;&#x7C7B; <code>UserControllerProxy</code> &#x8D1F;&#x8D23;&#x5728;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x524D;&#x540E;&#x9644;&#x52A0;&#x5176;&#x4ED6;&#x903B;&#x8F91;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x59D4;&#x6258;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x539F;&#x59CB;&#x7C7B;&#x6765;&#x6267;&#x884C;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x3002;</p>
 <h1 id="&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x52A8;&#x6001;&#x5730;&#x521B;&#x5EFA;&#x539F;&#x59CB;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7406;&#x7C7B;">&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x521B;&#x5EFA;&#x539F;&#x59CB;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7406;&#x7C7B;</h1>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MetricsCollectorProxy {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MetricsCollectorProxy <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector<span class="op">;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MetricsCollectorProxy</span>() {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">metricsCollector</span> = <span class="kw">new</span> <span class="fu">MetricsCollector</span>();</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MetricsCollectorProxy</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">metricsCollector</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">MetricsCollector</span><span class="op">();</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">createProxy</span>(<span class="bu">Object</span> proxiedObject) {</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Class</span>&lt;?&gt;[] interfaces = proxiedObject.<span class="fu">getClass</span>().<span class="fu">getInterfaces</span>();</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    DynamicProxyHandler handler = <span class="kw">new</span> <span class="fu">DynamicProxyHandler</span>(proxiedObject);</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="bu">Proxy</span>.<span class="fu">newProxyInstance</span>(proxiedObject.<span class="fu">getClass</span>().<span class="fu">getClassLoader</span>(), interfaces, handler);</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">createProxy</span><span class="op">(</span><span class="bu">Object</span> proxiedObject<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Class</span><span class="op">&lt;?&gt;[]</span> interfaces <span class="op">=</span> proxiedObject<span class="op">.</span><span class="fu">getClass</span><span class="op">().</span><span class="fu">getInterfaces</span><span class="op">();</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    DynamicProxyHandler handler <span class="op">=</span> <span class="kw">new</span> <span class="fu">DynamicProxyHandler</span><span class="op">(</span>proxiedObject<span class="op">);</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Proxy</span><span class="op">.</span><span class="fu">newProxyInstance</span><span class="op">(</span>proxiedObject<span class="op">.</span><span class="fu">getClass</span><span class="op">().</span><span class="fu">getClassLoader</span><span class="op">(),</span> interfaces<span class="op">,</span> handler<span class="op">);</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="kw">class</span> DynamicProxyHandler <span class="kw">implements</span> <span class="bu">InvocationHandler</span> {</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Object</span> proxiedObject;</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="kw">class</span> DynamicProxyHandler <span class="kw">implements</span> <span class="bu">InvocationHandler</span> <span class="op">{</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Object</span> proxiedObject<span class="op">;</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">DynamicProxyHandler</span>(<span class="bu">Object</span> proxiedObject) {</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">this</span>.<span class="fu">proxiedObject</span> = proxiedObject;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">DynamicProxyHandler</span><span class="op">(</span><span class="bu">Object</span> proxiedObject<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">this</span><span class="op">.</span><span class="fu">proxiedObject</span> <span class="op">=</span> proxiedObject<span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">invoke</span>(<span class="bu">Object</span> proxy, <span class="bu">Method</span> method, <span class="bu">Object</span>[] args) <span class="kw">throws</span> <span class="bu">Throwable</span> {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Object</span> result = method.<span class="fu">invoke</span>(proxiedObject, args);</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="bu">String</span> apiName = proxiedObject.<span class="fu">getClass</span>().<span class="fu">getName</span>() + <span class="st">&quot;:&quot;</span> + method.<span class="fu">getName</span>();</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(apiName, responseTime, startTimestamp);</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> result;</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">invoke</span><span class="op">(</span><span class="bu">Object</span> proxy<span class="op">,</span> <span class="bu">Method</span> method<span class="op">,</span> <span class="bu">Object</span><span class="op">[]</span> args<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Throwable</span> <span class="op">{</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> startTimestamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Object</span> result <span class="op">=</span> method<span class="op">.</span><span class="fu">invoke</span><span class="op">(</span>proxiedObject<span class="op">,</span> args<span class="op">);</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> endTimeStamp <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> responseTime <span class="op">=</span> endTimeStamp <span class="op">-</span> startTimestamp<span class="op">;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="bu">String</span> apiName <span class="op">=</span> proxiedObject<span class="op">.</span><span class="fu">getClass</span><span class="op">().</span><span class="fu">getName</span><span class="op">()</span> <span class="op">+</span> <span class="st">&quot;:&quot;</span> <span class="op">+</span> method<span class="op">.</span><span class="fu">getName</span><span class="op">();</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      <span class="bu">RequestInfo</span> requestInfo <span class="op">=</span> <span class="kw">new</span> <span class="bu">RequestInfo</span><span class="op">(</span>apiName<span class="op">,</span> responseTime<span class="op">,</span> startTimestamp<span class="op">);</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      metricsCollector<span class="op">.</span><span class="fu">recordRequest</span><span class="op">(</span>requestInfo<span class="op">);</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co">//MetricsCollectorProxy&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>MetricsCollectorProxy proxy = <span class="kw">new</span> <span class="fu">MetricsCollectorProxy</span>();</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>IUserController userController = (IUserController) proxy.<span class="fu">createProxy</span>(<span class="kw">new</span> <span class="fu">UserController</span>());</span></code></pre></div>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>MetricsCollectorProxy proxy <span class="op">=</span> <span class="kw">new</span> <span class="fu">MetricsCollectorProxy</span><span class="op">();</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>IUserController userController <span class="op">=</span> <span class="op">(</span>IUserController<span class="op">)</span> proxy<span class="op">.</span><span class="fu">createProxy</span><span class="op">(</span><span class="kw">new</span> <span class="fu">UserController</span><span class="op">());</span></span></code></pre></div>
 <p>Spring AOP &#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x3002;</p>
 <h1 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x573A;&#x666F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x573A;&#x666F;</h1>
 <h2 id="&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x975E;&#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;&#x5F00;&#x53D1;">&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x975E;&#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;&#x5F00;&#x53D1;</h2>

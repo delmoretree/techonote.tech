@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1010,20 +1019,20 @@
 <p><em>&#x4F8B;&#xFF1A;&#x4E00;&#x4E2A;&#x7C7B;&#x91CC;&#x65E2;&#x5305;&#x542B;&#x8BA2;&#x5355;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x53C8;&#x5305;&#x542B;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x3002; &#x800C;&#x8BA2;&#x5355;&#x548C;&#x7528;&#x6237;&#x662F;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x4E1A;&#x52A1;&#x9886;&#x57DF;&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E24;&#x4E2A;&#x4E0D;&#x76F8;&#x5E72;&#x7684;&#x529F;&#x80FD;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x90A3;&#x5C31;&#x8FDD;&#x53CD;&#x4E86;&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;&#x3002; &#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x7C7B;&#x62C6;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x7C92;&#x5EA6;&#x66F4;&#x7EC6;&#x3001;&#x529F;&#x80FD;&#x66F4;&#x52A0;&#x5355;&#x4E00;&#x7684;&#x4E24;&#x4E2A;&#x7C7B;&#xFF1A;&#x8BA2;&#x5355;&#x7C7B;&#x548C;&#x7528;&#x6237;&#x7C7B;&#x3002;</em></p>
 <h2 id="&#x4E0D;&#x540C;&#x573A;&#x666F;&#x5224;&#x65AD;&#x4E0D;&#x540C;">&#x4E0D;&#x540C;&#x573A;&#x666F;&#x5224;&#x65AD;&#x4E0D;&#x540C;</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserInfo {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> userId;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> username;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> email;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> telephone;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> createTime;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> lastLoginTime;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> avatarUrl;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> provinceOfAddress; <span class="co">// &#x7701;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cityOfAddress; <span class="co">// &#x5E02;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> regionOfAddress; <span class="co">// &#x533A; </span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> detailedAddress; <span class="co">// &#x8BE6;&#x7EC6;&#x5730;&#x5740;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserInfo <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> userId<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> username<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> email<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> telephone<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> createTime<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> lastLoginTime<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> avatarUrl<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> provinceOfAddress<span class="op">;</span> <span class="co">// &#x7701;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cityOfAddress<span class="op">;</span> <span class="co">// &#x5E02;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> regionOfAddress<span class="op">;</span> <span class="co">// &#x533A; </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> detailedAddress<span class="op">;</span> <span class="co">// &#x8BE6;&#x7EC6;&#x5730;&#x5740;</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x5982;&#x679C;&#x5728;&#x793E;&#x4EA4;&#x4EA7;&#x54C1;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x8DDF;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x5730;&#x7528;&#x6765;&#x5C55;&#x793A;&#xFF0C;&#x90A3; <code>UserInfo</code> &#x73B0;&#x5728;&#x7684;&#x8BBE;&#x8BA1;&#x5C31;&#x662F;&#x5408;&#x7406;&#x7684;&#x3002;</li>
 <li>&#x5982;&#x679C;&#x4E4B;&#x540E;&#x53C8;&#x5728;&#x4EA7;&#x54C1;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;<strong>&#x7535;&#x5546;</strong>&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x8FD8;&#x4F1A;&#x7528;&#x5728;&#x7535;&#x5546;&#x7269;&#x6D41;&#x4E2D;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x6700;&#x597D;&#x5C06;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x4ECE; <code>UserInfo</code> &#x4E2D;&#x62C6;&#x5206;&#x51FA;&#x6765;&#xFF0C;&#x72EC;&#x7ACB;&#x6210;<strong>&#x7528;&#x6237;&#x7269;&#x6D41;&#x4FE1;&#x606F;</strong>&#xFF08;&#x6216;&#x8005;&#x53EB;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x3001;&#x6536;&#x8D27;&#x4FE1;&#x606F;&#x7B49;&#xFF09;&#x3002;</li>
@@ -1043,38 +1052,38 @@
 <p>&#x5F53;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x8BFB;&#x8D77;&#x6765;&#x8BA9;&#x4F60;&#x5934;&#x5927;&#x4E86;&#xFF0C;&#x5B9E;&#x73B0;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x65F6;&#x4E0D;&#x77E5;&#x9053;&#x8BE5;&#x7528;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x4E86;&#xFF0C;&#x60F3;&#x7528;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x7FFB;&#x534A;&#x5929;&#x90FD;&#x627E;&#x4E0D;&#x5230;&#x4E86;&#xFF0C; &#x53EA;&#x7528;&#x5230;&#x4E00;&#x4E2A;&#x5C0F;&#x529F;&#x80FD;&#x8981;&#x5F15;&#x5165;&#x6574;&#x4E2A;&#x7C7B;&#xFF08;&#x7C7B;&#x4E2D;&#x5305;&#x542B;&#x5F88;&#x591A;&#x65E0;&#x5173;&#x6B64;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x51FD;&#x6570;&#xFF09;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x5C31;&#x8BF4;&#x660E;&#x7C7B;&#x7684;&#x884C;&#x6570;&#x3001;&#x51FD;&#x6570;&#x3001;&#x5C5E;&#x6027;&#x8FC7;&#x591A;&#x4E86;&#x3002;</p>
 <h2 id="&#x7C7B;&#x7684;&#x804C;&#x8D23;&#x4E0D;&#x662F;&#x8BBE;&#x8BA1;&#x5F97;&#x8D8A;&#x5355;&#x4E00;&#x8D8A;&#x597D;">&#x7C7B;&#x7684;&#x804C;&#x8D23;&#x4E0D;&#x662F;&#x8BBE;&#x8BA1;&#x5F97;&#x8D8A;&#x5355;&#x4E00;&#x8D8A;&#x597D;</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Serializer {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> IDENTIFIER_STRING = <span class="st">&quot;UEUEUE;&quot;</span>;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Gson gson;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Serializer <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> IDENTIFIER_STRING <span class="op">=</span> <span class="st">&quot;UEUEUE;&quot;</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Gson gson<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Serializer</span>() {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">gson</span> = <span class="kw">new</span> <span class="fu">Gson</span>();</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Serializer</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">gson</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gson</span><span class="op">();</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">serialize</span>(<span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">String</span>&gt; object) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">StringBuilder</span> textBuilder = <span class="kw">new</span> <span class="bu">StringBuilder</span>();</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    textBuilder.<span class="fu">append</span>(IDENTIFIER_STRING);</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    textBuilder.<span class="fu">append</span>(gson.<span class="fu">toJson</span>(object));</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> textBuilder.<span class="fu">toString</span>();</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">serialize</span><span class="op">(</span><span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> object<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">StringBuilder</span> textBuilder <span class="op">=</span> <span class="kw">new</span> <span class="bu">StringBuilder</span><span class="op">();</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    textBuilder<span class="op">.</span><span class="fu">append</span><span class="op">(</span>IDENTIFIER_STRING<span class="op">);</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    textBuilder<span class="op">.</span><span class="fu">append</span><span class="op">(</span>gson<span class="op">.</span><span class="fu">toJson</span><span class="op">(</span>object<span class="op">));</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> textBuilder<span class="op">.</span><span class="fu">toString</span><span class="op">();</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Deserializer {</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> IDENTIFIER_STRING = <span class="st">&quot;UEUEUE;&quot;</span>;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Gson gson;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Deserializer <span class="op">{</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> IDENTIFIER_STRING <span class="op">=</span> <span class="st">&quot;UEUEUE;&quot;</span><span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Gson gson<span class="op">;</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Deserializer</span>() {</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">gson</span> = <span class="kw">new</span> <span class="fu">Gson</span>();</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Deserializer</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">gson</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gson</span><span class="op">();</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">String</span>&gt; <span class="fu">deserialize</span>(<span class="bu">String</span> text) {</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!text.<span class="fu">startsWith</span>(IDENTIFIER_STRING)) {</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="kw">return</span> <span class="bu">Collections</span>.<span class="fu">emptyMap</span>();</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> gsonStr = text.<span class="fu">substring</span>(IDENTIFIER_STRING.<span class="fu">length</span>());</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> gson.<span class="fu">fromJson</span>(gsonStr, <span class="bu">Map</span>.<span class="fu">class</span>);</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> <span class="fu">deserialize</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>text<span class="op">.</span><span class="fu">startsWith</span><span class="op">(</span>IDENTIFIER_STRING<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Collections</span><span class="op">.</span><span class="fu">emptyMap</span><span class="op">();</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> gsonStr <span class="op">=</span> text<span class="op">.</span><span class="fu">substring</span><span class="op">(</span>IDENTIFIER_STRING<span class="op">.</span><span class="fu">length</span><span class="op">());</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gson<span class="op">.</span><span class="fu">fromJson</span><span class="op">(</span>gsonStr<span class="op">,</span> <span class="bu">Map</span><span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x4E00;&#x4E2A;&#x53EA;&#x8D1F;&#x8D23;&#x5E8F;&#x5217;&#x5316;&#x5DE5;&#x4F5C;&#x7684; <code>Serializer</code> &#x7C7B;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x53EA;&#x8D1F;&#x8D23;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x5DE5;&#x4F5C;&#x7684; <code>Deserializer</code> &#x7C7B;&#x3002; &#x5982;&#x679C;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x4E86;&#x534F;&#x8BAE;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x6570;&#x636E;&#x6807;&#x8BC6;&#x4ECE; <code>UEUEUE</code> &#x6539;&#x4E3A; <code>DFDFDF</code> &#xFF0C;&#x6216;&#x8005;&#x5E8F;&#x5217;&#x5316;&#x65B9;&#x5F0F;&#x4ECE; <code>JSON</code> &#x6539;&#x4E3A;&#x4E86; <code>XML</code>&#xFF0C; &#x90A3; <code>Serializer</code> &#x7C7B;&#x548C; <code>Deserializer</code> &#x7C7B;&#x90FD;&#x9700;&#x8981;&#x505A;&#x76F8;&#x5E94;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x5185;&#x805A;&#x6027;&#x663E;&#x7136;&#x6CA1;&#x6709;&#x5C06;&#x4E24;&#x4E2A;&#x7C7B;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x9AD8;&#x3002; &#x800C;&#x4E14;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x5BF9; <code>Serializer</code> &#x7C7B;&#x505A;&#x4E86;&#x534F;&#x8BAE;&#x4FEE;&#x6539;&#xFF0C;&#x800C;&#x5FD8;&#x8BB0;&#x4E86;&#x4FEE;&#x6539; <code>Deserializer</code> &#x7C7B;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x90A3;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5E8F;&#x5217;&#x5316;&#x3001;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x51FA;&#x9519;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C; <strong>&#x62C6;&#x5206;&#x4E4B;&#x540E;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x53D8;&#x5DEE;&#x4E86;</strong>&#x3002;</p>
 <p>&#x4E0D;&#x7BA1;&#x662F;&#x5E94;&#x7528;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x8FD8;&#x662F;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x76EE;&#x7684;&#x8FD8;&#x662F;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684; <strong>&#x53EF;&#x8BFB;&#x6027;</strong>&#x3001;<strong>&#x53EF;&#x6269;&#x5C55;&#x6027;</strong>&#x3001;<strong>&#x590D;&#x7528;&#x6027;</strong>&#x3001;<strong>&#x53EF;&#x7EF4;&#x62A4;&#x6027;</strong>&#x7B49;&#x3002; &#x6211;&#x4EEC;&#x5728;&#x8003;&#x8651;&#x5E94;&#x7528;&#x67D0;&#x4E00;&#x4E2A;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x662F;&#x5426;&#x5408;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE5;&#x6B64;&#x4F5C;&#x4E3A;&#x6700;&#x7EC8;&#x7684;&#x8003;&#x91CF;&#x6807;&#x51C6;&#x3002;</p>
 <h1 id="&#x5F00;&#x95ED;&#x539F;&#x5219;">&#x5F00;&#x95ED;&#x539F;&#x5219;</h1>
@@ -1084,25 +1093,25 @@
 <p>API &#x63A5;&#x53E3;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
 <p>&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E3B;&#x8981;&#x96C6;&#x4E2D;&#x5728; <code>check()</code> &#x51FD;&#x6570;&#x4E2D;&#x3002;&#x5F53;&#x63A5;&#x53E3;&#x7684; TPS &#x8D85;&#x8FC7;&#x67D0;&#x4E2A;&#x9884;&#x5148;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x65F6;&#xFF0C;&#x4EE5;&#x53CA;&#x5F53;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x51FA;&#x9519;&#x6570;&#x5927;&#x4E8E;&#x67D0;&#x4E2A;&#x6700;&#x5927;&#x5141;&#x8BB8;&#x503C;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x544A;&#x8B66;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> AlertRule rule;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Notification</span> notification;</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> AlertRule rule<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Notification</span> notification<span class="op">;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Alert</span>(AlertRule rule, <span class="bu">Notification</span> notification) {</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">rule</span> = rule;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">notification</span> = notification;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Alert</span><span class="op">(</span>AlertRule rule<span class="op">,</span> <span class="bu">Notification</span> notification<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">rule</span> <span class="op">=</span> rule<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">notification</span> <span class="op">=</span> notification<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span>(<span class="bu">String</span> api, <span class="dt">long</span> requestCount, <span class="dt">long</span> errorCount, <span class="dt">long</span> durationOfSeconds) {</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps = requestCount / durationOfSeconds;</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (tps &gt; rule.<span class="fu">getMatchedRule</span>(api).<span class="fu">getMaxTps</span>()) {</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">URGENCY</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (errorCount &gt; rule.<span class="fu">getMatchedRule</span>(api).<span class="fu">getMaxErrorCount</span>()) {</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">SEVERE</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span><span class="bu">String</span> api<span class="op">,</span> <span class="dt">long</span> requestCount<span class="op">,</span> <span class="dt">long</span> errorCount<span class="op">,</span> <span class="dt">long</span> durationOfSeconds<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps <span class="op">=</span> requestCount <span class="op">/</span> durationOfSeconds<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>tps <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>api<span class="op">).</span><span class="fu">getMaxTps</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">URGENCY</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>errorCount <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>api<span class="op">).</span><span class="fu">getMaxErrorCount</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">SEVERE</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><code>AlertRule</code> &#x5B58;&#x50A8;&#x544A;&#x8B66;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x8BBE;&#x7F6E;&#x3002;</li>
 <li><code>Notification</code> &#x662F;&#x544A;&#x8B66;&#x901A;&#x77E5;&#x7C7B;&#xFF0C;&#x652F;&#x6301;&#x90AE;&#x4EF6;&#x3001;&#x77ED;&#x4FE1;&#x3001;&#x5FAE;&#x4FE1;&#x3001;&#x624B;&#x673A;&#x7B49;&#x591A;&#x79CD;&#x901A;&#x77E5;&#x6E20;&#x9053;&#x3002;</li>
@@ -1112,26 +1121,26 @@
 <p>&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x5F53;&#x6BCF;&#x79D2;&#x949F;&#x63A5;&#x53E3;&#x8D85;&#x65F6;&#x8BF7;&#x6C42;&#x4E2A;&#x6570;&#xFF0C;&#x8D85;&#x8FC7;&#x67D0;&#x4E2A;&#x9884;&#x5148;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x9608;&#x503C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x8981;&#x89E6;&#x53D1;&#x544A;&#x8B66;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x3002; &#x4FEE;&#x6539; <code>check()</code> &#x51FD;&#x6570;&#x7684;&#x5165;&#x53C2;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EDF;&#x8BA1;&#x6570;&#x636E; <code>timeoutCount</code>&#xFF0C;&#x8868;&#x793A;&#x8D85;&#x65F6;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x6570;&#x3002;&#x5E76;&#x5728; <code>check()</code> &#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x544A;&#x8B66;&#x903B;&#x8F91;&#x3002;</p>
 <p>&#x4FEE;&#x6539;&#x540E;&#x7684; <code>check()</code> &#x51FD;&#x6570;&#xFF1A;</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert <span class="op">{</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;AlertRule/Notification&#x5C5E;&#x6027;&#x548C;&#x6784;&#x9020;&#x51FD;&#x6570;...</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x6539;&#x52A8;&#x4E00;&#xFF1A;&#x6DFB;&#x52A0;&#x53C2;&#x6570;timeoutCount</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span>(<span class="bu">String</span> api, <span class="dt">long</span> requestCount, <span class="dt">long</span> errorCount, <span class="dt">long</span> timeoutCount, <span class="dt">long</span> durationOfSeconds) {</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps = requestCount / durationOfSeconds;</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (tps &gt; rule.<span class="fu">getMatchedRule</span>(api).<span class="fu">getMaxTps</span>()) {</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">URGENCY</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (errorCount &gt; rule.<span class="fu">getMatchedRule</span>(api).<span class="fu">getMaxErrorCount</span>()) {</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">SEVERE</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span><span class="bu">String</span> api<span class="op">,</span> <span class="dt">long</span> requestCount<span class="op">,</span> <span class="dt">long</span> errorCount<span class="op">,</span> <span class="dt">long</span> timeoutCount<span class="op">,</span> <span class="dt">long</span> durationOfSeconds<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps <span class="op">=</span> requestCount <span class="op">/</span> durationOfSeconds<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>tps <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>api<span class="op">).</span><span class="fu">getMaxTps</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">URGENCY</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>errorCount <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>api<span class="op">).</span><span class="fu">getMaxErrorCount</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">SEVERE</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x6539;&#x52A8;&#x4E8C;&#xFF1A;&#x6DFB;&#x52A0;&#x63A5;&#x53E3;&#x8D85;&#x65F6;&#x5904;&#x7406;&#x903B;&#x8F91;</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> timeoutTps = timeoutCount / durationOfSeconds;</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (timeoutTps &gt; rule.<span class="fu">getMatchedRule</span>(api).<span class="fu">getMaxTimeoutTps</span>()) {</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">URGENCY</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> timeoutTps <span class="op">=</span> timeoutCount <span class="op">/</span> durationOfSeconds<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>timeoutTps <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>api<span class="op">).</span><span class="fu">getMaxTimeoutTps</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">URGENCY</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h3 id="&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;">&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</h3>
 <ul>
 <li>&#x5BF9;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x8981;&#x505A;&#x76F8;&#x5E94;&#x7684;&#x4FEE;&#x6539;&#x3002;</li>
@@ -1148,93 +1157,93 @@
 <li>&#x6DFB;&#x52A0;&#x65B0;&#x7684; <code>TimeoutAlertHandler</code> &#x7C7B;</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">List</span>&lt;AlertHandler&gt; alertHandlers = <span class="kw">new</span> <span class="bu">ArrayList</span>&lt;&gt;();</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Alert <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span>AlertHandler<span class="op">&gt;</span> alertHandlers <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addAlertHandler</span>(AlertHandler alertHandler) {</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">alertHandlers</span>.<span class="fu">add</span>(alertHandler);</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addAlertHandler</span><span class="op">(</span>AlertHandler alertHandler<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">alertHandlers</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span>alertHandler<span class="op">);</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span>(ApiStatInfo apiStatInfo) {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (AlertHandler handler : alertHandlers) {</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      handler.<span class="fu">check</span>(apiStatInfo);</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span>ApiStatInfo apiStatInfo<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>AlertHandler handler <span class="op">:</span> alertHandlers<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      handler<span class="op">.</span><span class="fu">check</span><span class="op">(</span>apiStatInfo<span class="op">);</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ApiStatInfo {<span class="co">//&#x7701;&#x7565;constructor/getter/setter&#x65B9;&#x6CD5;</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> api;</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> requestCount;</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> errorCount;</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> durationOfSeconds;</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ApiStatInfo <span class="op">{</span><span class="co">//&#x7701;&#x7565;constructor/getter/setter&#x65B9;&#x6CD5;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> api<span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> requestCount<span class="op">;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> errorCount<span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">long</span> durationOfSeconds<span class="op">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> AlertHandler {</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> AlertRule rule;</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">Notification</span> notification;</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">AlertHandler</span>(AlertRule rule, <span class="bu">Notification</span> notification) {</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">rule</span> = rule;</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">notification</span> = notification;</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">void</span> <span class="fu">check</span>(ApiStatInfo apiStatInfo);</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> AlertHandler <span class="op">{</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> AlertRule rule<span class="op">;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">protected</span> <span class="bu">Notification</span> notification<span class="op">;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">AlertHandler</span><span class="op">(</span>AlertRule rule<span class="op">,</span> <span class="bu">Notification</span> notification<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">rule</span> <span class="op">=</span> rule<span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">notification</span> <span class="op">=</span> notification<span class="op">;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span>ApiStatInfo apiStatInfo<span class="op">);</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TpsAlertHandler <span class="kw">extends</span> AlertHandler {</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">TpsAlertHandler</span>(AlertRule rule, <span class="bu">Notification</span> notification) {</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>(rule, notification);</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TpsAlertHandler <span class="kw">extends</span> AlertHandler <span class="op">{</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">TpsAlertHandler</span><span class="op">(</span>AlertRule rule<span class="op">,</span> <span class="bu">Notification</span> notification<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span><span class="op">(</span>rule<span class="op">,</span> notification<span class="op">);</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span>(ApiStatInfo apiStatInfo) {</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps = apiStatInfo.<span class="fu">getRequestCount</span>()/ apiStatInfo.<span class="fu">getDurationOfSeconds</span>();</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (tps &gt; rule.<span class="fu">getMatchedRule</span>(apiStatInfo.<span class="fu">getApi</span>()).<span class="fu">getMaxTps</span>()) {</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">URGENCY</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span>ApiStatInfo apiStatInfo<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> tps <span class="op">=</span> apiStatInfo<span class="op">.</span><span class="fu">getRequestCount</span><span class="op">()/</span> apiStatInfo<span class="op">.</span><span class="fu">getDurationOfSeconds</span><span class="op">();</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>tps <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>apiStatInfo<span class="op">.</span><span class="fu">getApi</span><span class="op">()).</span><span class="fu">getMaxTps</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">URGENCY</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ErrorAlertHandler <span class="kw">extends</span> AlertHandler {</span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ErrorAlertHandler</span>(AlertRule rule, <span class="bu">Notification</span> notification){</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>(rule, notification);</span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ErrorAlertHandler <span class="kw">extends</span> AlertHandler <span class="op">{</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ErrorAlertHandler</span><span class="op">(</span>AlertRule rule<span class="op">,</span> <span class="bu">Notification</span> notification<span class="op">){</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span><span class="op">(</span>rule<span class="op">,</span> notification<span class="op">);</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span>(ApiStatInfo apiStatInfo) {</span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (apiStatInfo.<span class="fu">getErrorCount</span>() &gt; rule.<span class="fu">getMatchedRule</span>(apiStatInfo.<span class="fu">getApi</span>()).<span class="fu">getMaxErrorCount</span>()) {</span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>      notification.<span class="fu">notify</span>(NotificationEmergencyLevel.<span class="fu">SEVERE</span>, <span class="st">&quot;...&quot;</span>);</span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">check</span><span class="op">(</span>ApiStatInfo apiStatInfo<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>apiStatInfo<span class="op">.</span><span class="fu">getErrorCount</span><span class="op">()</span> <span class="op">&gt;</span> rule<span class="op">.</span><span class="fu">getMatchedRule</span><span class="op">(</span>apiStatInfo<span class="op">.</span><span class="fu">getApi</span><span class="op">()).</span><span class="fu">getMaxErrorCount</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>      notification<span class="op">.</span><span class="fu">notify</span><span class="op">(</span>NotificationEmergencyLevel<span class="op">.</span><span class="fu">SEVERE</span><span class="op">,</span> <span class="st">&quot;...&quot;</span><span class="op">);</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TimeoutAlertHandler <span class="kw">extends</span> AlertHandler {</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TimeoutAlertHandler <span class="kw">extends</span> AlertHandler <span class="op">{</span></span>
 <span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="co">//&#x7701;&#x7565;&#x4EE3;&#x7801;...</span></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ApplicationContext {</span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> AlertRule alertRule;</span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Notification</span> notification;</span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Alert alert;</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ApplicationContext <span class="op">{</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> AlertRule alertRule<span class="op">;</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Notification</span> notification<span class="op">;</span></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Alert alert<span class="op">;</span></span>
 <span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">initializeBeans</span>() {</span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    alertRule = <span class="kw">new</span> <span class="fu">AlertRule</span>(<span class="co">/*.&#x7701;&#x7565;&#x53C2;&#x6570;.*/</span>); <span class="co">//&#x7701;&#x7565;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>    notification = <span class="kw">new</span> <span class="bu">Notification</span>(<span class="co">/*.&#x7701;&#x7565;&#x53C2;&#x6570;.*/</span>); <span class="co">//&#x7701;&#x7565;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;</span></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    alert = <span class="kw">new</span> <span class="fu">Alert</span>();</span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    alert.<span class="fu">addAlertHandler</span>(<span class="kw">new</span> <span class="fu">TpsAlertHandler</span>(alertRule, notification));</span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    alert.<span class="fu">addAlertHandler</span>(<span class="kw">new</span> <span class="fu">ErrorAlertHandler</span>(alertRule, notification));</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">initializeBeans</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    alertRule <span class="op">=</span> <span class="kw">new</span> <span class="fu">AlertRule</span><span class="op">(</span><span class="co">/*.&#x7701;&#x7565;&#x53C2;&#x6570;.*/</span><span class="op">);</span> <span class="co">//&#x7701;&#x7565;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>    notification <span class="op">=</span> <span class="kw">new</span> <span class="bu">Notification</span><span class="op">(</span><span class="co">/*.&#x7701;&#x7565;&#x53C2;&#x6570;.*/</span><span class="op">);</span> <span class="co">//&#x7701;&#x7565;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    alert <span class="op">=</span> <span class="kw">new</span> <span class="fu">Alert</span><span class="op">();</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    alert<span class="op">.</span><span class="fu">addAlertHandler</span><span class="op">(</span><span class="kw">new</span> <span class="fu">TpsAlertHandler</span><span class="op">(</span>alertRule<span class="op">,</span> notification<span class="op">));</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    alert<span class="op">.</span><span class="fu">addAlertHandler</span><span class="op">(</span><span class="kw">new</span> <span class="fu">ErrorAlertHandler</span><span class="op">(</span>alertRule<span class="op">,</span> notification<span class="op">));</span></span>
 <span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x6CE8;&#x518C;handler</span></span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    alert.<span class="fu">addAlertHandler</span>(<span class="kw">new</span> <span class="fu">TimeoutAlertHandler</span>(alertRule, notification));</span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    alert<span class="op">.</span><span class="fu">addAlertHandler</span><span class="op">(</span><span class="kw">new</span> <span class="fu">TimeoutAlertHandler</span><span class="op">(</span>alertRule<span class="op">,</span> notification<span class="op">));</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x672A;&#x6539;&#x52A8;&#x4EE3;&#x7801;...</span></span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo {</span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
-<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>    ApiStatInfo apiStatInfo = <span class="kw">new</span> <span class="fu">ApiStatInfo</span>();</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo <span class="op">{</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>    ApiStatInfo apiStatInfo <span class="op">=</span> <span class="kw">new</span> <span class="fu">ApiStatInfo</span><span class="op">();</span></span>
 <span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x7701;&#x7565;apiStatInfo&#x7684;set&#x5B57;&#x6BB5;&#x4EE3;&#x7801;</span></span>
-<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    apiStatInfo.<span class="fu">setTimeoutCount</span>(<span class="dv">289</span>); <span class="co">// &#x8BBE;&#x7F6E;tiemoutCount&#x503C;</span></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>    ApplicationContext.<span class="fu">getInstance</span>().<span class="fu">getAlert</span>().<span class="fu">check</span>(apiStatInfo);</span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    apiStatInfo<span class="op">.</span><span class="fu">setTimeoutCount</span><span class="op">(</span><span class="dv">289</span><span class="op">);</span> <span class="co">// &#x8BBE;&#x7F6E;tiemoutCount&#x503C;</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>    ApplicationContext<span class="op">.</span><span class="fu">getInstance</span><span class="op">().</span><span class="fu">getAlert</span><span class="op">().</span><span class="fu">check</span><span class="op">(</span>apiStatInfo<span class="op">);</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x91CD;&#x6784;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x548C;&#x6613;&#x6269;&#x5C55;&#x3002; &#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x60F3;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x544A;&#x8B66;&#x903B;&#x8F91;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x57FA;&#x4E8E;&#x6269;&#x5C55;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x65B0;&#x7684; <code>handler</code> &#x7C7B;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x52A8;&#x539F;&#x6765;&#x7684; <code>check()</code> &#x51FD;&#x6570;&#x7684;&#x903B;&#x8F91;&#x3002; &#x800C;&#x4E14;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E3A;&#x65B0;&#x7684; <code>handler</code> &#x7C7B;&#x6DFB;&#x52A0;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF0C;&#x8001;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x90FD;&#x4E0D;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x4E5F;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#x3002;</p>
 <h2 id="&#x8BEF;&#x533A;">&#x8BEF;&#x533A;</h2>
 <p>Q&#xFF1A;&#x5F80; <code>ApiStatInfo</code> &#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5C5E;&#x6027; <code>timeoutCount</code> &#x8FDD;&#x53CD;&#x5F00;&#x95ED;&#x539F;&#x5219;&#x5417;&#xFF1F;</p>
@@ -1279,27 +1288,27 @@
 <h2 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h2>
 <p>&#x51FD;&#x6570;&#x7684;&#x8BBE;&#x8BA1;&#x8981;&#x529F;&#x80FD;<strong>&#x5355;&#x4E00;</strong>&#xFF0C;&#x4E0D;&#x8981;&#x5C06;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x903B;&#x8F91;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x5B9E;&#x73B0;&#x3002;</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Statistics {</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> max;</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> min;</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> average;</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> sum;</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> percentile99;</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> percentile999;</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Statistics <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> max<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> min<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> average<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> sum<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> percentile99<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> percentile999<span class="op">;</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;constructor/getter/setter&#x7B49;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Statistics <span class="fu">count</span>(<span class="bu">Collection</span>&lt;<span class="bu">Long</span>&gt; dataSet) {</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    Statistics statistics = <span class="kw">new</span> <span class="fu">Statistics</span>();</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Statistics <span class="fu">count</span><span class="op">(</span><span class="bu">Collection</span><span class="op">&lt;</span><span class="bu">Long</span><span class="op">&gt;</span> dataSet<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    Statistics statistics <span class="op">=</span> <span class="kw">new</span> <span class="fu">Statistics</span><span class="op">();</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;&#x8BA1;&#x7B97;&#x903B;&#x8F91;...</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> statistics;</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> statistics<span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>count()</code> &#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x4E0D;&#x591F;&#x5355;&#x4E00;&#xFF0C;&#x5305;&#x542B;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x7EDF;&#x8BA1;&#x529F;&#x80FD;&#xFF0C; &#x6BD4;&#x5982;&#xFF0C;&#x6C42;&#x6700;&#x5927;&#x503C;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x3001;&#x5E73;&#x5747;&#x503C;&#x7B49;&#x7B49;&#x3002;&#x6309;&#x7167;&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x628A; <code>count()</code> &#x51FD;&#x6570;&#x62C6;&#x6210;&#x51E0;&#x4E2A;&#x66F4;&#x5C0F;&#x7C92;&#x5EA6;&#x7684;&#x51FD;&#x6570;&#xFF0C; &#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x8D1F;&#x8D23;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7EDF;&#x8BA1;&#x529F;&#x80FD;&#x3002;</p>
 <p>&#x62C6;&#x5206;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">max</span>(<span class="bu">Collection</span>&lt;<span class="bu">Long</span>&gt; dataSet) { <span class="co">//... }</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">min</span>(<span class="bu">Collection</span>&lt;<span class="bu">Long</span>&gt; dataSet) { <span class="co">//... } </span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">average</span>(Colletion&lt;<span class="bu">Long</span>&gt; dataSet) { <span class="co">//... }</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">max</span><span class="op">(</span><span class="bu">Collection</span><span class="op">&lt;</span><span class="bu">Long</span><span class="op">&gt;</span> dataSet<span class="op">)</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">min</span><span class="op">(</span><span class="bu">Collection</span><span class="op">&lt;</span><span class="bu">Long</span><span class="op">&gt;</span> dataSet<span class="op">)</span> <span class="op">{</span> <span class="co">//... } </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">Long</span> <span class="fu">average</span><span class="op">(</span>Colletion<span class="op">&lt;</span><span class="bu">Long</span><span class="op">&gt;</span> dataSet<span class="op">)</span> <span class="op">{</span> <span class="co">//... }</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;...</span></span></code></pre></div>
 <h3 id="&#x4E0E;&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;&#x7684;&#x533A;&#x522B;">&#x4E0E;&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;&#x7684;&#x533A;&#x522B;</h3>
 <ul>
@@ -1314,92 +1323,92 @@
 <p>&#x5E76;&#x4E14;&#x9700;&#x8981;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5185;&#x5D4C;&#x7684; <code>SimpleHttpServer</code>&#xFF0C;&#x8F93;&#x51FA;&#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5230;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684; HTTP &#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<code>http://127.0.0.1:2389/config</code> &#x3002; &#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x51FA;&#x7CFB;&#x7EDF;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x51FA;&#x4E8E;&#x67D0;&#x4E9B;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x66B4;&#x9732; <code>MySQL</code> &#x548C; <code>Redis</code> &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x60F3;&#x66B4;&#x9732; <code>Kafka</code> &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
 <p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Updater {</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">update</span>();</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Updater <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">update</span><span class="op">();</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Viewer {</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">outputInPlainText</span>();</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">String</span>&gt; <span class="fu">output</span>();</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> Viewer <span class="op">{</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">outputInPlainText</span><span class="op">();</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> <span class="fu">output</span><span class="op">();</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RedisConfig implemets Updater, Viewer {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RedisConfig implemets Updater<span class="op">,</span> Viewer <span class="op">{</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">update</span>() {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">update</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">outputInPlainText</span>() {</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">outputInPlainText</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">String</span>&gt; <span class="fu">output</span>() {</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> <span class="fu">output</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> KafkaConfig <span class="kw">implements</span> Updater {</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> KafkaConfig <span class="kw">implements</span> Updater <span class="op">{</span></span>
 <span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">update</span>() { <span class="co">//... }</span></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">update</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MysqlConfig <span class="kw">implements</span> Viewer {</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MysqlConfig <span class="kw">implements</span> Viewer <span class="op">{</span></span>
 <span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">outputInPlainText</span>() {</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">outputInPlainText</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">String</span>&gt; <span class="fu">output</span>() {</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> <span class="fu">output</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SimpleHttpServer {</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> host;</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> port;</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span>&lt;<span class="bu">String</span>, <span class="bu">List</span>&lt;Viewer&gt;&gt; viewers = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SimpleHttpServer <span class="op">{</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> host<span class="op">;</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> port<span class="op">;</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">List</span><span class="op">&lt;</span>Viewer<span class="op">&gt;&gt;</span> viewers <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">SimpleHttpServer</span>(<span class="bu">String</span> host, <span class="dt">int</span> port) {</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">SimpleHttpServer</span><span class="op">(</span><span class="bu">String</span> host<span class="op">,</span> <span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addViewers</span>(<span class="bu">String</span> urlDirectory, Viewer viewer) {</span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!viewers.<span class="fu">containsKey</span>(urlDirectory)) {</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>      viewers.<span class="fu">put</span>(urlDirectory, <span class="kw">new</span> <span class="bu">ArrayList</span>&lt;Viewer&gt;());</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">viewers</span>.<span class="fu">get</span>(urlDirectory).<span class="fu">add</span>(viewer);</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addViewers</span><span class="op">(</span><span class="bu">String</span> urlDirectory<span class="op">,</span> Viewer viewer<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>viewers<span class="op">.</span><span class="fu">containsKey</span><span class="op">(</span>urlDirectory<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>      viewers<span class="op">.</span><span class="fu">put</span><span class="op">(</span>urlDirectory<span class="op">,</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Viewer<span class="op">&gt;());</span></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">viewers</span><span class="op">.</span><span class="fu">get</span><span class="op">(</span>urlDirectory<span class="op">).</span><span class="fu">add</span><span class="op">(</span>viewer<span class="op">);</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span>() {</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application {</span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>    ConfigSource configSource = <span class="kw">new</span> <span class="fu">ZookeeperConfigSource</span>();</span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> RedisConfig redisConfig = <span class="kw">new</span> <span class="fu">RedisConfig</span>(configSource);</span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> KafkaConfig kafkaConfig = <span class="kw">new</span> <span class="fu">KakfaConfig</span>(configSource);</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> MySqlConfig mysqlConfig = <span class="kw">new</span> <span class="fu">MySqlConfig</span>(configSource);</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Application <span class="op">{</span></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>    ConfigSource configSource <span class="op">=</span> <span class="kw">new</span> <span class="fu">ZookeeperConfigSource</span><span class="op">();</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> RedisConfig redisConfig <span class="op">=</span> <span class="kw">new</span> <span class="fu">RedisConfig</span><span class="op">(</span>configSource<span class="op">);</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> KafkaConfig kafkaConfig <span class="op">=</span> <span class="kw">new</span> <span class="fu">KakfaConfig</span><span class="op">(</span>configSource<span class="op">);</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> MySqlConfig mysqlConfig <span class="op">=</span> <span class="kw">new</span> <span class="fu">MySqlConfig</span><span class="op">(</span>configSource<span class="op">);</span></span>
 <span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>        ScheduledUpdater redisConfigUpdater =</span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>            <span class="kw">new</span> <span class="fu">ScheduledUpdater</span>(redisConfig, <span class="dv">300</span>, <span class="dv">300</span>);</span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>        redisConfigUpdater.<span class="fu">run</span>();</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>        ScheduledUpdater redisConfigUpdater <span class="op">=</span></span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>            <span class="kw">new</span> <span class="fu">ScheduledUpdater</span><span class="op">(</span>redisConfig<span class="op">,</span> <span class="dv">300</span><span class="op">,</span> <span class="dv">300</span><span class="op">);</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>        redisConfigUpdater<span class="op">.</span><span class="fu">run</span><span class="op">();</span></span>
 <span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>        ScheduledUpdater kafkaConfigUpdater =</span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>            <span class="kw">new</span> <span class="fu">ScheduledUpdater</span>(kafkaConfig, <span class="dv">60</span>, <span class="dv">60</span>);</span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>        redisConfigUpdater.<span class="fu">run</span>();</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>        ScheduledUpdater kafkaConfigUpdater <span class="op">=</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>            <span class="kw">new</span> <span class="fu">ScheduledUpdater</span><span class="op">(</span>kafkaConfig<span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">60</span><span class="op">);</span></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>        redisConfigUpdater<span class="op">.</span><span class="fu">run</span><span class="op">();</span></span>
 <span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>        SimpleHttpServer simpleHttpServer = <span class="kw">new</span> <span class="fu">SimpleHttpServer</span>(<span class="st">&quot;127.0.0.1&quot;</span>, <span class="dv">2389</span>);</span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer.<span class="fu">addViewer</span>(<span class="st">&quot;/config&quot;</span>, redisConfig);</span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer.<span class="fu">addViewer</span>(<span class="st">&quot;/config&quot;</span>, mysqlConfig);</span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer.<span class="fu">run</span>();</span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>        SimpleHttpServer simpleHttpServer <span class="op">=</span> <span class="kw">new</span> <span class="fu">SimpleHttpServer</span><span class="op">(</span><span class="st">&quot;127.0.0.1&quot;</span><span class="op">,</span> <span class="dv">2389</span><span class="op">);</span></span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer<span class="op">.</span><span class="fu">addViewer</span><span class="op">(</span><span class="st">&quot;/config&quot;</span><span class="op">,</span> redisConfig<span class="op">);</span></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer<span class="op">.</span><span class="fu">addViewer</span><span class="op">(</span><span class="st">&quot;/config&quot;</span><span class="op">,</span> mysqlConfig<span class="op">);</span></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>        simpleHttpServer<span class="op">.</span><span class="fu">run</span><span class="op">();</span></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x4E86;&#x4E24;&#x4E2A;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x5355;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#xFF1A;<code>Updater</code> &#x548C; <code>Viewer</code>&#x3002; <code>ScheduledUpdater</code> &#x53EA;&#x4F9D;&#x8D56; <code>Updater</code> &#x8FD9;&#x4E2A;&#x8DDF;&#x70ED;&#x66F4;&#x65B0;&#x76F8;&#x5173;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x5F3A;&#x8FEB;&#x53BB;&#x4F9D;&#x8D56;&#x4E0D;&#x9700;&#x8981;&#x7684; <code>Viewer</code> &#x63A5;&#x53E3;&#xFF0C;&#x6EE1;&#x8DB3;&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;&#x3002;</p>
 <p>&#x540C;&#x7406;&#xFF0C;<code>SimpleHttpServer</code> &#x53EA;&#x4F9D;&#x8D56;&#x8DDF;&#x67E5;&#x770B;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x7684; <code>Viewer</code> &#x63A5;&#x53E3;&#xFF0C;&#x4E0D;&#x4F9D;&#x8D56;&#x4E0D;&#x9700;&#x8981;&#x7684; <code>Updater</code> &#x63A5;&#x53E3;&#xFF0C;&#x4E5F;&#x6EE1;&#x8DB3;&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;&#x3002;</p>
 <h1 id="&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;">&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;</h1>
@@ -1411,52 +1420,52 @@
 <p>&#x4F8B;&#xFF1A;</p>
 <p>&#x4EE3;&#x7801;1&#xFF1A;</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserServiceTest {</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">boolean</span> <span class="fu">doTest</span>() {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserServiceTest <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">boolean</span> <span class="fu">doTest</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ... </span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {<span class="co">//&#x8FD9;&#x90E8;&#x5206;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x653E;&#x5230;&#x6846;&#x67B6;&#x4E2D;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (<span class="fu">doTest</span>()) {</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Test succeed.&quot;</span>);</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> {</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Test failed.&quot;</span>);</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span><span class="co">//&#x8FD9;&#x90E8;&#x5206;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x653E;&#x5230;&#x6846;&#x67B6;&#x4E2D;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="fu">doTest</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Test succeed.&quot;</span><span class="op">);</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Test failed.&quot;</span><span class="op">);</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x4EE3;&#x7801;2&#xFF1A;</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> TestCase {</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span>() {</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (<span class="fu">doTest</span>()) {</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Test succeed.&quot;</span>);</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    } <span class="kw">else</span> {</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Test failed.&quot;</span>);</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> TestCase <span class="op">{</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="fu">doTest</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Test succeed.&quot;</span><span class="op">);</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Test failed.&quot;</span><span class="op">);</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">boolean</span> <span class="fu">doTest</span>();</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">boolean</span> <span class="fu">doTest</span><span class="op">();</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserServiceTest <span class="kw">extends</span> TestCase {</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserServiceTest <span class="kw">extends</span> TestCase <span class="op">{</span></span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">doTest</span>() {</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">doTest</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ... </span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JunitApplication {</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">List</span>&lt;TestCase&gt; testCases = <span class="kw">new</span> <span class="bu">ArrayList</span>&lt;&gt;();</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JunitApplication <span class="op">{</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">List</span><span class="op">&lt;</span>TestCase<span class="op">&gt;</span> testCases <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">register</span>(TestCase testCase) {</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    testCases.<span class="fu">add</span>(testCase);</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">register</span><span class="op">(</span>TestCase testCase<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    testCases<span class="op">.</span><span class="fu">add</span><span class="op">(</span>testCase<span class="op">);</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (TestCase cases: testCases) {</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      cases.<span class="fu">run</span>();</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>TestCase cases<span class="op">:</span> testCases<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      cases<span class="op">.</span><span class="fu">run</span><span class="op">();</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code></pre></div>
 <p><code>&#x4EE3;&#x7801;2</code>&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6846;&#x67B6;&#x9884;&#x7559;&#x7684;<strong>&#x6269;&#x5C55;&#x70B9;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>TestCase</code> &#x7C7B;&#x4E2D;&#x7684; <code>doTest()</code> &#x62BD;&#x8C61;&#x51FD;&#x6570;&#x4E2D;&#xFF0C; &#x586B;&#x5145;&#x5177;&#x4F53;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E4B;&#x524D;&#x7684;&#x529F;&#x80FD;&#x4E86;&#xFF0C;&#x5B8C;&#x5168;&#x4E0D;&#x9700;&#x8981;&#x5199;&#x8D1F;&#x8D23;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7684; <code>main()</code> &#x51FD;&#x6570;&#x4E86;&#x3002;</p>
 <p>&#x8FD9;&#x91CC;&#x7684; <code>&#x63A7;&#x5236;</code> &#x6307;&#x7684;&#x662F;&#x5BF9;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7684;&#x63A7;&#x5236;&#xFF0C;&#x800C; <code>&#x53CD;&#x8F6C;</code> &#x6307;&#x7684;&#x662F;&#x5728;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x6846;&#x67B6;&#x4E4B;&#x524D;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x81EA;&#x5DF1;&#x63A7;&#x5236;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x3002; &#x5728;&#x4F7F;&#x7528;&#x6846;&#x67B6;&#x4E4B;&#x540E;&#xFF0C;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6846;&#x67B6;&#x6765;&#x63A7;&#x5236;&#x3002; &#x6D41;&#x7A0B;&#x7684;&#x63A7;&#x5236;&#x6743;&#x4ECE;&#x7A0B;&#x5E8F;&#x5458; <strong>&#x53CD;&#x8F6C;</strong> &#x5230;&#x4E86;&#x6846;&#x67B6;&#x3002;</p>
 <p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x53CD;&#x8F6C;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x9664;&#x4E86;&#x521A;&#x624D;&#x4F8B;&#x5B50;&#x4E2D;&#x6240;&#x793A;&#x7684;&#x7C7B;&#x4F3C;&#x4E8E;&#x6A21;&#x677F;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709; <strong>&#x4F9D;&#x8D56;&#x6CE8;&#x5165;</strong> &#x7B49;&#x65B9;&#x6CD5;&#xFF0C; &#x6240;&#x4EE5;&#xFF0C;<strong>&#x63A7;&#x5236;&#x53CD;&#x8F6C;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x6280;&#x5DE7;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x7B3C;&#x7EDF;&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x6307;&#x5BFC;&#x6846;&#x67B6;&#x5C42;&#x9762;&#x7684;&#x8BBE;&#x8BA1;</strong> &#x3002;</p>

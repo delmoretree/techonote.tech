@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1009,107 +1018,107 @@
 <p><strong>&#x8D8A;&#x62BD;&#x8C61;&#x3001;&#x8D8A;&#x9876;&#x5C42;&#x3001;&#x8D8A;&#x8131;&#x79BB;&#x5177;&#x4F53;&#x67D0;&#x4E00;&#x5B9E;&#x73B0;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x8D8A;&#x80FD;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x8D8A;&#x80FD;&#x5E94;&#x5BF9;&#x672A;&#x6765;&#x7684;&#x9700;&#x6C42;&#x53D8;&#x5316;&#x3002;</strong> &#x597D;&#x7684;&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E0D;&#x4EC5;&#x80FD;&#x5E94;&#x5BF9;&#x5F53;&#x4E0B;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x5C06;&#x6765;&#x9700;&#x6C42;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ECD;&#x7136;&#x80FD;&#x591F;&#x5728;&#x4E0D;&#x7834;&#x574F;&#x539F;&#x6709;&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7075;&#x6D3B;&#x5E94;&#x5BF9;&#x3002;&#x800C;&#x62BD;&#x8C61;&#x5C31;&#x662F;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x6269;&#x5C55;&#x6027;&#x3001;&#x7075;&#x6D3B;&#x6027;&#x3001;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x6700;&#x6709;&#x6548;&#x7684;&#x624B;&#x6BB5;&#x4E4B;&#x4E00;&#x3002;</p>
 <p>&#x4F8B;&#xFF08;&#x56FE;&#x7247;&#x5904;&#x7406;&#x548C;&#x5B58;&#x50A8;&#xFF09;&#xFF1A;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AliyunImageStore {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AliyunImageStore <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5C5E;&#x6027;&#x3001;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7B49;...</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span>(<span class="bu">String</span> bucketName) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span><span class="op">(</span><span class="bu">String</span> bucketName<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x521B;&#x5EFA;bucket&#x4EE3;&#x7801;&#x903B;&#x8F91;...</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x5931;&#x8D25;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;..</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">generateAccessToken</span>() {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">generateAccessToken</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x6839;&#x636E;accesskey/secrectkey&#x7B49;&#x751F;&#x6210;access token</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">uploadToAliyun</span>(<span class="bu">Image</span> image, <span class="bu">String</span> bucketName, <span class="bu">String</span> accessToken) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">uploadToAliyun</span><span class="op">(</span><span class="bu">Image</span> image<span class="op">,</span> <span class="bu">String</span> bucketName<span class="op">,</span> <span class="bu">String</span> accessToken<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5230;&#x963F;&#x91CC;&#x4E91;...</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x5B58;&#x50A8;&#x5728;&#x963F;&#x91CC;&#x4E91;&#x4E0A;&#x7684;&#x5730;&#x5740;(url&#xFF09;...</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">downloadFromAliyun</span>(<span class="bu">String</span> url, <span class="bu">String</span> accessToken) {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">downloadFromAliyun</span><span class="op">(</span><span class="bu">String</span> url<span class="op">,</span> <span class="bu">String</span> accessToken<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4ECE;&#x963F;&#x91CC;&#x4E91;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;...</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">// AliyunImageStore&#x7C7B;&#x7684;&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ImageProcessingJob {</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> BUCKET_NAME = <span class="st">&quot;ai_images_bucket&quot;</span>;</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ImageProcessingJob <span class="op">{</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> BUCKET_NAME <span class="op">=</span> <span class="st">&quot;ai_images_bucket&quot;</span><span class="op">;</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x65E0;&#x5173;&#x4EE3;&#x7801;...</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">process</span>() {</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Image</span> image = ...; <span class="co">//&#x5904;&#x7406;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x5C01;&#x88C5;&#x4E3A;Image&#x5BF9;&#x8C61;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    AliyunImageStore imageStore = <span class="kw">new</span> <span class="fu">AliyunImageStore</span>(<span class="co">/*&#x7701;&#x7565;&#x53C2;&#x6570;*/</span>);</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    imageStore.<span class="fu">createBucketIfNotExisting</span>(BUCKET_NAME);</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken = imageStore.<span class="fu">generateAccessToken</span>();</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    imagestore.<span class="fu">uploadToAliyun</span>(image, BUCKET_NAME, accessToken);</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">process</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Image</span> image <span class="op">=</span> <span class="kw">...</span><span class="op">;</span> <span class="co">//&#x5904;&#x7406;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x5C01;&#x88C5;&#x4E3A;Image&#x5BF9;&#x8C61;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    AliyunImageStore imageStore <span class="op">=</span> <span class="kw">new</span> <span class="fu">AliyunImageStore</span><span class="op">(</span><span class="co">/*&#x7701;&#x7565;&#x53C2;&#x6570;*/</span><span class="op">);</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    imageStore<span class="op">.</span><span class="fu">createBucketIfNotExisting</span><span class="op">(</span>BUCKET_NAME<span class="op">);</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken <span class="op">=</span> imageStore<span class="op">.</span><span class="fu">generateAccessToken</span><span class="op">();</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    imagestore<span class="op">.</span><span class="fu">uploadToAliyun</span><span class="op">(</span>image<span class="op">,</span> BUCKET_NAME<span class="op">,</span> accessToken<span class="op">);</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><code>AliyunImageStore</code> &#x7C7B;&#x4E2D;&#x6709;&#x4E9B;&#x51FD;&#x6570;&#x547D;&#x540D;&#x66B4;&#x9732;&#x4E86;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;<code>uploadToAliyun()</code> &#x548C; <code>downloadFromAliyun()</code>&#x3002;&#x5982;&#x679C;&#x9700;&#x6C42;&#x53D8;&#x66F4;&#x4E3A;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x540D;&#x663E;&#x7136;&#x4E0D;&#x518D;&#x9002;&#x5408;&#x3002;</li>
 <li><code>AliyunImageStore</code> &#x4E2D;&#x5B9A;&#x4E49;&#x7684; <code>generateAccessToken()</code> &#x65B9;&#x6CD5;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x5C06;&#x7A81;&#x7834;&#x5B58;&#x50A8;&#x5728;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x9700;&#x6C42;&#x3002;</li>
 </ul>
 <p>&#x91CD;&#x6784;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ImageStore {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">upload</span>(<span class="bu">Image</span> image, <span class="bu">String</span> bucketName);</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Image</span> <span class="fu">download</span>(<span class="bu">String</span> url);</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ImageStore <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">upload</span><span class="op">(</span><span class="bu">Image</span> image<span class="op">,</span> <span class="bu">String</span> bucketName<span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Image</span> <span class="fu">download</span><span class="op">(</span><span class="bu">String</span> url<span class="op">);</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AliyunImageStore <span class="kw">implements</span> ImageStore {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AliyunImageStore <span class="kw">implements</span> ImageStore <span class="op">{</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5C5E;&#x6027;&#x3001;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7B49;...</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">upload</span>(<span class="bu">Image</span> image, <span class="bu">String</span> bucketName) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">createBucketIfNotExisting</span>(bucketName);</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken = <span class="fu">generateAccessToken</span>();</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">upload</span><span class="op">(</span><span class="bu">Image</span> image<span class="op">,</span> <span class="bu">String</span> bucketName<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">createBucketIfNotExisting</span><span class="op">(</span>bucketName<span class="op">);</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken <span class="op">=</span> <span class="fu">generateAccessToken</span><span class="op">();</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5230;&#x963F;&#x91CC;&#x4E91;...</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x5728;&#x963F;&#x91CC;&#x4E91;&#x4E0A;&#x7684;&#x5730;&#x5740;(url)...</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">download</span>(<span class="bu">String</span> url) {</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken = <span class="fu">generateAccessToken</span>();</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">download</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> accessToken <span class="op">=</span> <span class="fu">generateAccessToken</span><span class="op">();</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4ECE;&#x963F;&#x91CC;&#x4E91;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;...</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span>(<span class="bu">String</span> bucketName) {</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span><span class="op">(</span><span class="bu">String</span> bucketName<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x521B;&#x5EFA;bucket...</span></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x5931;&#x8D25;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;..</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">generateAccessToken</span>() {</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> <span class="fu">generateAccessToken</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x6839;&#x636E;accesskey/secrectkey&#x7B49;&#x751F;&#x6210;access token</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4E0A;&#x4F20;&#x4E0B;&#x8F7D;&#x6D41;&#x7A0B;&#x6539;&#x53D8;&#xFF1A;&#x79C1;&#x6709;&#x4E91;&#x4E0D;&#x9700;&#x8981;&#x652F;&#x6301;access token</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PrivateImageStore <span class="kw">implements</span> ImageStore  {</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">upload</span>(<span class="bu">Image</span> image, <span class="bu">String</span> bucketName) {</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">createBucketIfNotExisting</span>(bucketName);</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PrivateImageStore <span class="kw">implements</span> ImageStore  <span class="op">{</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">upload</span><span class="op">(</span><span class="bu">Image</span> image<span class="op">,</span> <span class="bu">String</span> bucketName<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">createBucketIfNotExisting</span><span class="op">(</span>bucketName<span class="op">);</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5230;&#x79C1;&#x6709;&#x4E91;...</span></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x7684;url...</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">download</span>(<span class="bu">String</span> url) {</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Image</span> <span class="fu">download</span><span class="op">(</span><span class="bu">String</span> url<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x4ECE;&#x79C1;&#x6709;&#x4E91;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;...</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span>(<span class="bu">String</span> bucketName) {</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">createBucketIfNotExisting</span><span class="op">(</span><span class="bu">String</span> bucketName<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x521B;&#x5EFA;bucket...</span></span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...&#x5931;&#x8D25;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;..</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co">// ImageStore&#x7684;&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ImageProcessingJob {</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> BUCKET_NAME = <span class="st">&quot;ai_images_bucket&quot;</span>;</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ImageProcessingJob <span class="op">{</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> BUCKET_NAME <span class="op">=</span> <span class="st">&quot;ai_images_bucket&quot;</span><span class="op">;</span></span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x65E0;&#x5173;&#x4EE3;&#x7801;...</span></span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">process</span>() {</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Image</span> image = ...;<span class="co">//&#x5904;&#x7406;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x5C01;&#x88C5;&#x4E3A;Image&#x5BF9;&#x8C61;</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    ImageStore imageStore = <span class="kw">new</span> <span class="fu">PrivateImageStore</span>(...);</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    imagestore.<span class="fu">upload</span>(image, BUCKET_NAME);</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">process</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Image</span> image <span class="op">=</span> <span class="kw">...</span><span class="op">;</span><span class="co">//&#x5904;&#x7406;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x5C01;&#x88C5;&#x4E3A;Image&#x5BF9;&#x8C61;</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    ImageStore imageStore <span class="op">=</span> <span class="kw">new</span> <span class="fu">PrivateImageStore</span><span class="op">(</span><span class="kw">...</span><span class="op">);</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    imagestore<span class="op">.</span><span class="fu">upload</span><span class="op">(</span>image<span class="op">,</span> BUCKET_NAME<span class="op">);</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><strong>&#x51FD;&#x6570;&#x7684;&#x547D;&#x540D;&#x4E0D;&#x80FD;&#x66B4;&#x9732;&#x4EFB;&#x4F55;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x3002;</strong> &#x6BD4;&#x5982;&#xFF0C;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684; <code>uploadToAliyun</code> ( &#x5C31;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF0C;&#x5E94;&#x8BE5;&#x6539;&#x4E3A;&#x53BB;&#x6389; <code>aliyun</code> &#x8FD9;&#x6837;&#x7684;&#x5B57;&#x773C;&#xFF0C;&#x6539;&#x4E3A;&#x66F4;&#x52A0;&#x62BD;&#x8C61;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<code>upload()</code>&#x3002;</li>
 <li><strong>&#x5C01;&#x88C5;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x3002;</strong> &#x6BD4;&#x5982;&#xFF0C;&#x8DDF;&#x963F;&#x91CC;&#x4E91;&#x76F8;&#x5173;&#x7684;&#x7279;&#x6B8A;&#x4E0A;&#x4F20;&#xFF08;&#x6216;&#x4E0B;&#x8F7D;&#xFF09;&#x6D41;&#x7A0B;&#x4E0D;&#x5E94;&#x8BE5;&#x66B4;&#x9732;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x3002;&#x6211;&#x4EEC;&#x5BF9;&#x4E0A;&#x4F20;&#xFF08;&#x6216;&#x4E0B;&#x8F7D;&#xFF09;&#x6D41;&#x7A0B;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF0C;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5305;&#x88F9;&#x6240;&#x6709;&#x4E0A;&#x4F20;&#xFF08;&#x6216;&#x4E0B;&#x8F7D;&#xFF09;&#x7EC6;&#x8282;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x4F7F;&#x7528;&#x3002;</li>

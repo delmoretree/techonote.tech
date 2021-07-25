@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1009,19 +1018,19 @@
 <p>&#x4F7F;&#x7528; <code>volatile</code> &#x63CF;&#x8FF0;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x5B58;&#x53D6;&#x503C;&#x3002;</p>
 <h1 id="happens-before-&#x89C4;&#x5219;-&#x589E;&#x5F3A;&#x4E86;-volatile-&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;">Happens-Before &#x89C4;&#x5219; &#x589E;&#x5F3A;&#x4E86; <code>volatile</code> &#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> VolatileExample {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> x = <span class="dv">0</span>;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">volatile</span> <span class="dt">boolean</span> v = <span class="kw">false</span>;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">writer</span>() {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    x = <span class="dv">42</span>;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    v = <span class="kw">true</span>;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">reader</span>() {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (v == <span class="kw">true</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> VolatileExample <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> x <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">volatile</span> <span class="dt">boolean</span> v <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">writer</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">42</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">reader</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>v <span class="op">==</span> <span class="kw">true</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="co">// &#x8FD9;&#x91CC;x&#x4F1A;&#x662F;&#x591A;&#x5C11;&#x5462;&#xFF1F;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5047;&#x8BBE;&#x7EBF;&#x7A0B; A &#x6267;&#x884C; <code>writer()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6309;&#x7167; volatile &#x8BED;&#x4E49;&#xFF0C;&#x4F1A;&#x628A;&#x53D8;&#x91CF; <code>v=true</code> &#x5199;&#x5165;&#x5185;&#x5B58;&#xFF1B;<br>
 &#x5047;&#x8BBE;&#x7EBF;&#x7A0B; B &#x6267;&#x884C; <code>reader()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x6837;&#x6309;&#x7167; volatile &#x8BED;&#x4E49;&#xFF0C;&#x7EBF;&#x7A0B; B &#x4F1A;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x53D8;&#x91CF; <code>v</code>&#xFF1B;<br>
 &#x5982;&#x679C;&#x7EBF;&#x7A0B; B &#x770B;&#x5230; <code>v == true</code> &#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x7EBF;&#x7A0B; B &#x770B;&#x5230;&#x7684;&#x53D8;&#x91CF; <code>x</code> &#x662F;&#x591A;&#x5C11;&#x5462;&#xFF1F;</p>
@@ -1047,12 +1056,12 @@
 <p>&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5BF9;&#x4E00;&#x4E2A;&#x9501;&#x4E34;&#x754C;&#x533A;&#x6267;&#x884C;&#x5B8C;&#x89E3;&#x9501;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x540E;&#x7EED;&#x5BF9;&#x8FD9;&#x4E2A;&#x4E34;&#x754C;&#x533A;&#x505A;&#x52A0;&#x9501;&#x64CD;&#x4F5C;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;</p>
 <p><code>synchronized</code> &#x5C31;&#x662F;Java&#x4E2D;<strong>&#x7BA1;&#x7A0B;</strong>&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">synchronized</span> (<span class="kw">this</span>) { <span class="co">//&#x6B64;&#x5904;&#x81EA;&#x52A8;&#x52A0;&#x9501;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">synchronized</span> <span class="op">(</span><span class="kw">this</span><span class="op">)</span> <span class="op">{</span> <span class="co">//&#x6B64;&#x5904;&#x81EA;&#x52A8;&#x52A0;&#x9501;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// x&#x662F;&#x5171;&#x4EAB;&#x53D8;&#x91CF;,&#x521D;&#x59CB;&#x503C;=10</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> (<span class="kw">this</span>.<span class="fu">x</span> &lt; <span class="dv">12</span>) {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">x</span> = <span class="dv">12</span>; </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  }  </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>} <span class="co">//&#x6B64;&#x5904;&#x81EA;&#x52A8;&#x89E3;&#x9501;</span></span></code></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">x</span> <span class="op">&lt;</span> <span class="dv">12</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">x</span> <span class="op">=</span> <span class="dv">12</span><span class="op">;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span>  </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="co">//&#x6B64;&#x5904;&#x81EA;&#x52A8;&#x89E3;&#x9501;</span></span></code></pre></div>
 <p>&#x5047;&#x8BBE; <code>x</code> &#x7684;&#x521D;&#x59CB;&#x503C;&#x662F; 10&#xFF1B;<br>
 &#x7EBF;&#x7A0B; A &#x6267;&#x884C;&#x5B8C;&#x4EE3;&#x7801;&#x5757;&#x540E; x &#x7684;&#x503C;&#x4F1A;&#x53D8;&#x6210; 12&#xFF08;&#x6267;&#x884C;&#x5B8C;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x9501;&#xFF09;&#xFF1B;<br>
 &#x7EBF;&#x7A0B; B &#x8FDB;&#x5165;&#x4EE3;&#x7801;&#x5757;&#x65F6;&#xFF0C;&#x80FD;&#x591F;&#x770B;&#x5230;&#x7EBF;&#x7A0B; A &#x5BF9; <code>x</code> &#x7684;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7EBF;&#x7A0B; B &#x80FD;&#x591F;&#x770B;&#x5230; <code>x==12</code>&#x3002;</p>
@@ -1060,15 +1069,15 @@
 <p>&#x4E3B;&#x7EBF;&#x7A0B; A &#x542F;&#x52A8;&#x5B50;&#x7EBF;&#x7A0B; B &#x540E;&#xFF0C;&#x5B50;&#x7EBF;&#x7A0B; B &#x80FD;&#x591F;&#x770B;&#x5230;&#x4E3B;&#x7EBF;&#x7A0B;&#x5728;&#x542F;&#x52A8;&#x5B50;&#x7EBF;&#x7A0B; B &#x524D;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
 <h2 id="&#x7EBF;&#x7A0B;-join-&#x89C4;&#x5219;">&#x7EBF;&#x7A0B; join() &#x89C4;&#x5219;</h2>
 <p>&#x5982;&#x679C;&#x5728;&#x7EBF;&#x7A0B; A &#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x7EBF;&#x7A0B; B &#x7684; <code>join()</code> &#x5E76;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#xFF0C;&#x90A3;&#x4E48;&#x7EBF;&#x7A0B; B &#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x64CD;&#x4F5C; &#x76F8;&#x5BF9;&#x4E8E;&#x8BE5; <code>join()</code> &#x64CD;&#x4F5C;&#x7684;&#x8FD4;&#x56DE; &#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Thread</span> B = <span class="kw">new</span> <span class="bu">Thread</span>(()-&gt;{</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Thread</span> B <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(()-&gt;{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x6B64;&#x5904;&#x5BF9;&#x5171;&#x4EAB;&#x53D8;&#x91CF;var&#x4FEE;&#x6539;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  var = <span class="dv">66</span>;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>});</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  var <span class="op">=</span> <span class="dv">66</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4F8B;&#x5982;&#x6B64;&#x5904;&#x5BF9;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x4FEE;&#x6539;&#xFF0C;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5219;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x7ED3;&#x679C;&#x5BF9;&#x7EBF;&#x7A0B;B&#x53EF;&#x89C1;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4E3B;&#x7EBF;&#x7A0B;&#x542F;&#x52A8;&#x5B50;&#x7EBF;&#x7A0B;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>B.<span class="fu">start</span>();</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>B.<span class="fu">join</span>()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>B<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>B<span class="op">.</span><span class="fu">join</span><span class="op">()</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5B50;&#x7EBF;&#x7A0B;&#x6240;&#x6709;&#x5BF9;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;B.join()&#x4E4B;&#x540E;&#x7686;&#x53EF;&#x89C1;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x6B64;&#x4F8B;&#x4E2D;&#xFF0C;var==66</span></span></code></pre></div>

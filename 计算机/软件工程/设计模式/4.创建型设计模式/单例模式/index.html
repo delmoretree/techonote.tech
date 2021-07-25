@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1023,17 +1032,17 @@
 <h2 id="&#x997F;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x6700;&#x7B80;&#x5355;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;">&#x997F;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x6700;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</h2>
 <p>&#x5728;&#x7C7B;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;instance &#x9759;&#x6001;&#x5B9E;&#x4F8B;&#x5C31;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x597D;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;instance &#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance <span class="op">=</span> <span class="kw">new</span> <span class="fu">IdGenerator</span><span class="op">();</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <ul>
 <li>&#x82E5;&#x521D;&#x59CB;&#x5316;&#x8017;&#x65F6;&#x957F;&#xFF0C;&#x63D0;&#x524D;&#x5230;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x5B8C;&#x6210;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x907F;&#x514D;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x53BB;&#x521D;&#x59CB;&#x5316;&#x5BFC;&#x81F4;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</li>
@@ -1042,93 +1051,93 @@
 </blockquote>
 <h2 id="&#x61D2;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x4F46;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;">&#x61D2;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x4F46;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">synchronized</span> IdGenerator <span class="fu">getInstance</span>() {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">synchronized</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      instance <span class="op">=</span> <span class="kw">new</span> <span class="fu">IdGenerator</span><span class="op">();</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x7C7B;&#x5076;&#x5C14;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#xFF0C;&#x90A3;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x3002;&#x4F46;&#x662F;&#xFF0C;<strong>&#x5982;&#x679C;&#x9891;&#x7E41;&#x5730;&#x7528;&#x5230;&#xFF0C;&#x90A3;&#x9891;&#x7E41;&#x52A0;&#x9501;&#x3001;&#x91CA;&#x653E;&#x9501;&#x53CA;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5C31;&#x4E0D;&#x53EF;&#x53D6;&#x4E86;</strong>&#x3002;</p>
 </blockquote>
 <h2 id="&#x53CC;&#x91CD;&#x68C0;&#x6D4B;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x65E2;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x53C8;&#x652F;&#x6301;&#x9AD8;&#x5E76;&#x53D1;">&#x53CC;&#x91CD;&#x68C0;&#x6D4B;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x65E2;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x53C8;&#x652F;&#x6301;&#x9AD8;&#x5E76;&#x53D1;</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">synchronized</span>(IdGenerator.<span class="fu">class</span>) { <span class="co">// &#x6B64;&#x5904;&#x4E3A;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">synchronized</span><span class="op">(</span>IdGenerator<span class="op">.</span><span class="fu">class</span><span class="op">)</span> <span class="op">{</span> <span class="co">// &#x6B64;&#x5904;&#x4E3A;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          instance <span class="op">=</span> <span class="kw">new</span> <span class="fu">IdGenerator</span><span class="op">();</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p>&#x53EA;&#x8981; instance &#x88AB;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x5373;&#x4FBF;&#x518D;&#x8C03;&#x7528; <code>getInstance()</code> &#x51FD;&#x6570;&#x4E5F;&#x4E0D;&#x4F1A;&#x518D;&#x8FDB;&#x5165;&#x5230;&#x52A0;&#x9501;&#x903B;&#x8F91;&#x4E2D;&#x4E86;&#x3002;</p>
 </blockquote>
 <h2 id="&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x997F;&#x6C49;&#x5F0F;&#x4F46;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x4E86;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;">&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x997F;&#x6C49;&#x5F0F;&#xFF0C;&#x4F46;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x4E86;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> SingletonHolder{</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> SingletonHolder<span class="op">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance <span class="op">=</span> <span class="kw">new</span> <span class="fu">IdGenerator</span><span class="op">();</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> SingletonHolder.<span class="fu">instance</span>;</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> SingletonHolder<span class="op">.</span><span class="fu">instance</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5F53;&#x5916;&#x90E8;&#x7C7B; <code>IdGenerator</code> &#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA; <code>SingletonHolder</code> &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x8C03;&#x7528; <code>getInstance()</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;<code>SingletonHolder</code> &#x624D;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x521B;&#x5EFA; instance&#x3002;</p>
 <blockquote>
 <p>instance &#x7684;&#x552F;&#x4E00;&#x6027;&#x3001;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x90FD;&#x7531; JVM &#x6765;&#x4FDD;&#x8BC1;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x65E2;&#x4FDD;&#x8BC1;&#x4E86;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;</p>
 </blockquote>
 <h1 id="&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5904;&#x7406;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x51B2;&#x7A81;">&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5904;&#x7406;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x51B2;&#x7A81;</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer;</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer<span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Logger</span>() {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file = <span class="kw">new</span> <span class="bu">File</span>(<span class="st">&quot;/Users/wangzheng/log.txt&quot;</span>);</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    writer = <span class="kw">new</span> <span class="bu">FileWriter</span>(file, <span class="kw">true</span>);</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Logger</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file <span class="op">=</span> <span class="kw">new</span> <span class="bu">File</span><span class="op">(</span><span class="st">&quot;/Users/wangzheng/log.txt&quot;</span><span class="op">);</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    writer <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileWriter</span><span class="op">(</span>file<span class="op">,</span> <span class="kw">true</span><span class="op">);</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    writer.<span class="fu">write</span>(mesasge);</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span><span class="op">(</span><span class="bu">String</span> message<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    writer<span class="op">.</span><span class="fu">write</span><span class="op">(</span>mesasge<span class="op">);</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;">&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;</h2>
 <p>&#x5728; Web &#x5BB9;&#x5668;&#x7684; Servlet &#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A; Servlet &#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x5206;&#x522B;&#x6267;&#x884C; <code>login()</code> &#x548C; <code>create()</code> &#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x540C;&#x65F6;&#x5199;&#x65E5;&#x5FD7;&#x5230; log.txt &#x6587;&#x4EF6;&#x4E2D;&#xFF0C; &#x90A3;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x5B58;&#x5728;<strong>&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;</strong>&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
 <p><img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2b0e6141d10399430c59169af4edc3c2.jpg"></p>
 <h2 id="&#x52A0;&#x5BF9;&#x8C61;&#x9501;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;">&#x52A0;&#x5BF9;&#x8C61;&#x9501;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;</h2>
 <p>&#x901A;&#x8FC7;&#x52A0;&#x5BF9;&#x8C61;&#x9501; <code>synchronized(this)</code> &#x7684;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#xFF1A;</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span>(<span class="kw">this</span>) {</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      writer.<span class="fu">write</span>(mesasge);</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span><span class="op">(</span><span class="bu">String</span> message<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span><span class="op">(</span><span class="kw">this</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      writer<span class="op">.</span><span class="fu">write</span><span class="op">(</span>mesasge<span class="op">);</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span></code></pre></div>
 <ul>
 <li><p>&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5E76;&#x4E0D;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;&#x3002;</p>
 <p>&#x8FD9;&#x79CD;&#x9501;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7684;&#x9501;&#xFF0C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0B;&#x540C;&#x65F6;&#x8C03;&#x7528; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x4F1A;&#x88AB;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;&#x4F46;&#x662F;&#xFF0C;<strong>&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5E76;&#x4E0D;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;</strong>&#x3002;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x6267;&#x884C; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x9501;&#x5E76;&#x4E0D;&#x4F1A;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x4ECD;&#x7136;&#x6709;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x4E92;&#x76F8;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;</p></li>
@@ -1141,32 +1150,32 @@
 <h2 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;</h2>
 <p>&#x53EA;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>Logger</code> &#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x4F7F;&#x7528;&#x7684;&#x8FD9;&#x4E00;&#x4E2A; <code>Logger</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5171;&#x4EAB;&#x4E00;&#x4E2A; <code>FileWriter</code> &#x5BF9;&#x8C61;&#xFF0C;&#x800C; <code>FileWriter</code> &#x672C;&#x8EAB;&#x662F;&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x60C5;&#x51B5;&#x4E0B;&#x5199;&#x65E5;&#x5FD7;&#x4F1A;&#x4E92;&#x76F8;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> {</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer;</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Logger</span> instance = <span class="kw">new</span> <span class="bu">Logger</span>();</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> <span class="op">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Logger</span> instance <span class="op">=</span> <span class="kw">new</span> <span class="bu">Logger</span><span class="op">();</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Logger</span>() {</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file = <span class="kw">new</span> <span class="bu">File</span>(<span class="st">&quot;/Users/wangzheng/log.txt&quot;</span>);</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    writer = <span class="kw">new</span> <span class="bu">FileWriter</span>(file, <span class="kw">true</span>);</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Logger</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file <span class="op">=</span> <span class="kw">new</span> <span class="bu">File</span><span class="op">(</span><span class="st">&quot;/Users/wangzheng/log.txt&quot;</span><span class="op">);</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    writer <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileWriter</span><span class="op">(</span>file<span class="op">,</span> <span class="kw">true</span><span class="op">);</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="bu">Logger</span> <span class="fu">getInstance</span>() {</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="bu">Logger</span> <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    writer.<span class="fu">write</span>(mesasge);</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span><span class="op">(</span><span class="bu">String</span> message<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    writer<span class="op">.</span><span class="fu">write</span><span class="op">(</span>mesasge<span class="op">);</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x52A0;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;&#x4E5F;&#x80FD;&#x89E3;&#x51B3;">&#x52A0;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;&#x4E5F;&#x80FD;&#x89E3;&#x51B3;</h2>
 <p>&#x8BA9;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;<strong>&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;</strong>&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x4E0D;&#x540C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x540C;&#x65F6;&#x8C03;&#x7528; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x800C;&#x5BFC;&#x81F4;&#x7684;&#x65E5;&#x5FD7;&#x8986;&#x76D6;&#x95EE;&#x9898;&#x3002;</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span>(<span class="bu">Logger</span>.<span class="fu">class</span>) {</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      writer.<span class="fu">write</span>(mesasge);</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span><span class="op">(</span><span class="bu">String</span> message<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span><span class="op">(</span><span class="bu">Logger</span><span class="op">.</span><span class="fu">class</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      writer<span class="op">.</span><span class="fu">write</span><span class="op">(</span>mesasge<span class="op">);</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span></code></pre></div>
 <h2 id="&#x5176;&#x4ED6;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;">&#x5176;&#x4ED6;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;</h2>
 <ul>
 <li><p>&#x5206;&#x5E03;&#x5F0F;&#x9501;</p>
@@ -1203,23 +1212,23 @@
 <h2 id="&#x7EBF;&#x7A0B;&#x552F;&#x4E00;&#x7684;&#x5355;&#x4F8B;&#x7C7B;">&#x7EBF;&#x7A0B;&#x552F;&#x4E00;&#x7684;&#x5355;&#x4F8B;&#x7C7B;</h2>
 <p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A; <code>HashMap</code> &#x6765;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D; <code>key</code> &#x662F;&#x7EBF;&#x7A0B; ID&#xFF0C;<code>value</code> &#x662F;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#xFF0C;<strong>&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EA;&#x80FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator {</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">ConcurrentHashMap</span>&lt;<span class="bu">Long</span>, IdGenerator&gt; instances = <span class="kw">new</span> <span class="bu">ConcurrentHashMap</span>&lt;&gt;();</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">ConcurrentHashMap</span><span class="op">&lt;</span><span class="bu">Long</span><span class="op">,</span> IdGenerator<span class="op">&gt;</span> instances <span class="op">=</span> <span class="kw">new</span> <span class="bu">ConcurrentHashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Long</span> currentThreadId = <span class="bu">Thread</span>.<span class="fu">currentThread</span>().<span class="fu">getId</span>();</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    instances.<span class="fu">putIfAbsent</span>(currentThreadId, <span class="kw">new</span> <span class="fu">IdGenerator</span>());</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instances.<span class="fu">get</span>(currentThreadId);</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Long</span> currentThreadId <span class="op">=</span> <span class="bu">Thread</span><span class="op">.</span><span class="fu">currentThread</span><span class="op">().</span><span class="fu">getId</span><span class="op">();</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    instances<span class="op">.</span><span class="fu">putIfAbsent</span><span class="op">(</span>currentThreadId<span class="op">,</span> <span class="kw">new</span> <span class="fu">IdGenerator</span><span class="op">());</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instances<span class="op">.</span><span class="fu">get</span><span class="op">(</span>currentThreadId<span class="op">);</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() {</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5355;&#x4F8B;">&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5355;&#x4F8B;</h2>
 <p><strong>&#x96C6;&#x7FA4;&#x552F;&#x4E00;</strong>&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x8FDB;&#x7A0B;&#x5185;&#x552F;&#x4E00;&#x3001;&#x8FDB;&#x7A0B;&#x95F4;&#x4E5F;&#x552F;&#x4E00;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x95F4;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
 <p>&#x9700;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x5E8F;&#x5217;&#x5316;&#x5E76;&#x5B58;&#x50A8;&#x5230;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#xFF08;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#xFF09;&#x3002; &#x8FDB;&#x7A0B;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4ECE;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#x4E2D;&#x5C06;&#x5B83;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x6210;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4F7F;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x518D;&#x5B58;&#x50A8;&#x56DE;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#x3002;</p>
@@ -1227,37 +1236,37 @@
 <p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4EFB;&#x4F55;&#x65F6;&#x523B;&#xFF0C;&#x5728;&#x8FDB;&#x7A0B;&#x95F4;&#x90FD;&#x53EA;&#x6709;&#x4E00;&#x4EFD;&#x5BF9;&#x8C61;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x5728;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5BF9;&#x8C61;&#x52A0;&#x9501;&#xFF0C;&#x907F;&#x514D;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x518D;&#x5C06;&#x5176;&#x83B7;&#x53D6;&#x3002;&#x5728;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x5B8C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x5C06;&#x5BF9;&#x8C61;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x5E76;&#x4E14;&#x91CA;&#x653E;&#x5BF9;&#x5BF9;&#x8C61;&#x7684;&#x52A0;&#x9501;&#x3002;</p>
 </blockquote>
 <div class="sourceCode" id="cb10"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator {</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> SharedObjectStorage storage = <span class="fu">FileSharedObjectStorage</span>(<span class="co">/*&#x5165;&#x53C2;&#x7701;&#x7565;&#xFF0C;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x5730;&#x5740;*/</span>);</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> DistributedLock lock = <span class="kw">new</span> <span class="fu">DistributedLock</span>();</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator <span class="op">{</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id <span class="op">=</span> <span class="kw">new</span> <span class="bu">AtomicLong</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance<span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> SharedObjectStorage storage <span class="op">=</span> <span class="fu">FileSharedObjectStorage</span><span class="op">(</span><span class="co">/*&#x5165;&#x53C2;&#x7701;&#x7565;&#xFF0C;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x5730;&#x5740;*/</span><span class="op">);</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> DistributedLock lock <span class="op">=</span> <span class="kw">new</span> <span class="fu">DistributedLock</span><span class="op">();</span></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span><span class="op">()</span> <span class="op">{}</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() </span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      lock.<span class="fu">lock</span>();</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      instance = storage.<span class="fu">load</span>(IdGenerator.<span class="fu">class</span>);</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span><span class="op">()</span> </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      lock<span class="op">.</span><span class="fu">lock</span><span class="op">();</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      instance <span class="op">=</span> storage<span class="op">.</span><span class="fu">load</span><span class="op">(</span>IdGenerator<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> synchroinzed <span class="dt">void</span> <span class="fu">freeInstance</span>() {</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    storage.<span class="fu">save</span>(<span class="kw">this</span>, IdGeneator.<span class="fu">class</span>);</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    instance = <span class="kw">null</span>; <span class="co">//&#x91CA;&#x653E;&#x5BF9;&#x8C61;</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    lock.<span class="fu">unlock</span>();</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> synchroinzed <span class="dt">void</span> <span class="fu">freeInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    storage<span class="op">.</span><span class="fu">save</span><span class="op">(</span><span class="kw">this</span><span class="op">,</span> IdGeneator<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    instance <span class="op">=</span> <span class="kw">null</span><span class="op">;</span> <span class="co">//&#x91CA;&#x653E;&#x5BF9;&#x8C61;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    lock<span class="op">.</span><span class="fu">unlock</span><span class="op">();</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span><span class="op">()</span> <span class="op">{</span> </span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> id<span class="op">.</span><span class="fu">incrementAndGet</span><span class="op">();</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">// IdGenerator&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>IdGenerator idGeneator = IdGenerator.<span class="fu">getInstance</span>();</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> id = idGenerator.<span class="fu">getId</span>();</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>IdGenerator.<span class="fu">freeInstance</span>();</span></code></pre></div>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>IdGenerator idGeneator <span class="op">=</span> IdGenerator<span class="op">.</span><span class="fu">getInstance</span><span class="op">();</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> id <span class="op">=</span> idGenerator<span class="op">.</span><span class="fu">getId</span><span class="op">();</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>IdGenerator<span class="op">.</span><span class="fu">freeInstance</span><span class="op">();</span></span></code></pre></div>
 
 </div>
 

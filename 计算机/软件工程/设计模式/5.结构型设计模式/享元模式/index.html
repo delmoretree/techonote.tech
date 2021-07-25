@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1013,141 +1022,141 @@
 </blockquote>
 <h2 id="&#x68CB;&#x724C;&#x6E38;&#x620F;&#x7684;&#x68CB;&#x5B50;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;">&#x68CB;&#x724C;&#x6E38;&#x620F;&#x7684;&#x68CB;&#x5B50;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5B50;&#x4EAB;&#x5143;&#x7C7B;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnit {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> id;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> text;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Color</span> color;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnit <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> id<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> text<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Color</span> color<span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPieceUnit</span>(<span class="dt">int</span> id, <span class="bu">String</span> text, <span class="bu">Color</span> color) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">id</span> = id;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">text</span> = text;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">color</span> = color;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPieceUnit</span><span class="op">(</span><span class="dt">int</span> id<span class="op">,</span> <span class="bu">String</span> text<span class="op">,</span> <span class="bu">Color</span> color<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">id</span> <span class="op">=</span> id<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">text</span> <span class="op">=</span> text<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">color</span> <span class="op">=</span> color<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">enum</span> <span class="bu">Color</span> {</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    RED, BLACK</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">enum</span> <span class="bu">Color</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    RED<span class="op">,</span> BLACK</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;getter&#x65B9;&#x6CD5;...</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x5C06;&#x68CB;&#x5B50;&#x7684; <code>id</code>&#x3001;<code>text</code>&#x3001;<code>color</code> &#x5C5E;&#x6027;&#x62C6;&#x5206;&#x51FA;&#x6765;&#xFF0C;&#x8BBE;&#x8BA1;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x4F5C;&#x4E3A;&#x4EAB;&#x5143;&#x4F9B;&#x591A;&#x4E2A;&#x68CB;&#x76D8;&#x590D;&#x7528;&#x3002;</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnitFactory {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span>&lt;<span class="bu">Integer</span>, ChessPieceUnit&gt; pieces = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnitFactory <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">,</span> ChessPieceUnit<span class="op">&gt;</span> pieces <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    pieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPieceUnit</span>(<span class="dv">1</span>, <span class="st">&quot;&#x8ECA;&quot;</span>, ChessPieceUnit.<span class="fu">Color</span>.<span class="fu">BLACK</span>));</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    pieces.<span class="fu">put</span>(<span class="dv">2</span>, <span class="kw">new</span> <span class="fu">ChessPieceUnit</span>(<span class="dv">2</span>,<span class="st">&quot;&#x99AC;&quot;</span>, ChessPieceUnit.<span class="fu">Color</span>.<span class="fu">BLACK</span>));</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    pieces<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ChessPieceUnit</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="st">&quot;&#x8ECA;&quot;</span><span class="op">,</span> ChessPieceUnit<span class="op">.</span><span class="fu">Color</span><span class="op">.</span><span class="fu">BLACK</span><span class="op">));</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    pieces<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ChessPieceUnit</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span><span class="st">&quot;&#x99AC;&quot;</span><span class="op">,</span> ChessPieceUnit<span class="op">.</span><span class="fu">Color</span><span class="op">.</span><span class="fu">BLACK</span><span class="op">));</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;&#x6446;&#x653E;&#x5176;&#x4ED6;&#x68CB;&#x5B50;&#x7684;&#x4EE3;&#x7801;...</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> ChessPieceUnit <span class="fu">getChessPiece</span>(<span class="dt">int</span> chessPieceId) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> pieces.<span class="fu">get</span>(chessPieceId);</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> ChessPieceUnit <span class="fu">getChessPiece</span><span class="op">(</span><span class="dt">int</span> chessPieceId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pieces<span class="op">.</span><span class="fu">get</span><span class="op">(</span>chessPieceId<span class="op">);</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x5229;&#x7528;&#x5DE5;&#x5382;&#x7C7B;&#x6765;&#x7F13;&#x5B58; <code>ChessPieceUnit</code> &#x4FE1;&#x606F;&#x3002;&#x901A;&#x8FC7;&#x5DE5;&#x5382;&#x7C7B;&#x83B7;&#x53D6;&#x5230;&#x7684; <code>ChessPieceUnit</code> &#x5C31;&#x662F;&#x4EAB;&#x5143;&#x3002;</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5B50;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPiece {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ChessPieceUnit chessPieceUnit;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionX;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionY;</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPiece <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ChessPieceUnit chessPieceUnit<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionX<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionY<span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPiece</span>(ChessPieceUnit unit, <span class="dt">int</span> positionX, <span class="dt">int</span> positionY) {</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">chessPieceUnit</span> = unit;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">positionX</span> = positionX;</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">positionY</span> = positionY;</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPiece</span><span class="op">(</span>ChessPieceUnit unit<span class="op">,</span> <span class="dt">int</span> positionX<span class="op">,</span> <span class="dt">int</span> positionY<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">chessPieceUnit</span> <span class="op">=</span> unit<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">positionX</span> <span class="op">=</span> positionX<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">positionY</span> <span class="op">=</span> positionY<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x7701;&#x7565;getter&#x3001;setter&#x65B9;&#x6CD5;</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5C40;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessBoard {</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span>&lt;<span class="bu">Integer</span>, ChessPiece&gt; chessPieces = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessBoard <span class="op">{</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">,</span> ChessPiece<span class="op">&gt;</span> chessPieces <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessBoard</span>() {</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">init</span>();</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessBoard</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">init</span><span class="op">();</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">init</span>() {</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    chessPieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPiece</span>(</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory.<span class="fu">getChessPiece</span>(<span class="dv">1</span>), <span class="dv">0</span>,<span class="dv">0</span>));</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    chessPieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPiece</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory.<span class="fu">getChessPiece</span>(<span class="dv">2</span>), <span class="dv">1</span>,<span class="dv">0</span>));</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">init</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    chessPieces<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ChessPiece</span><span class="op">(</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory<span class="op">.</span><span class="fu">getChessPiece</span><span class="op">(</span><span class="dv">1</span><span class="op">),</span> <span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">));</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    chessPieces<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="kw">new</span> <span class="fu">ChessPiece</span><span class="op">(</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory<span class="op">.</span><span class="fu">getChessPiece</span><span class="op">(</span><span class="dv">2</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span><span class="dv">0</span><span class="op">));</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;&#x6446;&#x653E;&#x5176;&#x4ED6;&#x68CB;&#x5B50;&#x7684;&#x4EE3;&#x7801;...</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">move</span>(<span class="dt">int</span> chessPieceId, <span class="dt">int</span> toPositionX, <span class="dt">int</span> toPositionY) {</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">move</span><span class="op">(</span><span class="dt">int</span> chessPieceId<span class="op">,</span> <span class="dt">int</span> toPositionX<span class="op">,</span> <span class="dt">int</span> toPositionY<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;...</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li>&#x6240;&#x6709;&#x7684; <code>ChessBoard</code> &#x5BF9;&#x8C61;&#x5171;&#x4EAB;&#x8FD9; 30 &#x4E2A; <code>ChessPieceUnit</code> &#x5BF9;&#x8C61;&#xFF08;&#x56E0;&#x4E3A;&#x8C61;&#x68CB;&#x4E2D;&#x53EA;&#x6709; 30 &#x4E2A;&#x68CB;&#x5B50;&#xFF09;&#x3002;</li>
 </ul>
 <p>&#x5728;&#x4F7F;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x4E4B;&#x524D;&#xFF0C;&#x8BB0;&#x5F55; 1 &#x4E07;&#x4E2A;&#x68CB;&#x5C40;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x521B;&#x5EFA; 30 &#x4E07;&#xFF08;30*1 &#x4E07;&#xFF09;&#x4E2A;&#x68CB;&#x5B50;&#x7684; <code>ChessPieceUnit</code> &#x5BF9;&#x8C61;&#x3002; &#x5229;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x521B;&#x5EFA; 30 &#x4E2A;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x4F9B;&#x6240;&#x6709;&#x68CB;&#x5C40;&#x5171;&#x4EAB;&#x4F7F;&#x7528;&#x5373;&#x53EF;&#xFF0C;&#x5927;&#x5927;&#x8282;&#x7701;&#x4E86;&#x5185;&#x5B58;&#x3002;</p>
 <h2 id="java-integer-&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;&#x7684;&#x4EAB;&#x5143;">Java Integer &#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;&#x7684;&#x4EAB;&#x5143;</h2>
 <p><code>IntegerCache</code> &#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x4F1A;&#x88AB;&#x96C6;&#x4E2D;&#x4E00;&#x6B21;&#x6027;&#x521B;&#x5EFA;&#x597D;&#x3002; &#x7F13;&#x5B58;&#x5BF9;&#x4E8E;&#x5927;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6574;&#x578B;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#xFF08;-128 &#x5230; 127 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#xFF09;&#x3002;</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> IntegerCache {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> low = -<span class="dv">128</span>;</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> high;</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Integer</span> cache[];</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> IntegerCache <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> low <span class="op">=</span> <span class="op">-</span><span class="dv">128</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> high<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Integer</span> cache<span class="op">[];</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="op">{</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// high value may be configured by property</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> h = <span class="dv">127</span>;</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> integerCacheHighPropValue =</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            sun.<span class="fu">misc</span>.<span class="fu">VM</span>.<span class="fu">getSavedProperty</span>(<span class="st">&quot;java.lang.Integer.IntegerCache.high&quot;</span>);</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> (integerCacheHighPropValue != <span class="kw">null</span>) {</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="kw">try</span> {</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="dt">int</span> i = <span class="fu">parseInt</span>(integerCacheHighPropValue);</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                i = <span class="bu">Math</span>.<span class="fu">max</span>(i, <span class="dv">127</span>);</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> h <span class="op">=</span> <span class="dv">127</span><span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> integerCacheHighPropValue <span class="op">=</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            sun<span class="op">.</span><span class="fu">misc</span><span class="op">.</span><span class="fu">VM</span><span class="op">.</span><span class="fu">getSavedProperty</span><span class="op">(</span><span class="st">&quot;java.lang.Integer.IntegerCache.high&quot;</span><span class="op">);</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>integerCacheHighPropValue <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="dt">int</span> i <span class="op">=</span> <span class="fu">parseInt</span><span class="op">(</span>integerCacheHighPropValue<span class="op">);</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                i <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>i<span class="op">,</span> <span class="dv">127</span><span class="op">);</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Maximum array size is Integer.MAX_VALUE</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                h = <span class="bu">Math</span>.<span class="fu">min</span>(i, <span class="bu">Integer</span>.<span class="fu">MAX_VALUE</span> - (-low) -<span class="dv">1</span>);</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>            } <span class="kw">catch</span>( <span class="bu">NumberFormatException</span> nfe) {</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                h <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span><span class="op">(</span>i<span class="op">,</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">MAX_VALUE</span> <span class="op">-</span> <span class="op">(-</span>low<span class="op">)</span> <span class="op">-</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">catch</span><span class="op">(</span> <span class="bu">NumberFormatException</span> nfe<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                <span class="co">// If the property cannot be parsed into an int, ignore it.</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        high = h;</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        high <span class="op">=</span> h<span class="op">;</span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        cache = <span class="kw">new</span> <span class="bu">Integer</span>[(high - low) + <span class="dv">1</span>];</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> j = low;</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span>(<span class="dt">int</span> k = <span class="dv">0</span>; k &lt; cache.<span class="fu">length</span>; k++)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            cache[k] = <span class="kw">new</span> <span class="bu">Integer</span>(j++);</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        cache <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">[(</span>high <span class="op">-</span> low<span class="op">)</span> <span class="op">+</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> j <span class="op">=</span> low<span class="op">;</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span><span class="op">(</span><span class="dt">int</span> k <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> k <span class="op">&lt;</span> cache<span class="op">.</span><span class="fu">length</span><span class="op">;</span> k<span class="op">++)</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            cache<span class="op">[</span>k<span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">(</span>j<span class="op">++);</span></span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">// range [-128, 127] must be interned (JLS7 5.1.7)</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        assert IntegerCache.<span class="fu">high</span> &gt;= <span class="dv">127</span>;</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        assert IntegerCache<span class="op">.</span><span class="fu">high</span> <span class="op">&gt;=</span> <span class="dv">127</span><span class="op">;</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="fu">IntegerCache</span>() {}</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="fu">IntegerCache</span><span class="op">()</span> <span class="op">{}</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="bu">Integer</span> <span class="fu">valueOf</span>(<span class="dt">int</span> i) {</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (i &gt;= IntegerCache.<span class="fu">low</span> &amp;&amp; i &lt;= IntegerCache.<span class="fu">high</span>)</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">return</span> IntegerCache.<span class="fu">cache</span>[i + (-IntegerCache.<span class="fu">low</span>)];</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="bu">Integer</span>(i);</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="bu">Integer</span> <span class="fu">valueOf</span><span class="op">(</span><span class="dt">int</span> i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>i <span class="op">&gt;=</span> IntegerCache<span class="op">.</span><span class="fu">low</span> <span class="op">&amp;&amp;</span> i <span class="op">&lt;=</span> IntegerCache<span class="op">.</span><span class="fu">high</span><span class="op">)</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> IntegerCache<span class="op">.</span><span class="fu">cache</span><span class="op">[</span>i <span class="op">+</span> <span class="op">(-</span>IntegerCache<span class="op">.</span><span class="fu">low</span><span class="op">)];</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i1 = <span class="dv">56</span>;</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i2 = <span class="dv">56</span>;</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i3 = <span class="dv">129</span>;</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i4 = <span class="dv">129</span>;</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(i1 == i2); <span class="co">// &#x8FD4;&#x56DE;true</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(i3 == i4); <span class="co">// &#x8FD4;&#x56DE;false</span></span></code></pre></div>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i1 <span class="op">=</span> <span class="dv">56</span><span class="op">;</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i2 <span class="op">=</span> <span class="dv">56</span><span class="op">;</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i3 <span class="op">=</span> <span class="dv">129</span><span class="op">;</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i4 <span class="op">=</span> <span class="dv">129</span><span class="op">;</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i1 <span class="op">==</span> i2<span class="op">);</span> <span class="co">// &#x8FD4;&#x56DE;true</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i3 <span class="op">==</span> i4<span class="op">);</span> <span class="co">// &#x8FD4;&#x56DE;false</span></span></code></pre></div>
 <p>&#x901A;&#x8FC7; <code>JVM</code> &#x53C2;&#x6570;&#x8C03;&#x6574;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#xFF1A;</p>
 <pre><code>-Djava.lang.Integer.IntegerCache.high=255</code></pre>
 <p>&#x6216;</p>
 <pre><code>-XX:AutoBoxCacheMax=255</code></pre>
 <h2 id="java-&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x4EAB;&#x5143;">Java &#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x4EAB;&#x5143;</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s1 = <span class="st">&quot;aaa&quot;</span>;</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s2 = <span class="st">&quot;aaa&quot;</span>;</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s3 = <span class="kw">new</span> <span class="bu">String</span>(<span class="st">&quot;aaa&quot;</span>);</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s1 <span class="op">=</span> <span class="st">&quot;aaa&quot;</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s2 <span class="op">=</span> <span class="st">&quot;aaa&quot;</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s3 <span class="op">=</span> <span class="kw">new</span> <span class="bu">String</span><span class="op">(</span><span class="st">&quot;aaa&quot;</span><span class="op">);</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(s1 == s2); <span class="co">// true</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(s1 == s3); <span class="co">// false</span></span></code></pre></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>s1 <span class="op">==</span> s2<span class="op">);</span> <span class="co">// true</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>s1 <span class="op">==</span> s3<span class="op">);</span> <span class="co">// false</span></span></code></pre></div>
 <p>JVM &#x4F1A;&#x4E13;&#x95E8;&#x5F00;&#x8F9F;&#x4E00;&#x5757;&#x5B58;&#x50A8;&#x533A;&#x6765;&#x5B58;&#x50A8;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#xFF0C;&#x8FD9;&#x5757;&#x5B58;&#x50A8;&#x533A;&#x53EB;&#x4F5C; <strong>&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;</strong>&#x3002; &#x5728;&#x67D0;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B58;&#x50A8;&#x5230;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#xFF0C;&#x5F53;&#x4E4B;&#x540E;&#x518D;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x76F4;&#x63A5;&#x5F15;&#x7528;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5373;&#x53EF;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E86;&#x3002;</p>
 <p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E2D;&#x5728;&#x521B;&#x5EFA; <code>s2</code> &#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>aaa</code> &#x7684;&#x5BF9;&#x8C61;&#xFF0C;<code>s2</code> &#x4E0E; <code>s1</code>&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
 <blockquote>

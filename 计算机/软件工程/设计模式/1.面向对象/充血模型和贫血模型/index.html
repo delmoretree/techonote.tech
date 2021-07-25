@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1017,49 +1026,49 @@
 <p>&#x4F8B;&#xFF1A;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">////////// Controller+VO(View Object) //////////</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserController {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserService userService; <span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserController <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserService userService<span class="op">;</span> <span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">getUserById</span>(<span class="bu">Long</span> userId) {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    UserBo userBo = userService.<span class="fu">getUserById</span>(userId);</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    UserVo userVo = [...<span class="fu">convert</span> userBo to userVo...];</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userVo;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">getUserById</span><span class="op">(</span><span class="bu">Long</span> userId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    UserBo userBo <span class="op">=</span> userService<span class="op">.</span><span class="fu">getUserById</span><span class="op">(</span>userId<span class="op">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    UserVo userVo <span class="op">=</span> <span class="op">[</span><span class="kw">...</span>convert userBo to userVo<span class="kw">...</span><span class="op">];</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> userVo<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserVo {<span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id;</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name;</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone;</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserVo <span class="op">{</span><span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">////////// Service+BO(Business Object) //////////</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService {</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepository userRepository; <span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService <span class="op">{</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepository userRepository<span class="op">;</span> <span class="co">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserBo <span class="fu">getUserById</span>(<span class="bu">Long</span> userId) {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    UserEntity userEntity = userRepository.<span class="fu">getUserById</span>(userId);</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    UserBo userBo = [...<span class="fu">convert</span> userEntity to userBo...];</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userBo;</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserBo <span class="fu">getUserById</span><span class="op">(</span><span class="bu">Long</span> userId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    UserEntity userEntity <span class="op">=</span> userRepository<span class="op">.</span><span class="fu">getUserById</span><span class="op">(</span>userId<span class="op">);</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    UserBo userBo <span class="op">=</span> <span class="op">[</span><span class="kw">...</span>convert userEntity to userBo<span class="kw">...</span><span class="op">];</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> userBo<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserBo {<span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id;</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name;</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone;</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserBo <span class="op">{</span><span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone<span class="op">;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">////////// Repository+Entity //////////</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepository {</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserEntity <span class="fu">getUserById</span>(<span class="bu">Long</span> userId) { <span class="co">//... }</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepository <span class="op">{</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserEntity <span class="fu">getUserById</span><span class="op">(</span><span class="bu">Long</span> userId<span class="op">)</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserEntity {<span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id;</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name;</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone;</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserEntity <span class="op">{</span><span class="co">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> cellphone<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5176;&#x4E2D; <code>Bo</code> &#x662F;&#x7EAF;&#x7CB9;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x96C6;&#x4E2D;&#x5728; <code>Service</code> &#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>Service</code> &#x6765;&#x64CD;&#x4F5C; <code>Bo</code>&#x3002;</p>
 <p>&#x540C;&#x7406;&#xFF0C;<code>Entity</code>&#x3001;<code>Vo</code> &#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x5C06;&#x6570;&#x636E;&#x4E0E;&#x64CD;&#x4F5C;&#x5206;&#x79BB;&#xFF0C;&#x7834;&#x574F;&#x4E86;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5C01;&#x88C5;&#x7279;&#x6027;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5178;&#x578B;&#x7684;<strong>&#x9762;&#x5411;&#x8FC7;&#x7A0B;</strong>&#x7684;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#x3002;</p>
 <h1 id="&#x57FA;&#x4E8E;ddd&#x7684;&#x5145;&#x8840;&#x6A21;&#x578B;">&#x57FA;&#x4E8E;DDD&#x7684;&#x5145;&#x8840;&#x6A21;&#x578B;</h1>
@@ -1110,95 +1119,95 @@
 <p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x67E5;&#x8BE2;&#x4E0A;&#x5C42; <code>&#x94B1;&#x5305;&#x7CFB;&#x7EDF;</code> &#x7684;&#x4EA4;&#x6613;&#x6D41;&#x6C34;&#x4FE1;&#x606F;&#xFF0C;&#x53BB;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x6D41;&#x6C34;&#x7684;&#x529F;&#x80FD;&#x9700;&#x6C42;&#xFF0C;&#x800C; <code>&#x865A;&#x62DF;&#x94B1;&#x5305;</code> &#x4E2D;&#x7684;&#x4EA4;&#x6613;&#x6D41;&#x6C34;&#x5C31;&#x53EA;&#x662F;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x6BD4;&#x5982;&#x7528;&#x6765;&#x5BF9;&#x8D26;&#x7B49;&#x3002;</p>
 <h2 id="&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;">&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWalletController {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWalletController <span class="op">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletService virtualWalletService;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletService virtualWalletService<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span>(<span class="bu">Long</span> walletId) { <span class="kw">... </span>} <span class="co">//&#x67E5;&#x8BE2;&#x4F59;&#x989D;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span>(<span class="bu">Long</span> walletId, <span class="bu">BigDecimal</span> amount) { <span class="kw">... </span>} <span class="co">//&#x51FA;&#x8D26;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span>(<span class="bu">Long</span> walletId, <span class="bu">BigDecimal</span> amount) { <span class="kw">... </span>} <span class="co">//&#x5165;&#x8D26;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">transfer</span>(<span class="bu">Long</span> fromWalletId, <span class="bu">Long</span> toWalletId, <span class="bu">BigDecimal</span> amount) { ...} <span class="co">//&#x8F6C;&#x8D26;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">)</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span> <span class="co">//&#x67E5;&#x8BE2;&#x4F59;&#x989D;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span> <span class="co">//&#x51FA;&#x8D26;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span> <span class="co">//&#x5165;&#x8D26;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">transfer</span><span class="op">(</span><span class="bu">Long</span> fromWalletId<span class="op">,</span> <span class="bu">Long</span> toWalletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span> <span class="kw">...</span><span class="op">}</span> <span class="co">//&#x8F6C;&#x8D26;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWallet { <span class="co">// Domain&#x9886;&#x57DF;&#x6A21;&#x578B;(&#x5145;&#x8840;&#x6A21;&#x578B;)</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id;</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> createTime = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();;</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">BigDecimal</span> balance = <span class="bu">BigDecimal</span>.<span class="fu">ZERO</span>;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWallet <span class="op">{</span> <span class="co">// Domain&#x9886;&#x57DF;&#x6A21;&#x578B;(&#x5145;&#x8840;&#x6A21;&#x578B;)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Long</span> createTime <span class="op">=</span> <span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">();;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">BigDecimal</span> balance <span class="op">=</span> <span class="bu">BigDecimal</span><span class="op">.</span><span class="fu">ZERO</span><span class="op">;</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">VirtualWallet</span>(<span class="bu">Long</span> preAllocatedId) {</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">id</span> = preAllocatedId;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">VirtualWallet</span><span class="op">(</span><span class="bu">Long</span> preAllocatedId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">id</span> <span class="op">=</span> preAllocatedId<span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">balance</span>() {</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">this</span>.<span class="fu">balance</span>;</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">balance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span>(<span class="bu">BigDecimal</span> amount) {</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (<span class="kw">this</span>.<span class="fu">balance</span>.<span class="fu">compareTo</span>(amount) &lt; <span class="dv">0</span>) {</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InsufficientBalanceException</span>(...);</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balance</span>.<span class="fu">subtract</span>(amount);</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span><span class="op">(</span><span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span>amount<span class="op">)</span> <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InsufficientBalanceException</span><span class="op">(</span><span class="kw">...</span><span class="op">);</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">.</span><span class="fu">subtract</span><span class="op">(</span>amount<span class="op">);</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span>(<span class="bu">BigDecimal</span> amount) {</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (amount.<span class="fu">compareTo</span>(<span class="bu">BigDecimal</span>.<span class="fu">ZERO</span>) &lt; <span class="dv">0</span>) {</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span>(...);</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">balance</span>.<span class="fu">add</span>(amount);</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span><span class="op">(</span><span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>amount<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="bu">BigDecimal</span><span class="op">.</span><span class="fu">ZERO</span><span class="op">)</span> <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>      <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">InvalidAmountException</span><span class="op">(</span><span class="kw">...</span><span class="op">);</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">balance</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span>amount<span class="op">);</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWalletService {</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VirtualWalletService <span class="op">{</span></span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletRepository walletRepo;</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletTransactionRepository transactionRepo;</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletRepository walletRepo<span class="op">;</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> VirtualWalletTransactionRepository transactionRepo<span class="op">;</span></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> VirtualWallet <span class="fu">getVirtualWallet</span>(<span class="bu">Long</span> walletId) {</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity = walletRepo.<span class="fu">getWalletEntity</span>(walletId);</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet = <span class="fu">convert</span>(walletEntity);</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> wallet;</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> VirtualWallet <span class="fu">getVirtualWallet</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity <span class="op">=</span> walletRepo<span class="op">.</span><span class="fu">getWalletEntity</span><span class="op">(</span>walletId<span class="op">);</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet <span class="op">=</span> <span class="fu">convert</span><span class="op">(</span>walletEntity<span class="op">);</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wallet<span class="op">;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span>(<span class="bu">Long</span> walletId) {</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> walletRepo.<span class="fu">getBalance</span>(walletId);</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">BigDecimal</span> <span class="fu">getBalance</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> walletRepo<span class="op">.</span><span class="fu">getBalance</span><span class="op">(</span>walletId<span class="op">);</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span>(<span class="bu">Long</span> walletId, <span class="bu">BigDecimal</span> amount) {</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity = walletRepo.<span class="fu">getWalletEntity</span>(walletId);</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet = <span class="fu">convert</span>(walletEntity);</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    wallet.<span class="fu">debit</span>(amount);</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    walletRepo.<span class="fu">updateBalance</span>(walletId, wallet.<span class="fu">balance</span>());</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debit</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity <span class="op">=</span> walletRepo<span class="op">.</span><span class="fu">getWalletEntity</span><span class="op">(</span>walletId<span class="op">);</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet <span class="op">=</span> <span class="fu">convert</span><span class="op">(</span>walletEntity<span class="op">);</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    wallet<span class="op">.</span><span class="fu">debit</span><span class="op">(</span>amount<span class="op">);</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    walletRepo<span class="op">.</span><span class="fu">updateBalance</span><span class="op">(</span>walletId<span class="op">,</span> wallet<span class="op">.</span><span class="fu">balance</span><span class="op">());</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span>(<span class="bu">Long</span> walletId, <span class="bu">BigDecimal</span> amount) {</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity = walletRepo.<span class="fu">getWalletEntity</span>(walletId);</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet = <span class="fu">convert</span>(walletEntity);</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    wallet.<span class="fu">credit</span>(amount);</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    walletRepo.<span class="fu">updateBalance</span>(walletId, wallet.<span class="fu">balance</span>());</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">credit</span><span class="op">(</span><span class="bu">Long</span> walletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    VirtualWalletEntity walletEntity <span class="op">=</span> walletRepo<span class="op">.</span><span class="fu">getWalletEntity</span><span class="op">(</span>walletId<span class="op">);</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    VirtualWallet wallet <span class="op">=</span> <span class="fu">convert</span><span class="op">(</span>walletEntity<span class="op">);</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    wallet<span class="op">.</span><span class="fu">credit</span><span class="op">(</span>amount<span class="op">);</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    walletRepo<span class="op">.</span><span class="fu">updateBalance</span><span class="op">(</span>walletId<span class="op">,</span> wallet<span class="op">.</span><span class="fu">balance</span><span class="op">());</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">transfer</span>(<span class="bu">Long</span> fromWalletId, <span class="bu">Long</span> toWalletId, <span class="bu">BigDecimal</span> amount) {</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>      VirtualWalletTransactionEntity transactionEntity = <span class="kw">new</span> <span class="fu">VirtualWalletTransactionEntity</span>();</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>      transactionEntity.<span class="fu">setAmount</span>(amount);</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>      transactionEntity.<span class="fu">setCreateTime</span>(<span class="bu">System</span>.<span class="fu">currentTimeMillis</span>());</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>      transactionEntity.<span class="fu">setFromWalletId</span>(fromWalletId);</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>      transactionEntity.<span class="fu">setToWalletId</span>(toWalletId);</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>      transactionEntity.<span class="fu">setStatus</span>(Status.<span class="fu">TO_BE_EXECUTED</span>);</span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Long</span> transactionId = transactionRepo.<span class="fu">saveTransaction</span>(transactionEntity);</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>      <span class="kw">try</span> {</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>        <span class="fu">debit</span>(fromWalletId, amount);</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>        <span class="fu">credit</span>(toWalletId, amount);</span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>      } <span class="kw">catch</span> (InsufficientBalanceException e) {</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>        transactionRepo.<span class="fu">updateStatus</span>(transactionId, Status.<span class="fu">CLOSED</span>);</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>        ...<span class="fu">rethrow</span> exception e...</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>      } <span class="kw">catch</span> (<span class="bu">Exception</span> e) {</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>        transactionRepo.<span class="fu">updateStatus</span>(transactionId, Status.<span class="fu">FAILED</span>);</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>        ...<span class="fu">rethrow</span> exception e...</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>      transactionRepo.<span class="fu">updateStatus</span>(transactionId, Status.<span class="fu">EXECUTED</span>);</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">transfer</span><span class="op">(</span><span class="bu">Long</span> fromWalletId<span class="op">,</span> <span class="bu">Long</span> toWalletId<span class="op">,</span> <span class="bu">BigDecimal</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>      VirtualWalletTransactionEntity transactionEntity <span class="op">=</span> <span class="kw">new</span> <span class="fu">VirtualWalletTransactionEntity</span><span class="op">();</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>      transactionEntity<span class="op">.</span><span class="fu">setAmount</span><span class="op">(</span>amount<span class="op">);</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>      transactionEntity<span class="op">.</span><span class="fu">setCreateTime</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">());</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>      transactionEntity<span class="op">.</span><span class="fu">setFromWalletId</span><span class="op">(</span>fromWalletId<span class="op">);</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>      transactionEntity<span class="op">.</span><span class="fu">setToWalletId</span><span class="op">(</span>toWalletId<span class="op">);</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>      transactionEntity<span class="op">.</span><span class="fu">setStatus</span><span class="op">(</span>Status<span class="op">.</span><span class="fu">TO_BE_EXECUTED</span><span class="op">);</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Long</span> transactionId <span class="op">=</span> transactionRepo<span class="op">.</span><span class="fu">saveTransaction</span><span class="op">(</span>transactionEntity<span class="op">);</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>      <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>        <span class="fu">debit</span><span class="op">(</span>fromWalletId<span class="op">,</span> amount<span class="op">);</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>        <span class="fu">credit</span><span class="op">(</span>toWalletId<span class="op">,</span> amount<span class="op">);</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>InsufficientBalanceException e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>        transactionRepo<span class="op">.</span><span class="fu">updateStatus</span><span class="op">(</span>transactionId<span class="op">,</span> Status<span class="op">.</span><span class="fu">CLOSED</span><span class="op">);</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span>rethrow exception e<span class="kw">...</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">Exception</span> e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>        transactionRepo<span class="op">.</span><span class="fu">updateStatus</span><span class="op">(</span>transactionId<span class="op">,</span> Status<span class="op">.</span><span class="fu">FAILED</span><span class="op">);</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span>rethrow exception e<span class="kw">...</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>      transactionRepo<span class="op">.</span><span class="fu">updateStatus</span><span class="op">(</span>transactionId<span class="op">,</span> Status<span class="op">.</span><span class="fu">EXECUTED</span><span class="op">);</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5176;&#x4E2D; <code>Service</code> &#x7C7B;&#x627F;&#x62C5;&#x7684;&#x804C;&#x8D23;&#xFF1A;</p>
 <ul>
 <li><p><strong><code>Service</code> &#x7C7B;&#x8D1F;&#x8D23;&#x4E0E; <code>Repository</code> &#x4EA4;&#x6D41;&#x3002;</strong> &#x8C03;&#x7528; <code>Respository</code> &#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8F6C;&#x5316;&#x6210;&#x9886;&#x57DF;&#x6A21;&#x578B; <code>VirtualWallet</code>&#xFF0C;&#x7136;&#x540E;&#x7531;&#x9886;&#x57DF;&#x6A21;&#x578B; <code>VirtualWallet</code> &#x6765;&#x5B8C;&#x6210;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C; &#x6700;&#x540E;&#x8C03;&#x7528; <code>Repository</code> &#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x56DE;&#x6570;&#x636E;&#x5E93;&#x3002;</p>

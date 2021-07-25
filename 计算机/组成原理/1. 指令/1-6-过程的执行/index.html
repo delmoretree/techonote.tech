@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1043,13 +1052,13 @@ jr $ra</code></pre>
 <h2 id="&#x5C06;&#x63A7;&#x5236;&#x8FD4;&#x56DE;&#x521D;&#x59CB;&#x70B9;">&#x5C06;&#x63A7;&#x5236;&#x8FD4;&#x56DE;&#x521D;&#x59CB;&#x70B9;</h2>
 <p>&#x8C03;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;<code>jr</code>&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x521D;&#x59CB;&#x70B9;&#xFF0C;&#x5176;&#x4F4D;&#x7F6E;&#x5728;<code>$ra</code>&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x3002;</p>
 <h2 id="&#x4F8B;&#x8BA1;&#x7B97;&#x9636;&#x4E58;">&#x4F8B;&#xFF1A;&#x8BA1;&#x7B97;&#x9636;&#x4E58;</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> fact (<span class="dt">int</span> n) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (n &gt; <span class="dv">1</span>) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span>;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (n * fact(n - <span class="dv">1</span>))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> fact <span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">&gt;</span> <span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span>n <span class="op">*</span> fact<span class="op">(</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">))</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <pre><code>fact:
 
     // &#x7533;&#x8BF7;2&#x4E2A;&#x7A7A;&#x95F4;&#x5B58;&#x50A8;&#x8FD4;&#x56DE;&#x5730;&#x5740;&#x5BC4;&#x5B58;&#x5668;$ra&#x548C;&#x53C2;&#x6570;&#x5BC4;&#x5B58;&#x5668;$a0

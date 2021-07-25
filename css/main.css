@@ -362,6 +362,12 @@ a {
 	margin-bottom: 15px;
 	height: auto;
 }
+
+#article-content figure img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #article-content figure figcaption {
 	text-align: center;
 	font-size: 14px;
@@ -376,6 +382,13 @@ a {
 	padding: 0 1em;
 	color:#6a737d;
 	border-left: .25em solid #dfe2e5;
+}
+
+#article-content blockquote ul code,
+#article-content blockquote ol code,
+#article-content blockquote p code{
+	color: #c67489;
+	background-color: #faeeee;
 }
 #article-content p {
 	line-height: 28px;

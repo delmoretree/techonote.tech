@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1010,66 +1019,66 @@
 <h3 id="&#x7C7B;&#x9002;&#x914D;&#x5668;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x6765;&#x5B9E;&#x73B0;">&#x7C7B;&#x9002;&#x914D;&#x5668;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x6765;&#x5B9E;&#x73B0;</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x7C7B;&#x9002;&#x914D;&#x5668;: &#x57FA;&#x4E8E;&#x7EE7;&#x627F;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ITarget {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f1</span>();</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f2</span>();</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fc</span>();</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ITarget <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f1</span><span class="op">();</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f2</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fc</span><span class="op">();</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptee {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span>() { <span class="co">//... }</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fb</span>() { <span class="co">//... }</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span>() { <span class="co">//... }</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptee <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fb</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptor <span class="kw">extends</span> Adaptee <span class="kw">implements</span> ITarget {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f1</span>() {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>.<span class="fu">fa</span>();</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptor <span class="kw">extends</span> Adaptee <span class="kw">implements</span> ITarget <span class="op">{</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f1</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span><span class="op">.</span><span class="fu">fa</span><span class="op">();</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f2</span>() {</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f2</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x91CD;&#x65B0;&#x5B9E;&#x73B0;f2()...</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x8FD9;&#x91CC;fc()&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#xFF0C;&#x76F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;Adaptee&#xFF0C;&#x8FD9;&#x662F;&#x8DDF;&#x5BF9;&#x8C61;&#x9002;&#x914D;&#x5668;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x70B9;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><code>Adaptee</code> &#x7C7B;&#x4E0D;&#x517C;&#x5BB9; <code>ITarget</code> &#x63A5;&#x53E3;&#xFF1B;</li>
 <li>&#x65B0;&#x7C7B; <code>Adaptor</code> &#x901A;&#x8FC7;&#x7EE7;&#x627F;&#xFF0C;&#x5728;&#x5B9E;&#x73B0; <code>ITarget</code> &#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x8C03;&#x7528; <code>Adaptee</code> &#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
 </ul>
 <h3 id="&#x5BF9;&#x8C61;&#x9002;&#x914D;&#x5668;&#x4F7F;&#x7528;&#x7EC4;&#x5408;&#x5173;&#x7CFB;&#x6765;&#x5B9E;&#x73B0;">&#x5BF9;&#x8C61;&#x9002;&#x914D;&#x5668;&#x4F7F;&#x7528;&#x7EC4;&#x5408;&#x5173;&#x7CFB;&#x6765;&#x5B9E;&#x73B0;</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5BF9;&#x8C61;&#x9002;&#x914D;&#x5668;&#xFF1A;&#x57FA;&#x4E8E;&#x7EC4;&#x5408;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ITarget {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f1</span>();</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f2</span>();</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fc</span>();</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ITarget <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f1</span><span class="op">();</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">f2</span><span class="op">();</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fc</span><span class="op">();</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptee {</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span>() { <span class="co">//... }</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fb</span>() { <span class="co">//... }</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span>() { <span class="co">//... }</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptee <span class="op">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fb</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptor <span class="kw">implements</span> ITarget {</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Adaptee adaptee;</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Adaptor <span class="kw">implements</span> ITarget <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Adaptee adaptee<span class="op">;</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Adaptor</span>(Adaptee adaptee) {</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">adaptee</span> = adaptee;</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Adaptor</span><span class="op">(</span>Adaptee adaptee<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">adaptee</span> <span class="op">=</span> adaptee<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f1</span>() {</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    adaptee.<span class="fu">fa</span>(); <span class="co">//&#x59D4;&#x6258;&#x7ED9;Adaptee</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f1</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    adaptee<span class="op">.</span><span class="fu">fa</span><span class="op">();</span> <span class="co">//&#x59D4;&#x6258;&#x7ED9;Adaptee</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f2</span>() {</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">f2</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x91CD;&#x65B0;&#x5B9E;&#x73B0;f2()...</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span>() {</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    adaptee.<span class="fu">fc</span>();</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fc</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    adaptee<span class="op">.</span><span class="fu">fc</span><span class="op">();</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><code>Adaptee</code> &#x7C7B;&#x4E0D;&#x517C;&#x5BB9; <code>ITarget</code> &#x63A5;&#x53E3;&#xFF1B;</li>
 <li>&#x65B0;&#x7C7B; <code>Adaptor</code> &#x5728;&#x5B9E;&#x73B0; <code>ITarget</code> &#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x59D4;&#x6258;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528; <code>Adaptee</code> &#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
@@ -1089,158 +1098,158 @@
 </ul>
 <p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x4F9D;&#x8D56;&#x7684;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x5728;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x65B9;&#x9762;&#x6709;&#x7F3A;&#x9677;&#xFF08;&#x6BD4;&#x5982;&#x5305;&#x542B;&#x5927;&#x91CF;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x5F15;&#x5165;&#x4E4B;&#x540E;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x6211;&#x4EEC;&#x81EA;&#x8EAB;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x3002; &#x4E3A;&#x4E86;&#x9694;&#x79BB;&#x8BBE;&#x8BA1;&#x4E0A;&#x7684;&#x7F3A;&#x9677;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5BF9;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x62BD;&#x8C61;&#x51FA;&#x66F4;&#x597D;&#x7684;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x4E86;&#x3002;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CD { <span class="co">//&#x8FD9;&#x4E2A;&#x7C7B;&#x6765;&#x81EA;&#x5916;&#x90E8;sdk&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6743;&#x4FEE;&#x6539;&#x5B83;&#x7684;&#x4EE3;&#x7801;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CD <span class="op">{</span> <span class="co">//&#x8FD9;&#x4E2A;&#x7C7B;&#x6765;&#x81EA;&#x5916;&#x90E8;sdk&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6743;&#x4FEE;&#x6539;&#x5B83;&#x7684;&#x4EE3;&#x7801;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">staticFunction1</span>() { <span class="co">//... }</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">staticFunction1</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">uglyNamingFunction2</span>() { <span class="co">//... }</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">uglyNamingFunction2</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tooManyParamsFunction3</span>(<span class="dt">int</span> paramA, <span class="dt">int</span> paramB, ...) { <span class="co">//... }</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tooManyParamsFunction3</span><span class="op">(</span><span class="dt">int</span> paramA<span class="op">,</span> <span class="dt">int</span> paramB<span class="op">,</span> <span class="kw">...</span><span class="op">)</span> <span class="op">{</span> <span class="co">//... }</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="dt">void</span> <span class="fu">lowPerformanceFunction4</span>() { <span class="co">//... }</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="dt">void</span> <span class="fu">lowPerformanceFunction4</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4F7F;&#x7528;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x91CD;&#x6784;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ITarget {</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function1</span>();</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function2</span>();</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fucntion3</span>(ParamsWrapperDefinition paramsWrapper);</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function4</span>();</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ITarget <span class="op">{</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function1</span><span class="op">();</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function2</span><span class="op">();</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fucntion3</span><span class="op">(</span>ParamsWrapperDefinition paramsWrapper<span class="op">);</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">function4</span><span class="op">();</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x6CE8;&#x610F;&#xFF1A;&#x9002;&#x914D;&#x5668;&#x7C7B;&#x7684;&#x547D;&#x540D;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x5F97;&#x672B;&#x5C3E;&#x5E26;Adaptor</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CDAdaptor <span class="kw">extends</span> CD <span class="kw">implements</span> ITarget {</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CDAdaptor <span class="kw">extends</span> CD <span class="kw">implements</span> ITarget <span class="op">{</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function1</span>() {</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>     <span class="kw">super</span>.<span class="fu">staticFunction1</span>();</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function1</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>     <span class="kw">super</span><span class="op">.</span><span class="fu">staticFunction1</span><span class="op">();</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function2</span>() {</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>.<span class="fu">uglyNamingFucntion2</span>();</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function2</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span><span class="op">.</span><span class="fu">uglyNamingFucntion2</span><span class="op">();</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function3</span>(ParamsWrapperDefinition paramsWrapper) {</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>     <span class="kw">super</span>.<span class="fu">tooManyParamsFunction3</span>(paramsWrapper.<span class="fu">getParamA</span>(), ...);</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function3</span><span class="op">(</span>ParamsWrapperDefinition paramsWrapper<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>     <span class="kw">super</span><span class="op">.</span><span class="fu">tooManyParamsFunction3</span><span class="op">(</span>paramsWrapper<span class="op">.</span><span class="fu">getParamA</span><span class="op">(),</span> <span class="kw">...</span><span class="op">);</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function4</span>() {</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">function4</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...reimplement it...</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><strong>&#x7EDF;&#x4E00;&#x591A;&#x4E2A;&#x7C7B;&#x7684;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;</strong></li>
 </ul>
 <p>&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x591A;&#x4E2A;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x7C7B;&#xFF09;&#x3002;&#x901A;&#x8FC7;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x7684;&#x63A5;&#x53E3;&#x9002;&#x914D;&#x4E3A;&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x6001;&#x7684;&#x7279;&#x6027;&#x6765;&#x590D;&#x7528;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;&#x5C06;&#x591A;&#x5957;&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x7684;&#x63A5;&#x53E3;&#x7EDF;&#x4E00;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x8C03;&#x7528;&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ASensitiveWordsFilter { <span class="co">// A&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ASensitiveWordsFilter <span class="op">{</span> <span class="co">// A&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">//text&#x662F;&#x539F;&#x59CB;&#x6587;&#x672C;&#xFF0C;&#x51FD;&#x6570;&#x8F93;&#x51FA;&#x7528;***&#x66FF;&#x6362;&#x654F;&#x611F;&#x8BCD;&#x4E4B;&#x540E;&#x7684;&#x6587;&#x672C;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSexyWords</span>(<span class="bu">String</span> text) {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSexyWords</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterPoliticalWords</span>(<span class="bu">String</span> text) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterPoliticalWords</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  } </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> BSensitiveWordsFilter  { <span class="co">// B&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span>(<span class="bu">String</span> text) {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> BSensitiveWordsFilter  <span class="op">{</span> <span class="co">// B&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CSensitiveWordsFilter { <span class="co">// C&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span>(<span class="bu">String</span> text, <span class="bu">String</span> mask) {</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CSensitiveWordsFilter <span class="op">{</span> <span class="co">// C&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span><span class="op">(</span><span class="bu">String</span> text<span class="op">,</span> <span class="bu">String</span> mask<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x672A;&#x4F7F;&#x7528;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#xFF1A;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x3001;&#x6269;&#x5C55;&#x6027;&#x4E0D;&#x597D;</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RiskManagement {</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ASensitiveWordsFilter aFilter = <span class="kw">new</span> <span class="fu">ASensitiveWordsFilter</span>();</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> BSensitiveWordsFilter bFilter = <span class="kw">new</span> <span class="fu">BSensitiveWordsFilter</span>();</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> CSensitiveWordsFilter cFilter = <span class="kw">new</span> <span class="fu">CSensitiveWordsFilter</span>();</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RiskManagement <span class="op">{</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ASensitiveWordsFilter aFilter <span class="op">=</span> <span class="kw">new</span> <span class="fu">ASensitiveWordsFilter</span><span class="op">();</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> BSensitiveWordsFilter bFilter <span class="op">=</span> <span class="kw">new</span> <span class="fu">BSensitiveWordsFilter</span><span class="op">();</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> CSensitiveWordsFilter cFilter <span class="op">=</span> <span class="kw">new</span> <span class="fu">CSensitiveWordsFilter</span><span class="op">();</span></span>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSensitiveWords</span>(<span class="bu">String</span> text) {</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText = aFilter.<span class="fu">filterSexyWords</span>(text);</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    maskedText = aFilter.<span class="fu">filterPoliticalWords</span>(maskedText);</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    maskedText = bFilter.<span class="fu">filter</span>(maskedText);</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    maskedText = cFilter.<span class="fu">filter</span>(maskedText, <span class="st">&quot;***&quot;</span>);</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> maskedText;</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSensitiveWords</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText <span class="op">=</span> aFilter<span class="op">.</span><span class="fu">filterSexyWords</span><span class="op">(</span>text<span class="op">);</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    maskedText <span class="op">=</span> aFilter<span class="op">.</span><span class="fu">filterPoliticalWords</span><span class="op">(</span>maskedText<span class="op">);</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    maskedText <span class="op">=</span> bFilter<span class="op">.</span><span class="fu">filter</span><span class="op">(</span>maskedText<span class="op">);</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    maskedText <span class="op">=</span> cFilter<span class="op">.</span><span class="fu">filter</span><span class="op">(</span>maskedText<span class="op">,</span> <span class="st">&quot;***&quot;</span><span class="op">);</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> maskedText<span class="op">;</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4F7F;&#x7528;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x6539;&#x9020;</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ISensitiveWordsFilter { <span class="co">// &#x7EDF;&#x4E00;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">filter</span>(<span class="bu">String</span> text);</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> ISensitiveWordsFilter <span class="op">{</span> <span class="co">// &#x7EDF;&#x4E00;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> <span class="fu">filter</span><span class="op">(</span><span class="bu">String</span> text<span class="op">);</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ASensitiveWordsFilterAdaptor <span class="kw">implements</span> ISensitiveWordsFilter {</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ASensitiveWordsFilter aFilter;</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span>(<span class="bu">String</span> text) {</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText = aFilter.<span class="fu">filterSexyWords</span>(text);</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    maskedText = aFilter.<span class="fu">filterPoliticalWords</span>(maskedText);</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> maskedText;</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ASensitiveWordsFilterAdaptor <span class="kw">implements</span> ISensitiveWordsFilter <span class="op">{</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ASensitiveWordsFilter aFilter<span class="op">;</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filter</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText <span class="op">=</span> aFilter<span class="op">.</span><span class="fu">filterSexyWords</span><span class="op">(</span>text<span class="op">);</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    maskedText <span class="op">=</span> aFilter<span class="op">.</span><span class="fu">filterPoliticalWords</span><span class="op">(</span>maskedText<span class="op">);</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> maskedText<span class="op">;</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="co">//...&#x7701;&#x7565;BSensitiveWordsFilterAdaptor&#x3001;CSensitiveWordsFilterAdaptor...</span></span>
 <span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x6269;&#x5C55;&#x6027;&#x66F4;&#x597D;&#xFF0C;&#x66F4;&#x52A0;&#x7B26;&#x5408;&#x5F00;&#x95ED;&#x539F;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x654F;&#x611F;&#x8BCD;&#x8FC7;&#x6EE4;&#x7CFB;&#x7EDF;&#xFF0C;</span></span>
 <span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x8FD9;&#x4E2A;&#x7C7B;&#x5B8C;&#x5168;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x52A8;&#xFF1B;&#x800C;&#x4E14;&#x57FA;&#x4E8E;&#x63A5;&#x53E3;&#x800C;&#x975E;&#x5B9E;&#x73B0;&#x7F16;&#x7A0B;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x66F4;&#x597D;&#x3002;</span></span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RiskManagement { </span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">List</span>&lt;ISensitiveWordsFilter&gt; filters = <span class="kw">new</span> <span class="bu">ArrayList</span>&lt;&gt;();</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> RiskManagement <span class="op">{</span> </span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span>ISensitiveWordsFilter<span class="op">&gt;</span> filters <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
 <span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addSensitiveWordsFilter</span>(ISensitiveWordsFilter filter) {</span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>    filters.<span class="fu">add</span>(filter);</span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addSensitiveWordsFilter</span><span class="op">(</span>ISensitiveWordsFilter filter<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>    filters<span class="op">.</span><span class="fu">add</span><span class="op">(</span>filter<span class="op">);</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSensitiveWords</span>(<span class="bu">String</span> text) {</span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText = text;</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (ISensitiveWordsFilter filter : filters) {</span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>      maskedText = filter.<span class="fu">filter</span>(maskedText);</span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> maskedText;</span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">filterSensitiveWords</span><span class="op">(</span><span class="bu">String</span> text<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> maskedText <span class="op">=</span> text<span class="op">;</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>ISensitiveWordsFilter filter <span class="op">:</span> filters<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>      maskedText <span class="op">=</span> filter<span class="op">.</span><span class="fu">filter</span><span class="op">(</span>maskedText<span class="op">);</span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> maskedText<span class="op">;</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <ul>
 <li><strong>&#x66FF;&#x6362;&#x4F9D;&#x8D56;&#x7684;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;</strong></li>
 </ul>
 <p>&#x628A;&#x9879;&#x76EE;&#x4E2D;&#x4F9D;&#x8D56;&#x7684;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x66FF;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5229;&#x7528;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x6539;&#x52A8;&#x3002;</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5916;&#x90E8;&#x7CFB;&#x7EDF;A</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IA <span class="op">{</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fa</span>();</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A <span class="kw">implements</span> IA {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">void</span> <span class="fu">fa</span><span class="op">();</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> A <span class="kw">implements</span> IA <span class="op">{</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span>() { <span class="co">//... }</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span><span class="op">()</span> <span class="op">{</span> <span class="co">//... }</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5728;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;A&#x7684;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo {</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a;</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span>(IA a) {</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">a</span> = a;</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Demo <span class="op">{</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> IA a<span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">Demo</span><span class="op">(</span>IA a<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">a</span> <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>Demo d = <span class="kw">new</span> <span class="fu">Demo</span>(<span class="kw">new</span> <span class="fu">A</span>());</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>Demo d <span class="op">=</span> <span class="kw">new</span> <span class="fu">Demo</span><span class="op">(</span><span class="kw">new</span> <span class="fu">A</span><span class="op">());</span></span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5C06;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;A&#x66FF;&#x6362;&#x6210;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;B</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> BAdaptor implemnts IA {</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> B b;</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">BAdaptor</span>(B b) {</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">b</span>= b;</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span>() {</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> BAdaptor implemnts IA <span class="op">{</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> B b<span class="op">;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">BAdaptor</span><span class="op">(</span>B b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">b</span><span class="op">=</span> b<span class="op">;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">fa</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    b.<span class="fu">fb</span>();</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    b<span class="op">.</span><span class="fu">fb</span><span class="op">();</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x501F;&#x52A9;BAdaptor&#xFF0C;Demo&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;IA&#x63A5;&#x53E3;&#x7684;&#x5730;&#x65B9;&#x90FD;&#x65E0;&#x9700;&#x6539;&#x52A8;&#xFF0C;</span></span>
 <span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x53EA;&#x9700;&#x8981;&#x5C06;BAdaptor&#x5982;&#x4E0B;&#x6CE8;&#x5165;&#x5230;Demo&#x5373;&#x53EF;&#x3002;</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>Demo d = <span class="kw">new</span> <span class="fu">Demo</span>(<span class="kw">new</span> <span class="fu">BAdaptor</span>(<span class="kw">new</span> <span class="fu">B</span>()));</span></code></pre></div>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>Demo d <span class="op">=</span> <span class="kw">new</span> <span class="fu">Demo</span><span class="op">(</span><span class="kw">new</span> <span class="fu">BAdaptor</span><span class="op">(</span><span class="kw">new</span> <span class="fu">B</span><span class="op">()));</span></span></code></pre></div>
 <ul>
 <li><strong>&#x517C;&#x5BB9;&#x8001;&#x7248;&#x672C;&#x63A5;&#x53E3;</strong></li>
 </ul>
@@ -1255,68 +1264,68 @@
 <p><code>slf4j</code> &#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x76F8;&#x5F53;&#x4E8E; JDBC &#x89C4;&#x8303;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x6253;&#x5370;&#x65E5;&#x5FD7;&#x7684;&#x7EDF;&#x4E00;&#x63A5;&#x53E3;&#x89C4;&#x8303;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;<strong>&#x5B83;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;</strong>&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;&#x5176;&#x4ED6;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#xFF08;<code>log4j</code>&#x3001;<code>logback</code>&#x2026;&#x2026;&#xFF09;&#x6765;&#x4F7F;&#x7528;&#x3002; &#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x7684;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x4EE5;&#x4FBF;&#x5BF9;&#x672A;&#x9075;&#x5FAA;&#x8BE5;&#x89C4;&#x8303;&#x7684;&#x6846;&#x67B6;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x9002;&#x914D;&#x6210;&#x7EDF;&#x4E00;&#x7684; <code>slf4j</code> &#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x3002;</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">// slf4j&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> org.slf4j;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Logger</span> {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isTraceEnabled</span>();</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span>(<span class="bu">String</span> msg);</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg);</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg1, <span class="bu">Object</span> arg2);</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span>(<span class="bu">String</span> format, <span class="bu">Object</span>[] argArray);</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span>(<span class="bu">String</span> msg, <span class="bu">Throwable</span> t);</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> org</span><span class="op">.</span><span class="im">slf4j</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Logger</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isTraceEnabled</span><span class="op">();</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">);</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg<span class="op">);</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg1<span class="op">,</span> <span class="bu">Object</span> arg2<span class="op">);</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span><span class="op">[]</span> argArray<span class="op">);</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">trace</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">,</span> <span class="bu">Throwable</span> t<span class="op">);</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isDebugEnabled</span>();</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> msg);</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg);</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg1, <span class="bu">Object</span> arg2)</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span>[] argArray)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> msg, <span class="bu">Throwable</span> t);</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isDebugEnabled</span><span class="op">();</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">);</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg<span class="op">);</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg1<span class="op">,</span> <span class="bu">Object</span> arg2<span class="op">)</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span><span class="op">[]</span> argArray<span class="op">)</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">,</span> <span class="bu">Throwable</span> t<span class="op">);</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;info&#x3001;warn&#x3001;error&#x7B49;&#x4E00;&#x5806;&#x63A5;&#x53E3;</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co">// log4j&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x7684;&#x9002;&#x914D;&#x5668;</span></span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">// Log4jLoggerAdapter&#x5B9E;&#x73B0;&#x4E86;LocationAwareLogger&#x63A5;&#x53E3;&#xFF0C;</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x5176;&#x4E2D;LocationAwareLogger&#x7EE7;&#x627F;&#x81EA;Logger&#x63A5;&#x53E3;&#xFF0C;</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x4E5F;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;Log4jLoggerAdapter&#x5B9E;&#x73B0;&#x4E86;Logger&#x63A5;&#x53E3;&#x3002;</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> org.slf4j.impl;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> org</span><span class="op">.</span><span class="im">slf4j</span><span class="op">.</span><span class="im">impl</span><span class="op">;</span></span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">final</span> <span class="kw">class</span> Log4jLoggerAdapter <span class="kw">extends</span> MarkerIgnoringBase</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">implements</span> LocationAwareLogger, <span class="bu">Serializable</span> {</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">final</span> <span class="kw">transient</span> org.<span class="fu">apache</span>.<span class="fu">log4j</span>.<span class="fu">Logger</span> logger; <span class="co">// log4j</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">implements</span> LocationAwareLogger<span class="op">,</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">final</span> <span class="kw">transient</span> org<span class="op">.</span><span class="fu">apache</span><span class="op">.</span><span class="fu">log4j</span><span class="op">.</span><span class="fu">Logger</span> logger<span class="op">;</span> <span class="co">// log4j</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isDebugEnabled</span>() {</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> logger.<span class="fu">isDebugEnabled</span>();</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isDebugEnabled</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> logger<span class="op">.</span><span class="fu">isDebugEnabled</span><span class="op">();</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> msg) {</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    logger.<span class="fu">log</span>(FQCN, <span class="bu">Level</span>.<span class="fu">DEBUG</span>, msg, <span class="kw">null</span>);</span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    logger<span class="op">.</span><span class="fu">log</span><span class="op">(</span>FQCN<span class="op">,</span> <span class="bu">Level</span><span class="op">.</span><span class="fu">DEBUG</span><span class="op">,</span> msg<span class="op">,</span> <span class="kw">null</span><span class="op">);</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg) {</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (logger.<span class="fu">isDebugEnabled</span>()) {</span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft = MessageFormatter<span class="fu">.format</span>(format, arg);</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>      logger.<span class="fu">log</span>(FQCN, <span class="bu">Level</span>.<span class="fu">DEBUG</span>, ft.<span class="fu">getMessage</span>(), ft.<span class="fu">getThrowable</span>());</span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>logger<span class="op">.</span><span class="fu">isDebugEnabled</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft <span class="op">=</span> MessageFormatter<span class="op">.</span><span class="fu">format</span><span class="op">(</span>format<span class="op">,</span> arg<span class="op">);</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>      logger<span class="op">.</span><span class="fu">log</span><span class="op">(</span>FQCN<span class="op">,</span> <span class="bu">Level</span><span class="op">.</span><span class="fu">DEBUG</span><span class="op">,</span> ft<span class="op">.</span><span class="fu">getMessage</span><span class="op">(),</span> ft<span class="op">.</span><span class="fu">getThrowable</span><span class="op">());</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span> arg1, <span class="bu">Object</span> arg2) {</span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (logger.<span class="fu">isDebugEnabled</span>()) {</span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft = MessageFormatter<span class="fu">.format</span>(format, arg1, arg2);</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>      logger.<span class="fu">log</span>(FQCN, <span class="bu">Level</span>.<span class="fu">DEBUG</span>, ft.<span class="fu">getMessage</span>(), ft.<span class="fu">getThrowable</span>());</span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span> arg1<span class="op">,</span> <span class="bu">Object</span> arg2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>logger<span class="op">.</span><span class="fu">isDebugEnabled</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft <span class="op">=</span> MessageFormatter<span class="op">.</span><span class="fu">format</span><span class="op">(</span>format<span class="op">,</span> arg1<span class="op">,</span> arg2<span class="op">);</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>      logger<span class="op">.</span><span class="fu">log</span><span class="op">(</span>FQCN<span class="op">,</span> <span class="bu">Level</span><span class="op">.</span><span class="fu">DEBUG</span><span class="op">,</span> ft<span class="op">.</span><span class="fu">getMessage</span><span class="op">(),</span> ft<span class="op">.</span><span class="fu">getThrowable</span><span class="op">());</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> format, <span class="bu">Object</span>[] argArray) {</span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (logger.<span class="fu">isDebugEnabled</span>()) {</span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft = MessageFormatter.<span class="fu">arrayFormat</span>(format, argArray);</span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>      logger.<span class="fu">log</span>(FQCN, <span class="bu">Level</span>.<span class="fu">DEBUG</span>, ft.<span class="fu">getMessage</span>(), ft.<span class="fu">getThrowable</span>());</span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> format<span class="op">,</span> <span class="bu">Object</span><span class="op">[]</span> argArray<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>logger<span class="op">.</span><span class="fu">isDebugEnabled</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>      FormattingTuple ft <span class="op">=</span> MessageFormatter<span class="op">.</span><span class="fu">arrayFormat</span><span class="op">(</span>format<span class="op">,</span> argArray<span class="op">);</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>      logger<span class="op">.</span><span class="fu">log</span><span class="op">(</span>FQCN<span class="op">,</span> <span class="bu">Level</span><span class="op">.</span><span class="fu">DEBUG</span><span class="op">,</span> ft<span class="op">.</span><span class="fu">getMessage</span><span class="op">(),</span> ft<span class="op">.</span><span class="fu">getThrowable</span><span class="op">());</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span>(<span class="bu">String</span> msg, <span class="bu">Throwable</span> t) {</span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>    logger.<span class="fu">log</span>(FQCN, <span class="bu">Level</span>.<span class="fu">DEBUG</span>, msg, t);</span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">debug</span><span class="op">(</span><span class="bu">String</span> msg<span class="op">,</span> <span class="bu">Throwable</span> t<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>    logger<span class="op">.</span><span class="fu">log</span><span class="op">(</span>FQCN<span class="op">,</span> <span class="bu">Level</span><span class="op">.</span><span class="fu">DEBUG</span><span class="op">,</span> msg<span class="op">,</span> t<span class="op">);</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x4E00;&#x5806;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;...</span></span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x5728;&#x5F00;&#x53D1;&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x6216;&#x8005;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3001;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x7EDF;&#x4E00;&#x4F7F;&#x7528; <code>slf4j</code> &#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x6765;&#x7F16;&#x5199;&#x6253;&#x5370;&#x65E5;&#x5FD7;&#x7684;&#x4EE3;&#x7801;&#xFF0C; &#x5177;&#x4F53;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>SPI</code> &#x6280;&#x672F;&#x52A8;&#x6001;&#x5730;&#x6307;&#x5B9A;&#x3002;</p>
 
 </div>

@@ -171,6 +171,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+										2-3-微分中值定理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -1009,35 +1018,35 @@
 <h2 id="&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x4E00;&#x5B9A;&#x8FDD;&#x53CD;-dry-&#x539F;&#x5219;">&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x4E00;&#x5B9A;&#x8FDD;&#x53CD; DRY &#x539F;&#x5219;</h2>
 <p>&#x5982;&#xFF1A;</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidUsername</span>(<span class="bu">String</span> username) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidUsername</span><span class="op">(</span><span class="bu">String</span> username<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// check not null, not empty</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (StringUtils.<span class="fu">isBlank</span>(username)) {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">false</span>;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>StringUtils<span class="op">.</span><span class="fu">isBlank</span><span class="op">(</span>username<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// check length: 4~64</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> length = username.<span class="fu">length</span>();</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (length &lt; <span class="dv">4</span> || length &gt; <span class="dv">64</span>) {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">false</span>;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> length <span class="op">=</span> username<span class="op">.</span><span class="fu">length</span><span class="op">();</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>length <span class="op">&lt;</span> <span class="dv">4</span> <span class="op">||</span> length <span class="op">&gt;</span> <span class="dv">64</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// contains only lowcase characters</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!StringUtils.<span class="fu">isAllLowerCase</span>(username)) {</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> <span class="kw">false</span>;</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>StringUtils<span class="op">.</span><span class="fu">isAllLowerCase</span><span class="op">(</span>username<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// contains only a~z,0~9,dot</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; length; ++i) {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">char</span> c = username.<span class="fu">charAt</span>(i);</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">if</span> (!(c &gt;= <span class="ch">&apos;a&apos;</span> &amp;&amp; c &lt;= <span class="ch">&apos;z&apos;</span>) || (c &gt;= <span class="ch">&apos;0&apos;</span> &amp;&amp; c &lt;= <span class="ch">&apos;9&apos;</span>) || c == <span class="ch">&apos;.&apos;</span>) {</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">return</span> <span class="kw">false</span>;</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">true</span>;</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">char</span> c <span class="op">=</span> username<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="op">(!(</span>c <span class="op">&gt;=</span> <span class="ch">&apos;a&apos;</span> <span class="op">&amp;&amp;</span> c <span class="op">&lt;=</span> <span class="ch">&apos;z&apos;</span><span class="op">)</span> <span class="op">||</span> <span class="op">(</span>c <span class="op">&gt;=</span> <span class="ch">&apos;0&apos;</span> <span class="op">&amp;&amp;</span> c <span class="op">&lt;=</span> <span class="ch">&apos;9&apos;</span><span class="op">)</span> <span class="op">||</span> c <span class="op">==</span> <span class="ch">&apos;.&apos;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidPassword</span>(<span class="bu">String</span> password) {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidPassword</span><span class="op">(</span><span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x540C;isValidUsername()</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code></pre></div>
 <p><code>isValidUserName()</code> &#x51FD;&#x6570;&#x548C; <code>isValidPassword()</code> &#x51FD;&#x6570;&#x770B;&#x8D77;&#x6765;&#x660E;&#x663E;&#x8FDD;&#x53CD; DRY &#x539F;&#x5219;&#xFF0C; &#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidUsernameOrPassword</span>(<span class="bu">String</span> usernameOrPassword)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">boolean</span> <span class="fu">isValidUsernameOrPassword</span><span class="op">(</span><span class="bu">String</span> usernameOrPassword<span class="op">)</span></span></code></pre></div>
 <ul>
 <li>&#x5408;&#x5E76;&#x4E4B;&#x540E;&#x7684; <code>isValidUserNameOrPassword()</code> &#x51FD;&#x6570;&#xFF0C; &#x8D1F;&#x8D23;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x540D;&#x548C;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#xFF0C;&#x8FDD;&#x53CD;&#x4E86; <strong>&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;</strong> &#x548C; <strong>&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;</strong>&#x3002;</li>
 <li><code>isValidUserName()</code> &#x548C; <code>isValidPassword()</code> &#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C; &#x867D;&#x7136;&#x4ECE;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x4E0A;&#x770B;&#x8D77;&#x6765;&#x662F;&#x91CD;&#x590D;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x8BED;&#x4E49;&#x4E0A;&#x5E76;&#x4E0D;&#x91CD;&#x590D;&#xFF08;&#x4ECE;&#x529F;&#x80FD;&#x4E0A;&#x6765;&#x770B;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5E72;&#x7684;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF09;&#x3002;</li>
@@ -1050,39 +1059,39 @@
 <h2 id="&#x4EE3;&#x7801;&#x6267;&#x884C;&#x91CD;&#x590D;&#x8FDD;&#x53CD;-dry-&#x539F;&#x5219;">&#x4EE3;&#x7801;&#x6267;&#x884C;&#x91CD;&#x590D;&#x8FDD;&#x53CD; DRY &#x539F;&#x5219;</h2>
 <p>&#x5982;&#xFF0C;<code>UserService</code> &#x4E2D; <code>login()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x6821;&#x9A8C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002; &#x5982;&#x679C;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#xFF1B;&#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepo userRepo;<span class="co">//&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepo userRepo<span class="op">;</span><span class="co">//&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">login</span>(<span class="bu">String</span> email, <span class="bu">String</span> password) {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">boolean</span> existed = userRepo.<span class="fu">checkIfUserExisted</span>(email, password);</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!existed) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">login</span><span class="op">(</span><span class="bu">String</span> email<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">boolean</span> existed <span class="op">=</span> userRepo<span class="op">.</span><span class="fu">checkIfUserExisted</span><span class="op">(</span>email<span class="op">,</span> password<span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>existed<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw AuthenticationFailureException...</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    User user = userRepo.<span class="fu">getUserByEmail</span>(email);</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> user;</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    User user <span class="op">=</span> userRepo<span class="op">.</span><span class="fu">getUserByEmail</span><span class="op">(</span>email<span class="op">);</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> user<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepo {</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">checkIfUserExisted</span>(<span class="bu">String</span> email, <span class="bu">String</span> password) {</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!EmailValidation.<span class="fu">validate</span>(email)) {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepo <span class="op">{</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">checkIfUserExisted</span><span class="op">(</span><span class="bu">String</span> email<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>EmailValidation<span class="op">.</span><span class="fu">validate</span><span class="op">(</span>email<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw InvalidEmailException...</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!PasswordValidation.<span class="fu">validate</span>(password)) {</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>PasswordValidation<span class="op">.</span><span class="fu">validate</span><span class="op">(</span>password<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw InvalidPasswordException...</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...query db to check if email&amp;password exists...</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">getUserByEmail</span>(<span class="bu">String</span> email) {</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!EmailValidation.<span class="fu">validate</span>(email)) {</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">getUserByEmail</span><span class="op">(</span><span class="bu">String</span> email<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>EmailValidation<span class="op">.</span><span class="fu">validate</span><span class="op">(</span>email<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw InvalidEmailException...</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...query db to get user by email...</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x65E2;&#x6CA1;&#x6709;&#x903B;&#x8F91;&#x91CD;&#x590D;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x8BED;&#x4E49;&#x91CD;&#x590D;&#xFF0C;&#x4F46;&#x4ECD;&#x7136;&#x8FDD;&#x53CD;&#x4E86; DRY &#x539F;&#x5219;&#x3002; &#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4EE3;&#x7801;&#x4E2D;&#x5B58;&#x5728; <strong>&#x6267;&#x884C;&#x91CD;&#x590D;</strong>&#x3002;</p>
 <ul>
 <li><p>&#x5728; <code>login()</code> &#x51FD;&#x6570;&#x4E2D;&#xFF0C;email &#x7684;&#x6821;&#x9A8C;&#x903B;&#x8F91;&#x88AB;&#x6267;&#x884C;&#x4E86;&#x4E24;&#x6B21;&#x3002;&#x4E00;&#x6B21;&#x662F;&#x5728;&#x8C03;&#x7528; <code>checkIfUserExisted()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53E6;&#x4E00;&#x6B21;&#x662F;&#x8C03;&#x7528; <code>getUserByEmail()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x3002; &#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x6821;&#x9A8C;&#x903B;&#x8F91;&#x4ECE; <code>UserRepo</code> &#x4E2D;&#x79FB;&#x9664;&#xFF0C;&#x7EDF;&#x4E00;&#x653E;&#x5230; <code>UserService</code> &#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p></li>
@@ -1093,33 +1102,33 @@
 </ul>
 <p>&#x91CD;&#x6784;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepo userRepo;<span class="co">//&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserService <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserRepo userRepo<span class="op">;</span><span class="co">//&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6216;&#x8005;IOC&#x6846;&#x67B6;&#x6CE8;&#x5165;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">login</span>(<span class="bu">String</span> email, <span class="bu">String</span> password) {</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!EmailValidation.<span class="fu">validate</span>(email)) {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">login</span><span class="op">(</span><span class="bu">String</span> email<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>EmailValidation<span class="op">.</span><span class="fu">validate</span><span class="op">(</span>email<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw InvalidEmailException...</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (!PasswordValidation.<span class="fu">validate</span>(password)) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>PasswordValidation<span class="op">.</span><span class="fu">validate</span><span class="op">(</span>password<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw InvalidPasswordException...</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    User user = userRepo.<span class="fu">getUserByEmail</span>(email);</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (user == <span class="kw">null</span> || !password.<span class="fu">equals</span>(user.<span class="fu">getPassword</span>()) {</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    User user <span class="op">=</span> userRepo<span class="op">.</span><span class="fu">getUserByEmail</span><span class="op">(</span>email<span class="op">);</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>user <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> <span class="op">!</span>password<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>user<span class="op">.</span><span class="fu">getPassword</span><span class="op">())</span> <span class="op">{</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="co">// ... throw AuthenticationFailureException...</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> user;</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> user<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepo {</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">checkIfUserExisted</span>(<span class="bu">String</span> email, <span class="bu">String</span> password) {</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserRepo <span class="op">{</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">checkIfUserExisted</span><span class="op">(</span><span class="bu">String</span> email<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...query db to check if email&amp;password exists</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">getUserByEmail</span>(<span class="bu">String</span> email) {</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> User <span class="fu">getUserByEmail</span><span class="op">(</span><span class="bu">String</span> email<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...query db to get user by email...</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 </div>
 
